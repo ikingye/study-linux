@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>首页 on Linux 学习笔记</title>
+    <link>https://ikingye.github.io/study-linux/</link>
+    <description>Recent content in 首页 on Linux 学习笔记</description>
+    <generator>Hugo -- gohugo.io</generator>
+    
+	<atom:link href="https://ikingye.github.io/study-linux/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>Bash</title>
+      <link>https://ikingye.github.io/study-linux/docs/shell/type/bash/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://ikingye.github.io/study-linux/docs/shell/type/bash/</guid>
+      <description>Bash </description>
+    </item>
+    
+    <item>
+      <title>CentOS</title>
+      <link>https://ikingye.github.io/study-linux/docs/distro/CentOS/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://ikingye.github.io/study-linux/docs/distro/CentOS/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Zsh</title>
+      <link>https://ikingye.github.io/study-linux/docs/shell/type/zsh/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://ikingye.github.io/study-linux/docs/shell/type/zsh/</guid>
+      <description>Zsh </description>
+    </item>
+    
+    <item>
+      <title>Ubuntu</title>
+      <link>https://ikingye.github.io/study-linux/docs/distro/Ubuntu/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://ikingye.github.io/study-linux/docs/distro/Ubuntu/</guid>
+      <description></description>
+    </item>
+    
+  </channel>
+</rss>
