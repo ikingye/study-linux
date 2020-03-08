@@ -4,12 +4,12 @@
 <head>
   <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<meta name="description" content="CentOS"><meta property="og:title" content="CentOS" />
-<meta property="og:description" content="CentOS " />
-<meta property="og:type" content="article" />
-<meta property="og:url" content="https://ikingye.github.io/study-linux/docs/distro/CentOS/" />
-<meta property="article:modified_time" content="2020-03-08T17:14:14+08:00" />
-<title>CentOS | Linux 学习笔记</title>
+<meta name="description" content="代码片段"><meta property="og:title" content="代码片段" />
+<meta property="og:description" content="" />
+<meta property="og:type" content="website" />
+<meta property="og:url" content="https://ikingye.github.io/study-linux/docs/shell/practice/snippet/" />
+
+<title>代码片段 | Linux 学习笔记</title>
 <link rel="icon" href="/study-linux/favicon.png" type="image/x-icon">
 
 
@@ -18,6 +18,7 @@
 
 <script defer src="/study-linux/en.search.min.c385de7902d726a14eb0c9a4163f3758478ed6d37467398b156149fe47b2648d.js" integrity="sha256-w4XeeQLXJqFOsMmkFj83WEeO1tN0ZzmLFWFJ/keyZI0="></script>
 
+<link rel="alternate" type="application/rss+xml" href="https://ikingye.github.io/study-linux/docs/shell/practice/snippet/index.xml" title="Linux 学习笔记" />
 <!--
 Made with Book Theme
 https://github.com/alex-shpak/hugo-book
@@ -98,7 +99,7 @@ https://github.com/alex-shpak/hugo-book
       
         <li>
 
-  <a href="/study-linux/docs/distro/CentOS/"  class="active">
+  <a href="/study-linux/docs/distro/CentOS/" >
       CentOS
   </a>
 
@@ -306,7 +307,7 @@ https://github.com/alex-shpak/hugo-book
     
       
 
-  <a href="/study-linux/docs/shell/practice/snippet/" >
+  <a href="/study-linux/docs/shell/practice/snippet/"  class="active">
       代码片段
   </a>
 
@@ -317,6 +318,12 @@ https://github.com/alex-shpak/hugo-book
 
 
 
+
+  
+  <ul>
+    
+  </ul>
+  
 
 
 
@@ -532,7 +539,7 @@ https://github.com/alex-shpak/hugo-book
     <img src="/study-linux/svg/menu.svg" class="book-icon" alt="Menu" />
   </label>
 
-  <strong>CentOS</strong>
+  <strong>代码片段</strong>
 
   <label for="toc-control">
     <img src="/study-linux/svg/toc.svg" class="book-icon" alt="Table of Contents" />
@@ -546,7 +553,11 @@ https://github.com/alex-shpak/hugo-book
       
   <nav id="TableOfContents">
   <ul>
-    <li><a href="#centos">CentOS</a></li>
+    <li><a href="#heading">代码片段</a>
+      <ul>
+        <li><a href="#heading-1">锁文件</a></li>
+      </ul>
+    </li>
   </ul>
 </nav>
 
@@ -558,8 +569,31 @@ https://github.com/alex-shpak/hugo-book
 
       
       
-<article class="markdown"><h1 id="centos">CentOS</h1>
-</article>
+<article class="markdown"><h1 id="heading">代码片段</h1>
+<h2 id="heading-1">锁文件</h2>
+<ul>
+<li>[建议] 使用 <code>pid</code> 生成锁文件，并用 <code>set -C</code> 来做逻辑判断</li>
+</ul>
+<pre><code>lockfile=/tmp/mylock
+if  (set  -C;echo $$ &gt;$lockfile)  2&gt;/dev/null;  then
+# set -C 使已存在的文件不能再被写
+# echo 不旦生成了锁文件，而且还将pid放入其中
+# 当此lock文件存在时，if返回失败，跳到else
+ trap 'rm $lockfile; exit $?' INT TERM EXIT # trap保证了脚本异常中断时，释放锁文件（删）
+  {
+  my critical code...  # 此处是正式的脚本代码
+  my critical code...
+  my critical code...
+  }
+ rm  $lockfile # 正式代码运行完了，释放锁文件
+ trap - INT TERM EXIT # 恢复trap的设置（如在脚本最后时，非必要恢复）
+  exit  0
+else
+  # 锁文件生效，会跳到此处
+ echo &quot;$lockfile exist, pid $(&lt;$lockfile) is running.&quot;  # 打印错误信息
+  exit  1
+fi
+</code></pre></article>
  
       
 
@@ -607,7 +641,11 @@ https://github.com/alex-shpak/hugo-book
       
   <nav id="TableOfContents">
   <ul>
-    <li><a href="#centos">CentOS</a></li>
+    <li><a href="#heading">代码片段</a>
+      <ul>
+        <li><a href="#heading-1">锁文件</a></li>
+      </ul>
+    </li>
   </ul>
 </nav>
 

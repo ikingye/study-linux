@@ -24,15 +24,15 @@
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
       <guid>https://ikingye.github.io/study-linux/docs/distro/CentOS/</guid>
-      <description></description>
+      <description>CentOS </description>
     </item>
     
     <item>
       <title>ps</title>
-      <link>https://ikingye.github.io/study-linux/docs/shell/command/ps/</link>
+      <link>https://ikingye.github.io/study-linux/docs/command/ps/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>https://ikingye.github.io/study-linux/docs/shell/command/ps/</guid>
+      <guid>https://ikingye.github.io/study-linux/docs/command/ps/</guid>
       <description>ps </description>
     </item>
     
@@ -46,21 +46,61 @@
     </item>
     
     <item>
+      <title>百度 Shell 编程规范</title>
+      <link>https://ikingye.github.io/study-linux/docs/shell/practice/spec/baidu/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://ikingye.github.io/study-linux/docs/shell/practice/spec/baidu/</guid>
+      <description>  本文档适用于 Bash 3.0 及以上版本，不包括 4.0 新增特性
+  文档是 Bash 编程规范，不是 POSIX Shell 编程规范
+  章节分类和内容组织依据 Google Shell Style Guide
+  参考文档
+ Google Shell Style Guide Chromium Project Shell Style Guidelines     </description>
+    </item>
+    
+    <item>
       <title>Ubuntu</title>
       <link>https://ikingye.github.io/study-linux/docs/distro/Ubuntu/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
       <guid>https://ikingye.github.io/study-linux/docs/distro/Ubuntu/</guid>
-      <description></description>
+      <description>CentOS </description>
+    </item>
+    
+    <item>
+      <title>基础</title>
+      <link>https://ikingye.github.io/study-linux/docs/appendix/interview/basic/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://ikingye.github.io/study-linux/docs/appendix/interview/basic/</guid>
+      <description>基础面试题 </description>
+    </item>
+    
+    <item>
+      <title>进阶</title>
+      <link>https://ikingye.github.io/study-linux/docs/appendix/interview/advanced/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://ikingye.github.io/study-linux/docs/appendix/interview/advanced/</guid>
+      <description>进阶面试题 </description>
     </item>
     
     <item>
       <title>netstat</title>
-      <link>https://ikingye.github.io/study-linux/docs/shell/command/netstat/</link>
+      <link>https://ikingye.github.io/study-linux/docs/command/netstat/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>https://ikingye.github.io/study-linux/docs/shell/command/netstat/</guid>
+      <guid>https://ikingye.github.io/study-linux/docs/command/netstat/</guid>
       <description>netstat </description>
+    </item>
+    
+    <item>
+      <title>高阶</title>
+      <link>https://ikingye.github.io/study-linux/docs/appendix/interview/expert/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://ikingye.github.io/study-linux/docs/appendix/interview/expert/</guid>
+      <description>高阶面试题 </description>
     </item>
     
   </channel>
