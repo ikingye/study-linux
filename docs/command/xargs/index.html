@@ -4,12 +4,16 @@
 <head>
   <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<meta name="description" content="Linux 面试题"><meta property="og:title" content="Linux 面试题" />
-<meta property="og:description" content="" />
-<meta property="og:type" content="website" />
-<meta property="og:url" content="https://ikingye.github.io/study-linux/docs/appendix/interview/" />
-
-<title>Linux 面试题 | Linux 学习笔记</title>
+<meta name="description" content="xargs"><meta property="og:title" content="xargs" />
+<meta property="og:description" content="xargs xargs 命令的作用，是将标准输入转为命令行参数
+-L xargs -L 1 xargs --max-lines=1 # synonym for the -L option -L 参数指定多少行作为一个命令行参数。
+执行子目录里所有的 deploy.sh find . -name deploy.sh | xargs -L 1 sh
+-n -L 参数虽然解决了多行的问题，但是有时用户会在同一行输入多项。 -n 参数指定每次将多少项，作为命令行参数。
+参考  阮一峰 xargs 命令教程  " />
+<meta property="og:type" content="article" />
+<meta property="og:url" content="https://ikingye.github.io/study-linux/docs/command/xargs/" />
+<meta property="article:modified_time" content="2020-03-08T17:37:13+08:00" />
+<title>xargs | Linux 学习笔记</title>
 <link rel="icon" href="/study-linux/favicon.png" type="image/x-icon">
 
 
@@ -18,7 +22,6 @@
 
 <script defer src="/study-linux/en.search.min.7d97663ca52df38774c855f22681b3fcaa0f29c072feaaac560c4418f8e78ed0.js" integrity="sha256-fZdmPKUt84d0yFXyJoGz/KoPKcBy/qqsVgxEGPjnjtA="></script>
 
-<link rel="alternate" type="application/rss+xml" href="https://ikingye.github.io/study-linux/docs/appendix/interview/index.xml" title="Linux 学习笔记" />
 <!--
 Made with Book Theme
 https://github.com/alex-shpak/hugo-book
@@ -171,7 +174,7 @@ https://github.com/alex-shpak/hugo-book
       
         <li>
 
-  <a href="/study-linux/docs/command/xargs/" >
+  <a href="/study-linux/docs/command/xargs/"  class="active">
       xargs
   </a>
 
@@ -437,7 +440,7 @@ https://github.com/alex-shpak/hugo-book
     
       
 
-  <a href="/study-linux/docs/appendix/interview/"  class="active">
+  <a href="/study-linux/docs/appendix/interview/" >
       Linux 面试题
   </a>
 
@@ -543,7 +546,7 @@ https://github.com/alex-shpak/hugo-book
     <img src="/study-linux/svg/menu.svg" class="book-icon" alt="Menu" />
   </label>
 
-  <strong>Linux 面试题</strong>
+  <strong>xargs</strong>
 
   <label for="toc-control">
     <img src="/study-linux/svg/toc.svg" class="book-icon" alt="Table of Contents" />
@@ -557,11 +560,11 @@ https://github.com/alex-shpak/hugo-book
       
   <nav id="TableOfContents">
   <ul>
-    <li><a href="#linux-">Linux 面试题</a>
+    <li><a href="#xargs">xargs</a>
       <ul>
-        <li><a href="#heading">基础题</a></li>
-        <li><a href="#heading-1">进阶题</a></li>
-        <li><a href="#heading-2">高阶题</a></li>
+        <li><a href="#-l">-L</a></li>
+        <li><a href="#-n">-n</a></li>
+        <li><a href="#heading">参考</a></li>
       </ul>
     </li>
   </ul>
@@ -575,10 +578,21 @@ https://github.com/alex-shpak/hugo-book
 
       
       
-<article class="markdown"><h1 id="linux-">Linux 面试题</h1>
-<h2 id="heading">基础题</h2>
-<h2 id="heading-1">进阶题</h2>
-<h2 id="heading-2">高阶题</h2>
+<article class="markdown"><h1 id="xargs">xargs</h1>
+<p>xargs 命令的作用，是将标准输入转为命令行参数</p>
+<h2 id="-l">-L</h2>
+<pre><code>xargs -L 1
+xargs --max-lines=1 # synonym for the -L option
+</code></pre><p>-L 参数指定多少行作为一个命令行参数。</p>
+<p>执行子目录里所有的 deploy.sh
+<code>find . -name deploy.sh  | xargs -L 1 sh</code></p>
+<h2 id="-n">-n</h2>
+<p>-L 参数虽然解决了多行的问题，但是有时用户会在同一行输入多项。
+-n 参数指定每次将多少项，作为命令行参数。</p>
+<h2 id="heading">参考</h2>
+<ul>
+<li>阮一峰 <a href="https://www.ruanyifeng.com/blog/2019/08/xargs-tutorial.html">xargs 命令教程</a></li>
+</ul>
 </article>
  
       
@@ -591,7 +605,7 @@ https://github.com/alex-shpak/hugo-book
 
   <div>
     
-    <a class="flex align-center" href="https://github.com/ikingye/study-linux/commit/98ef5182915fc17b94ec85816ca306fe5bffed71" title='Last modified by yewang | 2020-03-08' target="_blank" rel="noopener">
+    <a class="flex align-center" href="https://github.com/ikingye/study-linux/commit/7cbb30c9c545a84ae3b05904dcef99e826e807c0" title='Last modified by yewang | 2020-03-08' target="_blank" rel="noopener">
       <img src="/study-linux/svg/calendar.svg" class="book-icon" alt="Calendar" />
       <span>2020-03-08</span>
     </a>
@@ -627,11 +641,11 @@ https://github.com/alex-shpak/hugo-book
       
   <nav id="TableOfContents">
   <ul>
-    <li><a href="#linux-">Linux 面试题</a>
+    <li><a href="#xargs">xargs</a>
       <ul>
-        <li><a href="#heading">基础题</a></li>
-        <li><a href="#heading-1">进阶题</a></li>
-        <li><a href="#heading-2">高阶题</a></li>
+        <li><a href="#-l">-L</a></li>
+        <li><a href="#-n">-n</a></li>
+        <li><a href="#heading">参考</a></li>
       </ul>
     </li>
   </ul>
