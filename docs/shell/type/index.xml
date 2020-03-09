@@ -10,6 +10,15 @@
     
     
     <item>
+      <title>sh</title>
+      <link>https://ikingye.github.io/study-linux/docs/shell/type/sh/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://ikingye.github.io/study-linux/docs/shell/type/sh/</guid>
+      <description>sh 标记为 #!/bin/sh 的脚本不应使用任何 POSIX 没有规定的特性 (如 let 等命令，但 #!/bin/bash 可以)。</description>
+    </item>
+    
+    <item>
       <title>Bash</title>
       <link>https://ikingye.github.io/study-linux/docs/shell/type/bash/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
@@ -25,6 +34,26 @@
       
       <guid>https://ikingye.github.io/study-linux/docs/shell/type/zsh/</guid>
       <description>Zsh </description>
+    </item>
+    
+    <item>
+      <title>Dash</title>
+      <link>https://ikingye.github.io/study-linux/docs/shell/type/dash/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://ikingye.github.io/study-linux/docs/shell/type/dash/</guid>
+      <description>Dash Dash 与 Bash 的区别  定义函数  bash: function 在 bash 中为关键字
+dash: dash 中没有 function 这个关键字
+2.select var in list; do command; done
+bash: 支持
+dash: 不支持，替代方法：采用 while+read+case 来实现
+echo {0..10}  bash: 支持 {n..m} 展开
+dash: 不支持，替代方法，采用 seq 外部命令
+here string  bash: 支持 here string
+dash: 不支持，替代方法：可采用 here documents
+  &amp;amp;word 重定向标准输出和标准错误
+   bash: 当 word 为非数字时，&amp;gt;&amp;amp;word 变成重定向标准错误和标准输出到文件 word
+dash: &amp;gt;&amp;amp;word, word 不支持非数字，替代方法: &amp;gt;word 2&amp;gt;&amp;amp;1; 常见用法 &amp;gt;/dev/null 2&amp;gt;&amp;amp;1</description>
     </item>
     
   </channel>
