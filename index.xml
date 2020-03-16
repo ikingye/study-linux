@@ -44,7 +44,7 @@
       <guid>https://ikingye.github.io/study-linux/docs/shell/practice/spec/baidu/</guid>
       <description>  本文档适用于 Bash 3.0 及以上版本，不包括 4.0 新增特性
   文档是 Bash 编程规范，不是 POSIX Shell 编程规范
-  章节分类和内容组织依据 Google Shell Style Guide
+  章节分类和内容组织依据 Google Shell Style Guide
   参考文档
  Google Shell Style Guide Chromium Project Shell Style Guidelines     </description>
     </item>
