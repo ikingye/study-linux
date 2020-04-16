@@ -4,7 +4,11 @@
 <head>
   <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<meta name="description" content="百度 Shell 编程规范"><meta property="og:title" content="百度 Shell 编程规范" />
+<meta name="description" content="  本文档适用于 Bash 3.0 及以上版本，不包括 4.0 新增特性
+  文档是 Bash 编程规范，不是 POSIX Shell 编程规范
+  章节分类和内容组织依据 Google Shell Style Guide
+  参考文档
+ Google Shell Style Guide Chromium Project Shell Style Guidelines     "><meta property="og:title" content="百度 Shell 编程规范" />
 <meta property="og:description" content="  本文档适用于 Bash 3.0 及以上版本，不包括 4.0 新增特性
   文档是 Bash 编程规范，不是 POSIX Shell 编程规范
   章节分类和内容组织依据 Google Shell Style Guide
@@ -17,10 +21,10 @@
 <link rel="icon" href="/study-linux/favicon.png" type="image/x-icon">
 
 
-<link rel="stylesheet" href="/study-linux/book.min.66d2f6926159dd697150bdcd901eead56a7adc9408513ccb9ab553939262dd4c.css" integrity="sha256-ZtL2kmFZ3WlxUL3NkB7q1Wp63JQIUTzLmrVTk5Ji3Uw=">
+<link rel="stylesheet" href="/study-linux/book.min.2b565af4d61986071164f1ead48c719f32bb138a148802dc3943b967fc4f20c6.css" integrity="sha256-K1Za9NYZhgcRZPHq1IxxnzK7E4oUiALcOUO5Z/xPIMY=">
 
 
-<script defer src="/study-linux/en.search.min.2c3551ccf3f78b958a61e63e665e7041a95aaa160905729158d0518fdf575fae.js" integrity="sha256-LDVRzPP3i5WKYeY&#43;Zl5wQalaqhYJBXKRWNBRj99XX64="></script>
+<script defer src="/study-linux/en.search.min.670f9a3d62b09d70c2b7100e040a591090db54e3b217efd998eadfe8b1a83438.js" integrity="sha256-Zw&#43;aPWKwnXDCtxAOBApZEJDbVOOyF&#43;/ZmOrf6LGoNDg="></script>
 
 <!--
 Made with Book Theme
@@ -52,6 +56,12 @@ https://github.com/alex-shpak/hugo-book
 
 
 
+
+
+
+
+
+
   
 
   
@@ -74,16 +84,13 @@ https://github.com/alex-shpak/hugo-book
       
         
 
-  <li >
+  <li>
     
-      
 
-  <a href="/study-linux/docs/distro/" >
-      Linux 发行版
-  </a>
+  
+  <a href="/study-linux/docs/distro/" class="">Linux 发行版</a>
+  
 
-
-    
 
     
 
@@ -96,9 +103,9 @@ https://github.com/alex-shpak/hugo-book
       
         <li>
 
-  <a href="/study-linux/docs/distro/CentOS/" >
-      CentOS
-  </a>
+  
+  <a href="/study-linux/docs/distro/CentOS/" class="">CentOS</a>
+  
 
 </li>
       
@@ -106,9 +113,9 @@ https://github.com/alex-shpak/hugo-book
       
         <li>
 
-  <a href="/study-linux/docs/distro/Ubuntu/" >
-      Ubuntu
-  </a>
+  
+  <a href="/study-linux/docs/distro/Ubuntu/" class="">Ubuntu</a>
+  
 
 </li>
       
@@ -126,16 +133,13 @@ https://github.com/alex-shpak/hugo-book
       
         
 
-  <li >
+  <li>
     
-      
 
-  <a href="/study-linux/docs/command/" >
-      Linux 命令
-  </a>
+  
+  <a href="/study-linux/docs/command/" class="">Linux 命令</a>
+  
 
-
-    
 
     
 
@@ -148,9 +152,9 @@ https://github.com/alex-shpak/hugo-book
       
         <li>
 
-  <a href="/study-linux/docs/command/ps/" >
-      ps
-  </a>
+  
+  <a href="/study-linux/docs/command/ps/" class="">ps</a>
+  
 
 </li>
       
@@ -158,9 +162,9 @@ https://github.com/alex-shpak/hugo-book
       
         <li>
 
-  <a href="/study-linux/docs/command/netstat/" >
-      netstat
-  </a>
+  
+  <a href="/study-linux/docs/command/netstat/" class="">netstat</a>
+  
 
 </li>
       
@@ -168,9 +172,9 @@ https://github.com/alex-shpak/hugo-book
       
         <li>
 
-  <a href="/study-linux/docs/command/xargs/" >
-      xargs
-  </a>
+  
+  <a href="/study-linux/docs/command/xargs/" class="">xargs</a>
+  
 
 </li>
       
@@ -188,16 +192,13 @@ https://github.com/alex-shpak/hugo-book
       
         
 
-  <li >
+  <li>
     
-      
 
-  <a href="/study-linux/docs/shell/" >
-      Shell
-  </a>
+  
+  <a href="/study-linux/docs/shell/" class="">Shell</a>
+  
 
-
-    
 
     
 
@@ -210,16 +211,13 @@ https://github.com/alex-shpak/hugo-book
       
         
 
-  <li >
+  <li>
     
-      
 
-  <a href="/study-linux/docs/shell/type/" >
-      Shell 类型
-  </a>
+  
+  <a href="/study-linux/docs/shell/type/" class="">Shell 类型</a>
+  
 
-
-    
 
     
 
@@ -232,9 +230,9 @@ https://github.com/alex-shpak/hugo-book
       
         <li>
 
-  <a href="/study-linux/docs/shell/type/sh/" >
-      sh
-  </a>
+  
+  <a href="/study-linux/docs/shell/type/sh/" class="">sh</a>
+  
 
 </li>
       
@@ -242,9 +240,9 @@ https://github.com/alex-shpak/hugo-book
       
         <li>
 
-  <a href="/study-linux/docs/shell/type/bash/" >
-      Bash
-  </a>
+  
+  <a href="/study-linux/docs/shell/type/bash/" class="">Bash</a>
+  
 
 </li>
       
@@ -252,9 +250,9 @@ https://github.com/alex-shpak/hugo-book
       
         <li>
 
-  <a href="/study-linux/docs/shell/type/zsh/" >
-      Zsh
-  </a>
+  
+  <a href="/study-linux/docs/shell/type/zsh/" class="">Zsh</a>
+  
 
 </li>
       
@@ -262,9 +260,9 @@ https://github.com/alex-shpak/hugo-book
       
         <li>
 
-  <a href="/study-linux/docs/shell/type/dash/" >
-      Dash
-  </a>
+  
+  <a href="/study-linux/docs/shell/type/dash/" class="">Dash</a>
+  
 
 </li>
       
@@ -282,16 +280,13 @@ https://github.com/alex-shpak/hugo-book
       
         
 
-  <li >
+  <li>
     
-      
 
-  <a href="/study-linux/docs/shell/tutorial/" >
-      教程
-  </a>
+  
+  <a href="/study-linux/docs/shell/tutorial/" class="">教程</a>
+  
 
-
-    
 
     
 
@@ -314,16 +309,13 @@ https://github.com/alex-shpak/hugo-book
       
         
 
-  <li >
+  <li>
     
-      
 
-  <a href="/study-linux/docs/shell/practice/" >
-      最佳实践
-  </a>
+  
+  <a href="/study-linux/docs/shell/practice/" class="">最佳实践</a>
+  
 
-
-    
 
     
 
@@ -336,16 +328,13 @@ https://github.com/alex-shpak/hugo-book
       
         
 
-  <li >
+  <li>
     
-      
 
-  <a href="/study-linux/docs/shell/practice/snippet/" >
-      代码片段
-  </a>
+  
+  <a href="/study-linux/docs/shell/practice/snippet/" class="collapsed ">代码片段</a>
+  
 
-
-    
 
     
 
@@ -362,16 +351,13 @@ https://github.com/alex-shpak/hugo-book
       
         
 
-  <li >
+  <li>
     
-      
 
-  <a href="/study-linux/docs/shell/practice/spec/" >
-      编程规范
-  </a>
+  
+  <a href="/study-linux/docs/shell/practice/spec/" class="collapsed ">编程规范</a>
+  
 
-
-    
 
     
 
@@ -384,9 +370,9 @@ https://github.com/alex-shpak/hugo-book
       
         <li>
 
-  <a href="/study-linux/docs/shell/practice/spec/baidu/"  class="active">
-      百度 Shell 编程规范
-  </a>
+  
+  <a href="/study-linux/docs/shell/practice/spec/baidu/" class="active">百度 Shell 编程规范</a>
+  
 
 </li>
       
@@ -424,16 +410,13 @@ https://github.com/alex-shpak/hugo-book
       
         
 
-  <li >
+  <li>
     
-      
 
-  <a href="/study-linux/docs/kernel/" >
-      内核
-  </a>
+  
+  <a href="/study-linux/docs/kernel/" class="">内核</a>
+  
 
-
-    
 
     
 
@@ -456,10 +439,13 @@ https://github.com/alex-shpak/hugo-book
       
         
 
-  <li >
+  <li>
     
-      <span>附录</span>
-    
+
+  
+  <span>附录</span>
+  
+
 
     
 
@@ -472,16 +458,13 @@ https://github.com/alex-shpak/hugo-book
       
         
 
-  <li >
+  <li>
     
-      
 
-  <a href="/study-linux/docs/appendix/tutorial/" >
-      教程
-  </a>
+  
+  <a href="/study-linux/docs/appendix/tutorial/" class="">教程</a>
+  
 
-
-    
 
     
 
@@ -504,16 +487,13 @@ https://github.com/alex-shpak/hugo-book
       
         
 
-  <li >
+  <li>
     
-      
 
-  <a href="/study-linux/docs/appendix/interview/" >
-      Linux 面试题
-  </a>
+  
+  <a href="/study-linux/docs/appendix/interview/" class="">Linux 面试题</a>
+  
 
-
-    
 
     
 
@@ -526,9 +506,9 @@ https://github.com/alex-shpak/hugo-book
       
         <li>
 
-  <a href="/study-linux/docs/appendix/interview/basic/" >
-      基础
-  </a>
+  
+  <a href="/study-linux/docs/appendix/interview/basic/" class="">基础</a>
+  
 
 </li>
       
@@ -536,9 +516,9 @@ https://github.com/alex-shpak/hugo-book
       
         <li>
 
-  <a href="/study-linux/docs/appendix/interview/advanced/" >
-      进阶
-  </a>
+  
+  <a href="/study-linux/docs/appendix/interview/advanced/" class="">进阶</a>
+  
 
 </li>
       
@@ -546,9 +526,9 @@ https://github.com/alex-shpak/hugo-book
       
         <li>
 
-  <a href="/study-linux/docs/appendix/interview/expert/" >
-      高阶
-  </a>
+  
+  <a href="/study-linux/docs/appendix/interview/expert/" class="">高阶</a>
+  
 
 </li>
       
@@ -579,6 +559,11 @@ https://github.com/alex-shpak/hugo-book
 
 
   
+
+
+
+
+
 
 
 
@@ -622,7 +607,8 @@ https://github.com/alex-shpak/hugo-book
       </header>
 
       
-<article class="markdown"><ul>
+      
+  <article class="markdown"><ul>
 <li>
 <p>本文档适用于 Bash 3.0 及以上版本，不包括 4.0 新增特性</p>
 </li>
@@ -641,9 +627,10 @@ https://github.com/alex-shpak/hugo-book
 </li>
 </ul>
 <hr>
-<p><img src="https://cdn.jsdelivr.net/gh/ikingye/imagehost/picgo/20200308134618.png" alt=""></p>
+<p><img src="https://cdn.jsdelivr.net/gh/ikingye/imagehost/picgo/20200308134618.png" alt="" /></p>
 </article>
  
+      
 
       <footer class="book-footer">
         
@@ -665,6 +652,9 @@ https://github.com/alex-shpak/hugo-book
 
  
         
+      </footer>
+
+      
   
   <div class="book-comments">
 <script src="https://utteranc.es/client.js"
@@ -678,8 +668,8 @@ https://github.com/alex-shpak/hugo-book
 </div>
   
  
-      </footer>
-      
+
+      <label for="menu-control" class="hidden book-menu-overlay"></label>
     </div>
 
     
