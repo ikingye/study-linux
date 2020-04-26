@@ -4,12 +4,24 @@
 <head>
   <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<meta name="description" content="Shell 教程 基础 进阶 高阶 "><meta property="og:title" content="教程" />
-<meta property="og:description" content="" />
-<meta property="og:type" content="website" />
-<meta property="og:url" content="https://ikingye.github.io/study-linux/docs/shell/tutorial/" />
+<meta name="description" content="Linux 用户 创建用户 useradd   useradd xxx
+ 不会创建同名目录    useradd -m xxx
+ 会在 /home 目录创建同名文件夹    passwd xxx
+  adduser  删除用户 userdel xxx  用户组 添加组 groupadd xxx
+删除组 groupdel xxx
+ 修改用户主目录 usermod -d /usr/newfolder -u uid username
+uid 获取 id 用户名"><meta property="og:title" content="用户" />
+<meta property="og:description" content="Linux 用户 创建用户 useradd   useradd xxx
+ 不会创建同名目录    useradd -m xxx
+ 会在 /home 目录创建同名文件夹    passwd xxx
+  adduser  删除用户 userdel xxx  用户组 添加组 groupadd xxx
+删除组 groupdel xxx
+ 修改用户主目录 usermod -d /usr/newfolder -u uid username
+uid 获取 id 用户名" />
+<meta property="og:type" content="article" />
+<meta property="og:url" content="https://ikingye.github.io/study-linux/docs/basic/user/" />
 
-<title>教程 | Linux 学习笔记</title>
+<title>用户 | Linux 学习笔记</title>
 <link rel="icon" href="/study-linux/favicon.png" type="image/x-icon">
 
 
@@ -18,7 +30,6 @@
 
 <script defer src="/study-linux/en.search.min.36b0abccec7371b1c7b6de0fb6332b75e054c4bea94f31b15a1bb640ab321ee8.js" integrity="sha256-NrCrzOxzcbHHtt4PtjMrdeBUxL6pTzGxWhu2QKsyHug="></script>
 
-<link rel="alternate" type="application/rss+xml" href="https://ikingye.github.io/study-linux/docs/shell/tutorial/index.xml" title="Linux 学习笔记" />
 <!--
 Made with Book Theme
 https://github.com/alex-shpak/hugo-book
@@ -90,6 +101,22 @@ https://github.com/alex-shpak/hugo-book
 
 
 
+  
+  <ul>
+    
+      
+        <li>
+
+  
+  <a href="/study-linux/docs/basic/user/" class="active">用户</a>
+  
+
+</li>
+      
+    
+  </ul>
+  
+
 
 
   </li>
@@ -112,110 +139,6 @@ https://github.com/alex-shpak/hugo-book
 
 
 
-
-  
-  <ul>
-    
-      
-        
-
-  <li>
-    
-
-  
-  <a href="/study-linux/docs/shell/command/" class="collapsed ">Linux 命令</a>
-  
-
-
-    
-
-
-
-
-
-
-  </li>
-
-
-      
-    
-      
-        
-
-  <li>
-    
-
-  
-  <a href="/study-linux/docs/shell/program/" class="collapsed ">Shell 编程</a>
-  
-
-
-    
-
-
-
-
-
-
-  </li>
-
-
-      
-    
-      
-        
-
-  <li>
-    
-
-  
-  <a href="/study-linux/docs/shell/type/" class="collapsed ">Shell 类型</a>
-  
-
-
-    
-
-
-
-
-
-
-  </li>
-
-
-      
-    
-      
-        
-
-  <li>
-    
-
-  
-  <a href="/study-linux/docs/shell/tutorial/" class="collapsed active">教程</a>
-  
-
-
-    
-
-
-
-
-  
-  <ul>
-    
-  </ul>
-  
-
-
-
-  </li>
-
-
-      
-    
-  </ul>
-  
 
 
 
@@ -392,7 +315,7 @@ https://github.com/alex-shpak/hugo-book
     <img src="/study-linux/svg/menu.svg" class="book-icon" alt="Menu" />
   </label>
 
-  <strong>教程</strong>
+  <strong>用户</strong>
 
   <label for="toc-control">
     <img src="/study-linux/svg/toc.svg" class="book-icon" alt="Table of Contents" />
@@ -406,11 +329,30 @@ https://github.com/alex-shpak/hugo-book
       
   <nav id="TableOfContents">
   <ul>
-    <li><a href="#shell-教程">Shell 教程</a>
+    <li><a href="#linux-用户">Linux 用户</a>
       <ul>
-        <li><a href="#基础">基础</a></li>
-        <li><a href="#进阶">进阶</a></li>
-        <li><a href="#高阶">高阶</a></li>
+        <li><a href="#创建用户">创建用户</a>
+          <ul>
+            <li><a href="#useradd">useradd</a></li>
+            <li><a href="#adduser">adduser</a></li>
+          </ul>
+        </li>
+        <li><a href="#删除用户">删除用户</a>
+          <ul>
+            <li><a href="#userdel-xxx">userdel xxx</a></li>
+          </ul>
+        </li>
+        <li><a href="#用户组">用户组</a>
+          <ul>
+            <li><a href="#添加组">添加组</a></li>
+            <li><a href="#删除组">删除组</a></li>
+          </ul>
+        </li>
+        <li><a href="#修改用户主目录">修改用户主目录</a>
+          <ul>
+            <li><a href="#uid-获取">uid 获取</a></li>
+          </ul>
+        </li>
       </ul>
     </li>
   </ul>
@@ -424,10 +366,41 @@ https://github.com/alex-shpak/hugo-book
 
       
       
-  <article class="markdown"><h1 id="shell-教程">Shell 教程</h1>
-<h2 id="基础">基础</h2>
-<h2 id="进阶">进阶</h2>
-<h2 id="高阶">高阶</h2>
+  <article class="markdown"><h1 id="linux-用户">Linux 用户</h1>
+<h2 id="创建用户">创建用户</h2>
+<h3 id="useradd">useradd</h3>
+<ul>
+<li>
+<p><code>useradd xxx</code></p>
+<ul>
+<li>不会创建同名目录</li>
+</ul>
+</li>
+<li>
+<p><code>useradd -m xxx</code></p>
+<ul>
+<li>会在 /home 目录创建同名文件夹</li>
+</ul>
+</li>
+<li>
+<p><code>passwd xxx</code></p>
+</li>
+</ul>
+<h3 id="adduser">adduser</h3>
+<hr>
+<h2 id="删除用户">删除用户</h2>
+<h3 id="userdel-xxx">userdel xxx</h3>
+<hr>
+<h2 id="用户组">用户组</h2>
+<h3 id="添加组">添加组</h3>
+<p>groupadd xxx</p>
+<h3 id="删除组">删除组</h3>
+<p>groupdel xxx</p>
+<hr>
+<h2 id="修改用户主目录">修改用户主目录</h2>
+<p>usermod -d /usr/newfolder -u uid username</p>
+<h3 id="uid-获取">uid 获取</h3>
+<p>id 用户名</p>
 </article>
  
       
@@ -437,14 +410,6 @@ https://github.com/alex-shpak/hugo-book
   <div class="flex justify-between">
 
 
-
-  <div>
-    
-    <a class="flex align-center" href="https://github.com/ikingye/study-linux/commit/f026d11e7cd50b9e509ff2794febb6e9408a557c" title='Last modified by yewang | 2020-04-16' target="_blank" rel="noopener">
-      <img src="/study-linux/svg/calendar.svg" class="book-icon" alt="Calendar" />
-      <span>2020-04-16</span>
-    </a>
-  </div>
 
 
 
@@ -477,11 +442,30 @@ https://github.com/alex-shpak/hugo-book
       
   <nav id="TableOfContents">
   <ul>
-    <li><a href="#shell-教程">Shell 教程</a>
+    <li><a href="#linux-用户">Linux 用户</a>
       <ul>
-        <li><a href="#基础">基础</a></li>
-        <li><a href="#进阶">进阶</a></li>
-        <li><a href="#高阶">高阶</a></li>
+        <li><a href="#创建用户">创建用户</a>
+          <ul>
+            <li><a href="#useradd">useradd</a></li>
+            <li><a href="#adduser">adduser</a></li>
+          </ul>
+        </li>
+        <li><a href="#删除用户">删除用户</a>
+          <ul>
+            <li><a href="#userdel-xxx">userdel xxx</a></li>
+          </ul>
+        </li>
+        <li><a href="#用户组">用户组</a>
+          <ul>
+            <li><a href="#添加组">添加组</a></li>
+            <li><a href="#删除组">删除组</a></li>
+          </ul>
+        </li>
+        <li><a href="#修改用户主目录">修改用户主目录</a>
+          <ul>
+            <li><a href="#uid-获取">uid 获取</a></li>
+          </ul>
+        </li>
       </ul>
     </li>
   </ul>
