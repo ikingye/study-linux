@@ -4,12 +4,22 @@
 <head>
   <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<meta name="description" content="编程规范 "><meta property="og:title" content="编程规范" />
-<meta property="og:description" content="" />
-<meta property="og:type" content="website" />
-<meta property="og:url" content="https://ikingye.github.io/study-linux/docs/shell/program/practice/spec/" />
+<meta name="description" content="时区 设置时区 CentOS 和 Ubuntu 的时区文件是 /etc/localtime，
+但是在 CentOS7 以后 localtime 变成了一个链接文件
+[root@centos7 ~]# ll /etc/localtime lrwxrwxrwx 1 root root 33 Oct 12 11:01 /etc/localtime -&gt; /usr/share/zoneinfo/Asia/Shanghai  CentOS6、Ubuntu16 $ cp /usr/share/zoneinfo/Asia/Shanghai /etc/localtime CentOS7、RHEL7、Scientific Linux 7、Oracle Linux 7 最好的方法是使用 timedatectl 命令
+$ timedatectl list-timezones |grep Shanghai #查找中国时区的完整名称 Asia/Shanghai $ timedatectl set-timezone Asia/Shanghai #其他时区以此类推 或者直接手动创建软链接
+$ ln -sf /usr/share/zoneinfo/Asia/Shanghai /etc/localtime  参考：
+ Linux 修改时区的正确方法  "><meta property="og:title" content="时区" />
+<meta property="og:description" content="时区 设置时区 CentOS 和 Ubuntu 的时区文件是 /etc/localtime，
+但是在 CentOS7 以后 localtime 变成了一个链接文件
+[root@centos7 ~]# ll /etc/localtime lrwxrwxrwx 1 root root 33 Oct 12 11:01 /etc/localtime -&gt; /usr/share/zoneinfo/Asia/Shanghai  CentOS6、Ubuntu16 $ cp /usr/share/zoneinfo/Asia/Shanghai /etc/localtime CentOS7、RHEL7、Scientific Linux 7、Oracle Linux 7 最好的方法是使用 timedatectl 命令
+$ timedatectl list-timezones |grep Shanghai #查找中国时区的完整名称 Asia/Shanghai $ timedatectl set-timezone Asia/Shanghai #其他时区以此类推 或者直接手动创建软链接
+$ ln -sf /usr/share/zoneinfo/Asia/Shanghai /etc/localtime  参考：
+ Linux 修改时区的正确方法  " />
+<meta property="og:type" content="article" />
+<meta property="og:url" content="https://ikingye.github.io/study-linux/docs/basic/timezone/" />
 
-<title>编程规范 | Linux 学习笔记</title>
+<title>时区 | Linux 学习笔记</title>
 <link rel="icon" href="/study-linux/favicon.png" type="image/x-icon">
 
 
@@ -18,7 +28,6 @@
 
 <script defer src="/study-linux/en.search.min.52a7093b385701467635910aab14bc663171c4468c8a13d8775d9fba99b99680.js" integrity="sha256-UqcJOzhXAUZ2NZEKqxS8ZjFxxEaMihPYd12fupm5loA="></script>
 
-<link rel="alternate" type="application/rss+xml" href="https://ikingye.github.io/study-linux/docs/shell/program/practice/spec/index.xml" title="Linux 学习笔记" />
 <!--
 Made with Book Theme
 https://github.com/alex-shpak/hugo-book
@@ -90,6 +99,32 @@ https://github.com/alex-shpak/hugo-book
 
 
 
+  
+  <ul>
+    
+      
+        <li>
+
+  
+  <a href="/study-linux/docs/basic/user/" class="">用户</a>
+  
+
+</li>
+      
+    
+      
+        <li>
+
+  
+  <a href="/study-linux/docs/basic/timezone/" class="active">时区</a>
+  
+
+</li>
+      
+    
+  </ul>
+  
+
 
 
   </li>
@@ -112,201 +147,6 @@ https://github.com/alex-shpak/hugo-book
 
 
 
-
-  
-  <ul>
-    
-      
-        
-
-  <li>
-    
-
-  
-  <a href="/study-linux/docs/shell/command/" class="collapsed ">Linux 命令</a>
-  
-
-
-    
-
-
-
-
-
-
-  </li>
-
-
-      
-    
-      
-        
-
-  <li>
-    
-
-  
-  <a href="/study-linux/docs/shell/program/" class="collapsed ">Shell 编程</a>
-  
-
-
-    
-
-
-
-
-  
-  <ul>
-    
-      
-        
-
-  <li>
-    
-
-  
-  <a href="/study-linux/docs/shell/program/practice/" class="collapsed ">实践</a>
-  
-
-
-    
-
-
-
-
-  
-  <ul>
-    
-      
-        
-
-  <li>
-    
-
-  
-  <a href="/study-linux/docs/shell/program/practice/snippet/" class="collapsed ">代码片段</a>
-  
-
-
-    
-
-
-
-
-
-
-  </li>
-
-
-      
-    
-      
-        
-
-  <li>
-    
-
-  
-  <a href="/study-linux/docs/shell/program/practice/spec/" class="collapsed active">编程规范</a>
-  
-
-
-    
-
-
-
-
-  
-  <ul>
-    
-      
-        <li>
-
-  
-  <a href="/study-linux/docs/shell/program/practice/spec/baidu/" class="">百度 Shell 编程规范</a>
-  
-
-</li>
-      
-    
-  </ul>
-  
-
-
-
-  </li>
-
-
-      
-    
-  </ul>
-  
-
-
-
-  </li>
-
-
-      
-    
-  </ul>
-  
-
-
-
-  </li>
-
-
-      
-    
-      
-        
-
-  <li>
-    
-
-  
-  <a href="/study-linux/docs/shell/type/" class="collapsed ">Shell 类型</a>
-  
-
-
-    
-
-
-
-
-
-
-  </li>
-
-
-      
-    
-      
-        
-
-  <li>
-    
-
-  
-  <a href="/study-linux/docs/shell/tutorial/" class="collapsed ">教程</a>
-  
-
-
-    
-
-
-
-
-
-
-  </li>
-
-
-      
-    
-  </ul>
-  
 
 
 
@@ -483,7 +323,7 @@ https://github.com/alex-shpak/hugo-book
     <img src="/study-linux/svg/menu.svg" class="book-icon" alt="Menu" />
   </label>
 
-  <strong>编程规范</strong>
+  <strong>时区</strong>
 
   <label for="toc-control">
     <img src="/study-linux/svg/toc.svg" class="book-icon" alt="Table of Contents" />
@@ -497,7 +337,11 @@ https://github.com/alex-shpak/hugo-book
       
   <nav id="TableOfContents">
   <ul>
-    <li><a href="#编程规范">编程规范</a></li>
+    <li><a href="#时区">时区</a>
+      <ul>
+        <li><a href="#设置时区">设置时区</a></li>
+      </ul>
+    </li>
   </ul>
 </nav>
 
@@ -509,7 +353,33 @@ https://github.com/alex-shpak/hugo-book
 
       
       
-  <article class="markdown"><h1 id="编程规范">编程规范</h1>
+  <article class="markdown"><h1 id="时区">时区</h1>
+<h2 id="设置时区">设置时区</h2>
+<p>CentOS 和 Ubuntu 的时区文件是 /etc/localtime，</p>
+<p>但是在 CentOS7 以后 localtime 变成了一个链接文件</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-shell" data-lang="shell"><span style="color:#f92672">[</span>root@centos7 ~<span style="color:#f92672">]</span><span style="color:#75715e"># ll /etc/localtime</span>
+lrwxrwxrwx <span style="color:#ae81ff">1</span> root root <span style="color:#ae81ff">33</span> Oct <span style="color:#ae81ff">12</span> 11:01 /etc/localtime -&gt; /usr/share/zoneinfo/Asia/Shanghai
+</code></pre></div>
+
+
+
+<div class="book-tabs"><input type="radio" class="hidden" name="tabs-uniqueid" id="tabs-uniqueid-0" checked="checked" />
+  <label for="tabs-uniqueid-0">CentOS6、Ubuntu16</label>
+  <div class="book-tabs-content markdown-inner"><div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-shell" data-lang="shell">$ cp /usr/share/zoneinfo/Asia/Shanghai /etc/localtime
+</code></pre></div></div><input type="radio" class="hidden" name="tabs-uniqueid" id="tabs-uniqueid-1"  />
+  <label for="tabs-uniqueid-1">CentOS7、RHEL7、Scientific Linux 7、Oracle Linux 7</label>
+  <div class="book-tabs-content markdown-inner"><p>最好的方法是使用 timedatectl 命令</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-shell" data-lang="shell">$ timedatectl list-timezones |grep Shanghai    <span style="color:#75715e">#查找中国时区的完整名称</span>
+Asia/Shanghai
+$ timedatectl set-timezone Asia/Shanghai    <span style="color:#75715e">#其他时区以此类推</span>
+</code></pre></div><p>或者直接手动创建软链接</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-shell" data-lang="shell">$ ln -sf /usr/share/zoneinfo/Asia/Shanghai /etc/localtime
+</code></pre></div></div></div>
+
+<p>参考：</p>
+<ul>
+<li><a href="https://www.cnblogs.com/st-jun/p/7737188.html">Linux 修改时区的正确方法</a></li>
+</ul>
 </article>
  
       
@@ -519,14 +389,6 @@ https://github.com/alex-shpak/hugo-book
   <div class="flex justify-between">
 
 
-
-  <div>
-    
-    <a class="flex align-center" href="https://github.com/ikingye/study-linux/commit/f026d11e7cd50b9e509ff2794febb6e9408a557c" title='Last modified by yewang | 2020-04-16' target="_blank" rel="noopener">
-      <img src="/study-linux/svg/calendar.svg" class="book-icon" alt="Calendar" />
-      <span>2020-04-16</span>
-    </a>
-  </div>
 
 
 
@@ -559,7 +421,11 @@ https://github.com/alex-shpak/hugo-book
       
   <nav id="TableOfContents">
   <ul>
-    <li><a href="#编程规范">编程规范</a></li>
+    <li><a href="#时区">时区</a>
+      <ul>
+        <li><a href="#设置时区">设置时区</a></li>
+      </ul>
+    </li>
   </ul>
 </nav>
 
