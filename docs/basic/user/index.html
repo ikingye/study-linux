@@ -6,12 +6,16 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <meta name="description" content="Linux 用户 创建用户 useradd  useradd xxx  不会创建同名目录   useradd -m xxx  会在 /home 目录创建同名文件夹   passwd xxx  adduser  删除用户 userdel xxx  用户组 添加组 groupadd xxx
 删除组 groupdel xxx
- 修改用户主目录 usermod -d /home/users/yewang -u uid yewang usermod -d /home/users/yewang -u 311272 yewang usermod -d /home/users/yewang yewang
-问题：usermod user is currently used by process nohup kill 7282; sleep 2; usermod -d /home/users/yewang yewang &amp;"><meta property="og:title" content="用户" />
+ 修改用户主目录 usermod -d /home/users/yewang -u uid yewang
+问题：usermod user is currently used by process
+uid 获取 id 用户名
+ 修改默认用户目录与默认 shell chmod &#43;w /etc/passwd vi /etc/passwd # id username # yewang:x:311272:100000:yewang:/home/user/yewang:/bin/zsh chmod -w /etc/passwd sudo 免密码   切换到 root 用户"><meta property="og:title" content="用户" />
 <meta property="og:description" content="Linux 用户 创建用户 useradd  useradd xxx  不会创建同名目录   useradd -m xxx  会在 /home 目录创建同名文件夹   passwd xxx  adduser  删除用户 userdel xxx  用户组 添加组 groupadd xxx
 删除组 groupdel xxx
- 修改用户主目录 usermod -d /home/users/yewang -u uid yewang usermod -d /home/users/yewang -u 311272 yewang usermod -d /home/users/yewang yewang
-问题：usermod user is currently used by process nohup kill 7282; sleep 2; usermod -d /home/users/yewang yewang &amp;" />
+ 修改用户主目录 usermod -d /home/users/yewang -u uid yewang
+问题：usermod user is currently used by process
+uid 获取 id 用户名
+ 修改默认用户目录与默认 shell chmod &#43;w /etc/passwd vi /etc/passwd # id username # yewang:x:311272:100000:yewang:/home/user/yewang:/bin/zsh chmod -w /etc/passwd sudo 免密码   切换到 root 用户" />
 <meta property="og:type" content="article" />
 <meta property="og:url" content="https://ikingye.github.io/study-linux/docs/basic/user/" />
 <meta property="article:modified_time" content="2020-05-07T15:46:32+08:00" />
@@ -22,7 +26,7 @@
 <link rel="stylesheet" href="/study-linux/book.min.2b565af4d61986071164f1ead48c719f32bb138a148802dc3943b967fc4f20c6.css" integrity="sha256-K1Za9NYZhgcRZPHq1IxxnzK7E4oUiALcOUO5Z/xPIMY=">
 
 
-<script defer src="/study-linux/en.search.min.52a7093b385701467635910aab14bc663171c4468c8a13d8775d9fba99b99680.js" integrity="sha256-UqcJOzhXAUZ2NZEKqxS8ZjFxxEaMihPYd12fupm5loA="></script>
+<script defer src="/study-linux/en.search.min.9adfbc685aeeceb442349d655a24c8b400bdb4a4159fcbaacc6f995816fbf7f1.js" integrity="sha256-mt&#43;8aFruzrRCNJ1lWiTItAC9tKQVn8uqzG&#43;ZWBb79/E="></script>
 
 <!--
 Made with Book Theme
@@ -357,6 +361,8 @@ https://github.com/alex-shpak/hugo-book
             <li><a href="#uid-获取">uid 获取</a></li>
           </ul>
         </li>
+        <li><a href="#修改默认用户目录与默认-shell">修改默认用户目录与默认 shell</a></li>
+        <li><a href="#sudo-免密码">sudo 免密码</a></li>
       </ul>
     </li>
   </ul>
@@ -398,14 +404,50 @@ https://github.com/alex-shpak/hugo-book
 <p>groupdel xxx</p>
 <hr>
 <h2 id="修改用户主目录">修改用户主目录</h2>
-<p>usermod -d /home/users/yewang -u uid yewang
-usermod -d /home/users/yewang -u 311272 yewang
-usermod -d /home/users/yewang yewang</p>
-<p>问题：usermod user is currently used by process
-nohup kill 7282; sleep 2; usermod -d /home/users/yewang yewang &amp;</p>
+<p>usermod -d /home/users/yewang -u uid yewang</p>
+<p>问题：usermod user is currently used by process</p>
 <h3 id="uid-获取">uid 获取</h3>
 <p>id 用户名</p>
-</article>
+<hr>
+<h2 id="修改默认用户目录与默认-shell">修改默认用户目录与默认 shell</h2>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-shell" data-lang="shell">chmod +w /etc/passwd
+vi /etc/passwd
+
+<span style="color:#75715e"># id username</span>
+<span style="color:#75715e"># yewang:x:311272:100000:yewang:/home/user/yewang:/bin/zsh</span>
+
+chmod -w /etc/passwd
+</code></pre></div><h2 id="sudo-免密码">sudo 免密码</h2>
+<ol>
+<li>
+<p>切换到 root 用户</p>
+</li>
+<li>
+<p>添加 sudo 文件的写权限</p>
+</li>
+</ol>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-shell" data-lang="shell"><span style="color:#75715e"># 添加 sudo 文件的写权限</span>
+chmod u+w /etc/sudoers
+
+vi /etc/sudoers
+</code></pre></div><p>找到这行 root ALL=(ALL) ALL, 在他下面添加 xxx ALL=(ALL) ALL (这里的 xxx 是你的用户名)</p>
+<p>ps: 这里说下你可以 sudoers 添加下面四行中任意一条</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-shell" data-lang="shell"><span style="color:#75715e"># 允许用户 youuser 执行 sudo 命令 (需要输入密码).</span>
+youuser            ALL<span style="color:#f92672">=(</span>ALL<span style="color:#f92672">)</span>                ALL
+
+<span style="color:#75715e"># 允许用户组 youuser 里面的用户执行 sudo 命令 (需要输入密码).</span>
+%youuser           ALL<span style="color:#f92672">=(</span>ALL<span style="color:#f92672">)</span>                ALL
+
+<span style="color:#75715e"># 允许用户 youuser 执行 sudo 命令，并且在执行的时候不输入密码.</span>
+youuser            ALL<span style="color:#f92672">=(</span>ALL<span style="color:#f92672">)</span>                NOPASSWD: ALL
+
+<span style="color:#75715e"># 允许用户组 youuser 里面的用户执行 sudo 命令，并且在执行的时候不输入密码.</span>
+%youuser           ALL<span style="color:#f92672">=(</span>ALL<span style="color:#f92672">)</span>                NOPASSWD: ALL
+</code></pre></div><ol start="4">
+<li>撤销 sudoers 文件写权限，命令:</li>
+</ol>
+<pre><code>chmod u-w /etc/sudoers
+</code></pre></article>
  
       
 
@@ -478,6 +520,8 @@ nohup kill 7282; sleep 2; usermod -d /home/users/yewang yewang &amp;</p>
             <li><a href="#uid-获取">uid 获取</a></li>
           </ul>
         </li>
+        <li><a href="#修改默认用户目录与默认-shell">修改默认用户目录与默认 shell</a></li>
+        <li><a href="#sudo-免密码">sudo 免密码</a></li>
       </ul>
     </li>
   </ul>

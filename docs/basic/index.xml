@@ -17,8 +17,10 @@
       <guid>https://ikingye.github.io/study-linux/docs/basic/user/</guid>
       <description>Linux 用户 创建用户 useradd  useradd xxx  不会创建同名目录   useradd -m xxx  会在 /home 目录创建同名文件夹   passwd xxx  adduser  删除用户 userdel xxx  用户组 添加组 groupadd xxx
 删除组 groupdel xxx
- 修改用户主目录 usermod -d /home/users/yewang -u uid yewang usermod -d /home/users/yewang -u 311272 yewang usermod -d /home/users/yewang yewang
-问题：usermod user is currently used by process nohup kill 7282; sleep 2; usermod -d /home/users/yewang yewang &amp;amp;</description>
+ 修改用户主目录 usermod -d /home/users/yewang -u uid yewang
+问题：usermod user is currently used by process
+uid 获取 id 用户名
+ 修改默认用户目录与默认 shell chmod +w /etc/passwd vi /etc/passwd # id username # yewang:x:311272:100000:yewang:/home/user/yewang:/bin/zsh chmod -w /etc/passwd sudo 免密码   切换到 root 用户</description>
     </item>
     
     <item>
