@@ -4,8 +4,8 @@
 <head>
   <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<meta name="description" content="CentOS "><meta property="og:title" content="CentOS" />
-<meta property="og:description" content="CentOS " />
+<meta name="description" content="CentOS yum 安装本地 rpm 包 rpm -qs | grep jdk yum install -y /xxx/xxx.rpm # localinstall 已过时 # yum localinstall -y /xxx/xxx.rpm "><meta property="og:title" content="CentOS" />
+<meta property="og:description" content="CentOS yum 安装本地 rpm 包 rpm -qs | grep jdk yum install -y /xxx/xxx.rpm # localinstall 已过时 # yum localinstall -y /xxx/xxx.rpm " />
 <meta property="og:type" content="article" />
 <meta property="og:url" content="https://ikingye.github.io/study-linux/docs/distro/CentOS/" />
 <meta property="article:modified_time" content="2020-03-16T14:03:57+08:00" />
@@ -16,7 +16,7 @@
 <link rel="stylesheet" href="/study-linux/book.min.2b565af4d61986071164f1ead48c719f32bb138a148802dc3943b967fc4f20c6.css" integrity="sha256-K1Za9NYZhgcRZPHq1IxxnzK7E4oUiALcOUO5Z/xPIMY=">
 
 
-<script defer src="/study-linux/en.search.min.7ca4465d08b982d01ee78173e1c49f1c78666f9c3d748a44d149e454b30fea62.js" integrity="sha256-fKRGXQi5gtAe54Fz4cSfHHhmb5w9dIpE0UnkVLMP6mI="></script>
+<script defer src="/study-linux/en.search.min.a3045b571f47a60f4250eba5f7048f90e77358d898826d08a8d5f70825bf5b3b.js" integrity="sha256-owRbVx9Hpg9CUOul9wSPkOdzWNiYgm0IqNX3CCW/Wzs="></script>
 
 <!--
 Made with Book Theme
@@ -327,7 +327,15 @@ https://github.com/alex-shpak/hugo-book
       
   <nav id="TableOfContents">
   <ul>
-    <li><a href="#centos">CentOS</a></li>
+    <li><a href="#centos">CentOS</a>
+      <ul>
+        <li><a href="#yum">yum</a>
+          <ul>
+            <li><a href="#安装本地-rpm-包">安装本地 rpm 包</a></li>
+          </ul>
+        </li>
+      </ul>
+    </li>
   </ul>
 </nav>
 
@@ -340,7 +348,15 @@ https://github.com/alex-shpak/hugo-book
       
       
   <article class="markdown"><h1 id="centos">CentOS</h1>
-</article>
+<h2 id="yum">yum</h2>
+<h3 id="安装本地-rpm-包">安装本地 rpm 包</h3>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-shell" data-lang="shell">rpm -qs | grep jdk
+
+yum install -y /xxx/xxx.rpm
+
+<span style="color:#75715e"># localinstall 已过时</span>
+<span style="color:#75715e"># yum localinstall -y /xxx/xxx.rpm</span>
+</code></pre></div></article>
  
       
 
@@ -389,7 +405,15 @@ https://github.com/alex-shpak/hugo-book
       
   <nav id="TableOfContents">
   <ul>
-    <li><a href="#centos">CentOS</a></li>
+    <li><a href="#centos">CentOS</a>
+      <ul>
+        <li><a href="#yum">yum</a>
+          <ul>
+            <li><a href="#安装本地-rpm-包">安装本地 rpm 包</a></li>
+          </ul>
+        </li>
+      </ul>
+    </li>
   </ul>
 </nav>
 

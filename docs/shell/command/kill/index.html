@@ -4,12 +4,14 @@
 <head>
   <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<meta name="description" content="Linux 发行版 Debian Ubuntu  Fedora RHEL (Red Hat Enterprise Linux) CentOS  openSUSE  Arch Linux  Chrome OS "><meta property="og:title" content="发行版" />
-<meta property="og:description" content="" />
-<meta property="og:type" content="website" />
-<meta property="og:url" content="https://ikingye.github.io/study-linux/docs/distro/" />
+<meta name="description" content="kill kill -9 与 kill 的区别  kill 等于 kill -15，是安全的  TERM   kill -9 是不安全的  SIGKILL    kill aka kill -TERM aka kill -15 is the safe and correct way of terminating a process. It&rsquo;s equivalent to safely shutting down a computer.
+kill -9 is the unsafe way of brutally murdering a process. It&rsquo;s equivalent to pulling the power cord, and may cause data corruption."><meta property="og:title" content="kill" />
+<meta property="og:description" content="kill kill -9 与 kill 的区别  kill 等于 kill -15，是安全的  TERM   kill -9 是不安全的  SIGKILL    kill aka kill -TERM aka kill -15 is the safe and correct way of terminating a process. It&rsquo;s equivalent to safely shutting down a computer.
+kill -9 is the unsafe way of brutally murdering a process. It&rsquo;s equivalent to pulling the power cord, and may cause data corruption." />
+<meta property="og:type" content="article" />
+<meta property="og:url" content="https://ikingye.github.io/study-linux/docs/shell/command/kill/" />
 
-<title>发行版 | Linux 学习笔记</title>
+<title>kill | Linux 学习笔记</title>
 <link rel="icon" href="/study-linux/favicon.png" type="image/x-icon">
 
 
@@ -18,7 +20,6 @@
 
 <script defer src="/study-linux/en.search.min.a3045b571f47a60f4250eba5f7048f90e77358d898826d08a8d5f70825bf5b3b.js" integrity="sha256-owRbVx9Hpg9CUOul9wSPkOdzWNiYgm0IqNX3CCW/Wzs="></script>
 
-<link rel="alternate" type="application/rss+xml" href="https://ikingye.github.io/study-linux/docs/distro/index.xml" title="Linux 学习笔记" />
 <!--
 Made with Book Theme
 https://github.com/alex-shpak/hugo-book
@@ -113,12 +114,8 @@ https://github.com/alex-shpak/hugo-book
 
 
 
-
-
-  </li>
-
-
-      
+  
+  <ul>
     
       
         
@@ -127,7 +124,7 @@ https://github.com/alex-shpak/hugo-book
     
 
   
-  <a href="/study-linux/docs/distro/" class="collapsed active">发行版</a>
+  <a href="/study-linux/docs/shell/command/" class="collapsed ">Linux 命令</a>
   
 
 
@@ -143,7 +140,7 @@ https://github.com/alex-shpak/hugo-book
         <li>
 
   
-  <a href="/study-linux/docs/distro/CentOS/" class="">CentOS</a>
+  <a href="/study-linux/docs/shell/command/ps/" class="">ps</a>
   
 
 </li>
@@ -153,7 +150,47 @@ https://github.com/alex-shpak/hugo-book
         <li>
 
   
-  <a href="/study-linux/docs/distro/Ubuntu/" class="">Ubuntu</a>
+  <a href="/study-linux/docs/shell/command/kill/" class="active">kill</a>
+  
+
+</li>
+      
+    
+      
+        <li>
+
+  
+  <a href="/study-linux/docs/shell/command/netcat/" class="">netcat</a>
+  
+
+</li>
+      
+    
+      
+        <li>
+
+  
+  <a href="/study-linux/docs/shell/command/netstat/" class="">netstat</a>
+  
+
+</li>
+      
+    
+      
+        <li>
+
+  
+  <a href="/study-linux/docs/shell/command/telnet/" class="">telnet</a>
+  
+
+</li>
+      
+    
+      
+        <li>
+
+  
+  <a href="/study-linux/docs/shell/command/xargs/" class="">xargs</a>
   
 
 </li>
@@ -161,6 +198,108 @@ https://github.com/alex-shpak/hugo-book
     
   </ul>
   
+
+
+
+  </li>
+
+
+      
+    
+      
+        
+
+  <li>
+    
+
+  
+  <a href="/study-linux/docs/shell/program/" class="collapsed ">Shell 编程</a>
+  
+
+
+    
+
+
+
+
+
+
+  </li>
+
+
+      
+    
+      
+        
+
+  <li>
+    
+
+  
+  <a href="/study-linux/docs/shell/type/" class="collapsed ">Shell 类型</a>
+  
+
+
+    
+
+
+
+
+
+
+  </li>
+
+
+      
+    
+      
+        
+
+  <li>
+    
+
+  
+  <a href="/study-linux/docs/shell/tutorial/" class="collapsed ">教程</a>
+  
+
+
+    
+
+
+
+
+
+
+  </li>
+
+
+      
+    
+  </ul>
+  
+
+
+
+  </li>
+
+
+      
+    
+      
+        
+
+  <li>
+    
+
+  
+  <a href="/study-linux/docs/distro/" class="collapsed ">发行版</a>
+  
+
+
+    
+
+
+
 
 
 
@@ -314,7 +453,7 @@ https://github.com/alex-shpak/hugo-book
     <img src="/study-linux/svg/menu.svg" class="book-icon" alt="Menu" />
   </label>
 
-  <strong>发行版</strong>
+  <strong>kill</strong>
 
   <label for="toc-control">
     <img src="/study-linux/svg/toc.svg" class="book-icon" alt="Table of Contents" />
@@ -328,22 +467,13 @@ https://github.com/alex-shpak/hugo-book
       
   <nav id="TableOfContents">
   <ul>
-    <li><a href="#linux-发行版">Linux 发行版</a>
+    <li><a href="#kill">kill</a>
       <ul>
-        <li><a href="#debianhttpswwwwikiwandcomendebian"><a href="https://www.wikiwand.com/en/Debian">Debian</a></a>
+        <li>
           <ul>
-            <li><a href="#ubuntuhttpswwwwikiwandcomenubuntu_operating_system"><a href="https://www.wikiwand.com/en/Ubuntu_(operating_system)">Ubuntu</a></a></li>
+            <li><a href="#kill--9-与-kill-的区别">kill -9 与 kill 的区别</a></li>
           </ul>
         </li>
-        <li><a href="#fedorahttpswwwwikiwandcomenfedora_operating_system"><a href="https://www.wikiwand.com/en/Fedora_(operating_system)">Fedora</a></a>
-          <ul>
-            <li><a href="#rhel-red-hat-enterprise-linuxhttpswwwwikiwandcomenred_hat_enterprise_linux"><a href="https://www.wikiwand.com/en/Red_Hat_Enterprise_Linux">RHEL (Red Hat Enterprise Linux)</a></a></li>
-            <li><a href="#centoshttpswwwwikiwandcomencentos"><a href="https://www.wikiwand.com/en/CentOS">CentOS</a></a></li>
-          </ul>
-        </li>
-        <li><a href="#opensusehttpswwwwikiwandcomenopensuse"><a href="https://www.wikiwand.com/en/OpenSUSE">openSUSE</a></a></li>
-        <li><a href="#arch-linuxhttpswwwwikiwandcomenarch_linux"><a href="https://www.wikiwand.com/en/Arch_Linux">Arch Linux</a></a></li>
-        <li><a href="#chrome-oshttpswwwwikiwandcomenchrome_os"><a href="https://www.wikiwand.com/en/Chrome_OS">Chrome OS</a></a></li>
       </ul>
     </li>
   </ul>
@@ -357,20 +487,30 @@ https://github.com/alex-shpak/hugo-book
 
       
       
-  <article class="markdown"><h1 id="linux-发行版">Linux 发行版</h1>
-<p><img src="https://cdn.jsdelivr.net/gh/ikingye/imagehost/picgo/20200301140335.png" alt="" /></p>
-<h2 id="debianhttpswwwwikiwandcomendebian"><a href="https://www.wikiwand.com/en/Debian">Debian</a></h2>
-<h3 id="ubuntuhttpswwwwikiwandcomenubuntu_operating_system"><a href="https://www.wikiwand.com/en/Ubuntu_%28operating_system%29">Ubuntu</a></h3>
-<hr>
-<h2 id="fedorahttpswwwwikiwandcomenfedora_operating_system"><a href="https://www.wikiwand.com/en/Fedora_%28operating_system%29">Fedora</a></h2>
-<h3 id="rhel-red-hat-enterprise-linuxhttpswwwwikiwandcomenred_hat_enterprise_linux"><a href="https://www.wikiwand.com/en/Red_Hat_Enterprise_Linux">RHEL (Red Hat Enterprise Linux)</a></h3>
-<h3 id="centoshttpswwwwikiwandcomencentos"><a href="https://www.wikiwand.com/en/CentOS">CentOS</a></h3>
-<hr>
-<h2 id="opensusehttpswwwwikiwandcomenopensuse"><a href="https://www.wikiwand.com/en/OpenSUSE">openSUSE</a></h2>
-<hr>
-<h2 id="arch-linuxhttpswwwwikiwandcomenarch_linux"><a href="https://www.wikiwand.com/en/Arch_Linux">Arch Linux</a></h2>
-<hr>
-<h2 id="chrome-oshttpswwwwikiwandcomenchrome_os"><a href="https://www.wikiwand.com/en/Chrome_OS">Chrome OS</a></h2>
+  <article class="markdown"><h1 id="kill">kill</h1>
+<h3 id="kill--9-与-kill-的区别">kill -9 与 kill 的区别</h3>
+<ul>
+<li>kill 等于 kill -15，是安全的
+<ul>
+<li>TERM</li>
+</ul>
+</li>
+<li>kill -9 是不安全的
+<ul>
+<li>SIGKILL</li>
+</ul>
+</li>
+</ul>
+<p><code>kill</code> aka <code>kill -TERM</code> aka <code>kill -15</code> is the safe and correct way of terminating a process.
+It&rsquo;s equivalent to safely shutting down a computer.</p>
+<p><code>kill -9</code> is the unsafe way of brutally murdering a process.
+It&rsquo;s equivalent to pulling the power cord, and may cause data corruption.</p>
+<p>参考：</p>
+<ul>
+<li><a href="https://stackoverflow.com/questions/43724467/what-is-the-difference-between-kill-and-kill-9">what-is-the-difference-between-kill-and-kill-9</a></li>
+<li><a href="https://askubuntu.com/questions/184071/what-is-the-purpose-of-the-9-option-in-the-kill-command">what-is-the-purpose-of-the-9-option-in-the-kill-command</a></li>
+<li><a href="https://www.cnblogs.com/yucongblog/p/6568374.html">Linux kill -9 和 kill -15 的区别</a></li>
+</ul>
 </article>
  
       
@@ -380,14 +520,6 @@ https://github.com/alex-shpak/hugo-book
   <div class="flex justify-between">
 
 
-
-  <div>
-    
-    <a class="flex align-center" href="https://github.com/ikingye/study-linux/commit/f026d11e7cd50b9e509ff2794febb6e9408a557c" title='Last modified by yewang | 2020-04-16' target="_blank" rel="noopener">
-      <img src="/study-linux/svg/calendar.svg" class="book-icon" alt="Calendar" />
-      <span>2020-04-16</span>
-    </a>
-  </div>
 
 
 
@@ -420,22 +552,13 @@ https://github.com/alex-shpak/hugo-book
       
   <nav id="TableOfContents">
   <ul>
-    <li><a href="#linux-发行版">Linux 发行版</a>
+    <li><a href="#kill">kill</a>
       <ul>
-        <li><a href="#debianhttpswwwwikiwandcomendebian"><a href="https://www.wikiwand.com/en/Debian">Debian</a></a>
+        <li>
           <ul>
-            <li><a href="#ubuntuhttpswwwwikiwandcomenubuntu_operating_system"><a href="https://www.wikiwand.com/en/Ubuntu_(operating_system)">Ubuntu</a></a></li>
+            <li><a href="#kill--9-与-kill-的区别">kill -9 与 kill 的区别</a></li>
           </ul>
         </li>
-        <li><a href="#fedorahttpswwwwikiwandcomenfedora_operating_system"><a href="https://www.wikiwand.com/en/Fedora_(operating_system)">Fedora</a></a>
-          <ul>
-            <li><a href="#rhel-red-hat-enterprise-linuxhttpswwwwikiwandcomenred_hat_enterprise_linux"><a href="https://www.wikiwand.com/en/Red_Hat_Enterprise_Linux">RHEL (Red Hat Enterprise Linux)</a></a></li>
-            <li><a href="#centoshttpswwwwikiwandcomencentos"><a href="https://www.wikiwand.com/en/CentOS">CentOS</a></a></li>
-          </ul>
-        </li>
-        <li><a href="#opensusehttpswwwwikiwandcomenopensuse"><a href="https://www.wikiwand.com/en/OpenSUSE">openSUSE</a></a></li>
-        <li><a href="#arch-linuxhttpswwwwikiwandcomenarch_linux"><a href="https://www.wikiwand.com/en/Arch_Linux">Arch Linux</a></a></li>
-        <li><a href="#chrome-oshttpswwwwikiwandcomenchrome_os"><a href="https://www.wikiwand.com/en/Chrome_OS">Chrome OS</a></a></li>
       </ul>
     </li>
   </ul>

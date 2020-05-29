@@ -63,8 +63,20 @@
   </url>
   
   <url>
+    <loc>https://ikingye.github.io/study-linux/docs/shell/command/kill/</loc>
+  </url>
+  
+  <url>
+    <loc>https://ikingye.github.io/study-linux/docs/shell/command/netcat/</loc>
+  </url>
+  
+  <url>
     <loc>https://ikingye.github.io/study-linux/docs/shell/command/netstat/</loc>
     <lastmod>2020-04-17T00:54:39+08:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://ikingye.github.io/study-linux/docs/shell/command/telnet/</loc>
   </url>
   
   <url>

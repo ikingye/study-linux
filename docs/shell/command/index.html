@@ -17,7 +17,7 @@
 <link rel="stylesheet" href="/study-linux/book.min.2b565af4d61986071164f1ead48c719f32bb138a148802dc3943b967fc4f20c6.css" integrity="sha256-K1Za9NYZhgcRZPHq1IxxnzK7E4oUiALcOUO5Z/xPIMY=">
 
 
-<script defer src="/study-linux/en.search.min.7ca4465d08b982d01ee78173e1c49f1c78666f9c3d748a44d149e454b30fea62.js" integrity="sha256-fKRGXQi5gtAe54Fz4cSfHHhmb5w9dIpE0UnkVLMP6mI="></script>
+<script defer src="/study-linux/en.search.min.a3045b571f47a60f4250eba5f7048f90e77358d898826d08a8d5f70825bf5b3b.js" integrity="sha256-owRbVx9Hpg9CUOul9wSPkOdzWNiYgm0IqNX3CCW/Wzs="></script>
 
 <link rel="alternate" type="application/rss+xml" href="https://ikingye.github.io/study-linux/docs/shell/command/index.xml" title="Linux 学习笔记" />
 <!--
@@ -150,7 +150,37 @@ https://github.com/alex-shpak/hugo-book
         <li>
 
   
+  <a href="/study-linux/docs/shell/command/kill/" class="">kill</a>
+  
+
+</li>
+      
+    
+      
+        <li>
+
+  
+  <a href="/study-linux/docs/shell/command/netcat/" class="">netcat</a>
+  
+
+</li>
+      
+    
+      
+        <li>
+
+  
   <a href="/study-linux/docs/shell/command/netstat/" class="">netstat</a>
+  
+
+</li>
+      
+    
+      
+        <li>
+
+  
+  <a href="/study-linux/docs/shell/command/telnet/" class="">telnet</a>
   
 
 </li>
@@ -452,6 +482,21 @@ https://github.com/alex-shpak/hugo-book
             <li><a href="#带宽">带宽</a></li>
           </ul>
         </li>
+        <li><a href="#查看运行信息">查看运行信息</a>
+          <ul>
+            <li><a href="#lsof">lsof</a>
+              <ul>
+                <li><a href="#文件删除但是磁盘没有释放">文件删除，但是磁盘没有释放</a></li>
+                <li><a href="#进程">进程</a></li>
+              </ul>
+            </li>
+          </ul>
+        </li>
+        <li><a href="#参考">参考</a>
+          <ul>
+            <li><a href="#linux-工具快速教程httpslinuxtools-rstreadthedocsiozh_cnlatestindexhtml"><a href="https://linuxtools-rst.readthedocs.io/zh_CN/latest/index.html">Linux 工具快速教程</a></a></li>
+          </ul>
+        </li>
       </ul>
     </li>
   </ul>
@@ -512,6 +557,36 @@ du -m --max-depth<span style="color:#f92672">=</span><span style="color:#ae81ff"
 <div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-shell" data-lang="shell">ifconfig
 sudo ethtool 网卡名 | grep Speed
 </code></pre></div><p><img src="https://cdn.jsdelivr.net/gh/ikingye/imagehost/picgo/20200529161838.png" alt="" /></p>
+<hr>
+<h2 id="查看运行信息">查看运行信息</h2>
+<h3 id="lsof">lsof</h3>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-shell" data-lang="shell"><span style="color:#75715e"># 列出所有 tcp 网络连接信息</span>
+lsof  -i tcp
+
+<span style="color:#75715e"># 列出所有 udp 网络连接信息</span>
+lsof  -i udp
+
+<span style="color:#75715e"># 列出谁在使用某个端口</span>
+lsof -i :3306
+
+<span style="color:#75715e"># 列出谁在使用某个特定的 udp 端口</span>
+lsof -i udp:55
+
+<span style="color:#75715e"># 列出特定的 tcp 端口</span>
+lsof -i tcp:80
+</code></pre></div><h4 id="文件删除但是磁盘没有释放">文件删除，但是磁盘没有释放</h4>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-shell" data-lang="shell">lsof | grep deleted
+</code></pre></div><h4 id="进程">进程</h4>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-shell" data-lang="shell"><span style="color:#75715e"># 查看文件被哪个进程占用</span>
+lsof /path/to/file
+
+<span style="color:#75715e"># 怎么查看进程打开的文件</span>
+lsof -p pid
+
+lsof -c cmd
+</code></pre></div><hr>
+<h2 id="参考">参考</h2>
+<h3 id="linux-工具快速教程httpslinuxtools-rstreadthedocsiozh_cnlatestindexhtml"><a href="https://linuxtools-rst.readthedocs.io/zh_CN/latest/index.html">Linux 工具快速教程</a></h3>
 </article>
  
       
@@ -574,6 +649,21 @@ sudo ethtool 网卡名 | grep Speed
             <li><a href="#磁盘">磁盘</a></li>
             <li><a href="#文件类型">文件类型</a></li>
             <li><a href="#带宽">带宽</a></li>
+          </ul>
+        </li>
+        <li><a href="#查看运行信息">查看运行信息</a>
+          <ul>
+            <li><a href="#lsof">lsof</a>
+              <ul>
+                <li><a href="#文件删除但是磁盘没有释放">文件删除，但是磁盘没有释放</a></li>
+                <li><a href="#进程">进程</a></li>
+              </ul>
+            </li>
+          </ul>
+        </li>
+        <li><a href="#参考">参考</a>
+          <ul>
+            <li><a href="#linux-工具快速教程httpslinuxtools-rstreadthedocsiozh_cnlatestindexhtml"><a href="https://linuxtools-rst.readthedocs.io/zh_CN/latest/index.html">Linux 工具快速教程</a></a></li>
           </ul>
         </li>
       </ul>
