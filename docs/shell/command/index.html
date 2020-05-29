@@ -4,7 +4,8 @@
 <head>
   <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<meta name="description" content="Linux 命令 "><meta property="og:title" content="Linux 命令" />
+<meta name="description" content="Linux 命令 查看服务器信息 CPU # 物理 cpu 个数 cat /proc/cpuinfo| grep &#39;physical id&#39; | sort | uniq | wc -l # 每个物理 cpu 的核心数 cat /proc/cpuinfo| grep &#39;core id&#39; | sort | uniq | wc -l # 逻辑 cpu 个数（线程数） cat /proc/cpuinfo| grep &#39;processor&#39; | sort | uniq | wc -l 系统版本 # 操作系统版本 cat /etc/issue cat /etc/*-release # 系统内核 uname -a cat /proc/version Linux 内核版本 参考：
+ The Linux Kernel Archives Linux 内核 Linux 内核开发指南  磁盘 # 目录空间大小排行 du -m --max-depth=2 | sort -rn | head -10 文件类型 文件类型分为 p、d、l、s、c、b 和 -："><meta property="og:title" content="Linux 命令" />
 <meta property="og:description" content="" />
 <meta property="og:type" content="website" />
 <meta property="og:url" content="https://ikingye.github.io/study-linux/docs/shell/command/" />
@@ -16,7 +17,7 @@
 <link rel="stylesheet" href="/study-linux/book.min.2b565af4d61986071164f1ead48c719f32bb138a148802dc3943b967fc4f20c6.css" integrity="sha256-K1Za9NYZhgcRZPHq1IxxnzK7E4oUiALcOUO5Z/xPIMY=">
 
 
-<script defer src="/study-linux/en.search.min.9adfbc685aeeceb442349d655a24c8b400bdb4a4159fcbaacc6f995816fbf7f1.js" integrity="sha256-mt&#43;8aFruzrRCNJ1lWiTItAC9tKQVn8uqzG&#43;ZWBb79/E="></script>
+<script defer src="/study-linux/en.search.min.7ca4465d08b982d01ee78173e1c49f1c78666f9c3d748a44d149e454b30fea62.js" integrity="sha256-fKRGXQi5gtAe54Fz4cSfHHhmb5w9dIpE0UnkVLMP6mI="></script>
 
 <link rel="alternate" type="application/rss+xml" href="https://ikingye.github.io/study-linux/docs/shell/command/index.xml" title="Linux 学习笔记" />
 <!--
@@ -436,7 +437,23 @@ https://github.com/alex-shpak/hugo-book
       
   <nav id="TableOfContents">
   <ul>
-    <li><a href="#linux-命令">Linux 命令</a></li>
+    <li><a href="#linux-命令">Linux 命令</a>
+      <ul>
+        <li><a href="#查看服务器信息">查看服务器信息</a>
+          <ul>
+            <li><a href="#cpu">CPU</a></li>
+            <li><a href="#系统版本">系统版本</a>
+              <ul>
+                <li><a href="#linux-内核版本">Linux 内核版本</a></li>
+              </ul>
+            </li>
+            <li><a href="#磁盘">磁盘</a></li>
+            <li><a href="#文件类型">文件类型</a></li>
+            <li><a href="#带宽">带宽</a></li>
+          </ul>
+        </li>
+      </ul>
+    </li>
   </ul>
 </nav>
 
@@ -449,6 +466,52 @@ https://github.com/alex-shpak/hugo-book
       
       
   <article class="markdown"><h1 id="linux-命令">Linux 命令</h1>
+<h2 id="查看服务器信息">查看服务器信息</h2>
+<h3 id="cpu">CPU</h3>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-shell" data-lang="shell"><span style="color:#75715e"># 物理 cpu 个数</span>
+cat /proc/cpuinfo| grep <span style="color:#e6db74">&#39;physical id&#39;</span> | sort | uniq | wc -l
+<span style="color:#75715e"># 每个物理 cpu 的核心数</span>
+cat /proc/cpuinfo| grep <span style="color:#e6db74">&#39;core id&#39;</span> | sort | uniq | wc -l
+<span style="color:#75715e"># 逻辑 cpu 个数（线程数）</span>
+cat /proc/cpuinfo| grep <span style="color:#e6db74">&#39;processor&#39;</span> | sort | uniq | wc -l
+</code></pre></div><h3 id="系统版本">系统版本</h3>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-shell" data-lang="shell"><span style="color:#75715e"># 操作系统版本</span>
+cat /etc/issue
+cat /etc/*-release
+
+<span style="color:#75715e"># 系统内核</span>
+uname -a
+cat /proc/version
+</code></pre></div><h4 id="linux-内核版本">Linux 内核版本</h4>
+<p><img src="https://cdn.jsdelivr.net/gh/ikingye/imagehost/picgo/20200529161448.png" alt="" /></p>
+<p>参考：</p>
+<ul>
+<li><a href="https://www.kernel.org/">The Linux Kernel Archives</a></li>
+<li><a href="https://www.wikiwand.com/zh-cn/Linux%E5%86%85%E6%A0%B8">Linux 内核</a></li>
+<li><a href="https://www.kernel.org/doc/html/latest/translations/zh_CN/index.html">Linux 内核开发指南</a></li>
+</ul>
+<h3 id="磁盘">磁盘</h3>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-shell" data-lang="shell"><span style="color:#75715e"># 目录空间大小排行</span>
+du -m --max-depth<span style="color:#f92672">=</span><span style="color:#ae81ff">2</span> | sort -rn | head -10
+</code></pre></div><h3 id="文件类型">文件类型</h3>
+<p>文件类型分为 p、d、l、s、c、b 和 -：</p>
+<ul>
+<li>
+<ul>
+<li>表示普通文件</li>
+</ul>
+</li>
+<li>p 表示命名管道文件</li>
+<li>d 表示目录文件</li>
+<li>l 表示符号连接文件</li>
+<li>s 表示 socket 文件</li>
+<li>c 表示字符设备文件</li>
+<li>b 表示块设备文件</li>
+</ul>
+<h3 id="带宽">带宽</h3>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-shell" data-lang="shell">ifconfig
+sudo ethtool 网卡名 | grep Speed
+</code></pre></div><p><img src="https://cdn.jsdelivr.net/gh/ikingye/imagehost/picgo/20200529161838.png" alt="" /></p>
 </article>
  
       
@@ -498,7 +561,23 @@ https://github.com/alex-shpak/hugo-book
       
   <nav id="TableOfContents">
   <ul>
-    <li><a href="#linux-命令">Linux 命令</a></li>
+    <li><a href="#linux-命令">Linux 命令</a>
+      <ul>
+        <li><a href="#查看服务器信息">查看服务器信息</a>
+          <ul>
+            <li><a href="#cpu">CPU</a></li>
+            <li><a href="#系统版本">系统版本</a>
+              <ul>
+                <li><a href="#linux-内核版本">Linux 内核版本</a></li>
+              </ul>
+            </li>
+            <li><a href="#磁盘">磁盘</a></li>
+            <li><a href="#文件类型">文件类型</a></li>
+            <li><a href="#带宽">带宽</a></li>
+          </ul>
+        </li>
+      </ul>
+    </li>
   </ul>
 </nav>
 
