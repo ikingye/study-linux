@@ -4,8 +4,12 @@
 <head>
   <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<meta name="description" content="CentOS yum 安装本地 rpm 包 rpm -qs | grep jdk yum install -y /xxx/xxx.rpm # localinstall 已过时 # yum localinstall -y /xxx/xxx.rpm "><meta property="og:title" content="CentOS" />
-<meta property="og:description" content="CentOS yum 安装本地 rpm 包 rpm -qs | grep jdk yum install -y /xxx/xxx.rpm # localinstall 已过时 # yum localinstall -y /xxx/xxx.rpm " />
+<meta name="description" content="CentOS yum 安装本地 rpm 包 rpm -qs | grep jdk yum install -y /xxx/xxx.rpm # localinstall 已过时 # yum localinstall -y /xxx/xxx.rpm 第三方源 EPEL Extra Packages for Enterprise Linux
+EPEL is a Fedora Special Interest Group that creates, maintains, and manages a high quality set of additional packages for Enterprise Linux, including, but not limited to, Red Hat Enterprise Linux (RHEL), CentOS and Scientific Linux (SL), Oracle Linux (OL).
+yum install -y epel-release "><meta property="og:title" content="CentOS" />
+<meta property="og:description" content="CentOS yum 安装本地 rpm 包 rpm -qs | grep jdk yum install -y /xxx/xxx.rpm # localinstall 已过时 # yum localinstall -y /xxx/xxx.rpm 第三方源 EPEL Extra Packages for Enterprise Linux
+EPEL is a Fedora Special Interest Group that creates, maintains, and manages a high quality set of additional packages for Enterprise Linux, including, but not limited to, Red Hat Enterprise Linux (RHEL), CentOS and Scientific Linux (SL), Oracle Linux (OL).
+yum install -y epel-release " />
 <meta property="og:type" content="article" />
 <meta property="og:url" content="https://ikingye.github.io/study-linux/docs/distro/CentOS/" />
 <meta property="article:modified_time" content="2020-05-29T20:40:23+08:00" />
@@ -16,7 +20,7 @@
 <link rel="stylesheet" href="/study-linux/book.min.2b565af4d61986071164f1ead48c719f32bb138a148802dc3943b967fc4f20c6.css" integrity="sha256-K1Za9NYZhgcRZPHq1IxxnzK7E4oUiALcOUO5Z/xPIMY=">
 
 
-<script defer src="/study-linux/en.search.min.a3045b571f47a60f4250eba5f7048f90e77358d898826d08a8d5f70825bf5b3b.js" integrity="sha256-owRbVx9Hpg9CUOul9wSPkOdzWNiYgm0IqNX3CCW/Wzs="></script>
+<script defer src="/study-linux/en.search.min.8d85b2564df668cf9c8b3bd90b6320a6ac997c3cf9bb9fac3e9966ca8255a6a4.js" integrity="sha256-jYWyVk32aM&#43;cizvZC2MgpqyZfDz5u5&#43;sPplmyoJVpqQ="></script>
 
 <!--
 Made with Book Theme
@@ -332,6 +336,11 @@ https://github.com/alex-shpak/hugo-book
         <li><a href="#yum">yum</a>
           <ul>
             <li><a href="#安装本地-rpm-包">安装本地 rpm 包</a></li>
+            <li><a href="#第三方源">第三方源</a>
+              <ul>
+                <li><a href="#epelhttpsfedoraprojectorgwikiepel"><a href="https://fedoraproject.org/wiki/EPEL">EPEL</a></a></li>
+              </ul>
+            </li>
           </ul>
         </li>
       </ul>
@@ -356,6 +365,17 @@ yum install -y /xxx/xxx.rpm
 
 <span style="color:#75715e"># localinstall 已过时</span>
 <span style="color:#75715e"># yum localinstall -y /xxx/xxx.rpm</span>
+</code></pre></div><h3 id="第三方源">第三方源</h3>
+<h4 id="epelhttpsfedoraprojectorgwikiepel"><a href="https://fedoraproject.org/wiki/EPEL">EPEL</a></h4>
+<p><code>Extra Packages for Enterprise Linux</code></p>
+<p><code>EPEL</code> is a Fedora Special Interest Group
+that creates, maintains, and manages a high quality set of additional packages for Enterprise Linux,
+including, but not limited to, 
+<a href="https://fedoraproject.org/wiki/Red_Hat_Enterprise_Linux" title="Red Hat Enterprise Linux">Red Hat Enterprise Linux</a> (RHEL),
+CentOS
+and Scientific Linux (SL),
+Oracle Linux (OL).</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-shell" data-lang="shell">yum install -y epel-release
 </code></pre></div></article>
  
       
@@ -410,6 +430,11 @@ yum install -y /xxx/xxx.rpm
         <li><a href="#yum">yum</a>
           <ul>
             <li><a href="#安装本地-rpm-包">安装本地 rpm 包</a></li>
+            <li><a href="#第三方源">第三方源</a>
+              <ul>
+                <li><a href="#epelhttpsfedoraprojectorgwikiepel"><a href="https://fedoraproject.org/wiki/EPEL">EPEL</a></a></li>
+              </ul>
+            </li>
           </ul>
         </li>
       </ul>
