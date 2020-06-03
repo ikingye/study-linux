@@ -4,12 +4,12 @@
 <head>
   <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<meta name="description" content="CentOS yum 安装本地 rpm 包 rpm -qs | grep jdk yum install -y /xxx/xxx.rpm # localinstall 已过时 # yum localinstall -y /xxx/xxx.rpm 第三方源 EPEL Extra Packages for Enterprise Linux
-EPEL is a Fedora Special Interest Group that creates, maintains, and manages a high quality set of additional packages for Enterprise Linux, including, but not limited to, Red Hat Enterprise Linux (RHEL), CentOS and Scientific Linux (SL), Oracle Linux (OL).
-yum install -y epel-release "><meta property="og:title" content="CentOS" />
-<meta property="og:description" content="CentOS yum 安装本地 rpm 包 rpm -qs | grep jdk yum install -y /xxx/xxx.rpm # localinstall 已过时 # yum localinstall -y /xxx/xxx.rpm 第三方源 EPEL Extra Packages for Enterprise Linux
-EPEL is a Fedora Special Interest Group that creates, maintains, and manages a high quality set of additional packages for Enterprise Linux, including, but not limited to, Red Hat Enterprise Linux (RHEL), CentOS and Scientific Linux (SL), Oracle Linux (OL).
-yum install -y epel-release " />
+<meta name="description" content="CentOS yum Yum（Yellow dog Updater, Modified）是由 Duke University 团队修改 Yellow Dog Linux 的 Yellow Dog Updater 开发而成，是一个基于 RPM 包管理的字符前端软件包管理器。能够从指定的服务器自动下载 RPM 包并且安装，可以处理依赖性关系，并且一次安装所有依赖的软件包，无须繁琐地一次次下载、安装。被 Yellow Dog Linux 本身，以及 Fedora、Red Hat Enterprise Linux 采用。
+安装本地 rpm 包 rpm -qs | grep jdk yum install -y /xxx/xxx.rpm # localinstall 已过时 # yum localinstall -y /xxx/xxx.rpm 第三方源 EPEL Extra Packages for Enterprise Linux
+EPEL is a Fedora Special Interest Group that creates, maintains, and manages a high quality set of additional packages for Enterprise Linux, including, but not limited to, Red Hat Enterprise Linux (RHEL), CentOS and Scientific Linux (SL), Oracle Linux (OL)."><meta property="og:title" content="CentOS" />
+<meta property="og:description" content="CentOS yum Yum（Yellow dog Updater, Modified）是由 Duke University 团队修改 Yellow Dog Linux 的 Yellow Dog Updater 开发而成，是一个基于 RPM 包管理的字符前端软件包管理器。能够从指定的服务器自动下载 RPM 包并且安装，可以处理依赖性关系，并且一次安装所有依赖的软件包，无须繁琐地一次次下载、安装。被 Yellow Dog Linux 本身，以及 Fedora、Red Hat Enterprise Linux 采用。
+安装本地 rpm 包 rpm -qs | grep jdk yum install -y /xxx/xxx.rpm # localinstall 已过时 # yum localinstall -y /xxx/xxx.rpm 第三方源 EPEL Extra Packages for Enterprise Linux
+EPEL is a Fedora Special Interest Group that creates, maintains, and manages a high quality set of additional packages for Enterprise Linux, including, but not limited to, Red Hat Enterprise Linux (RHEL), CentOS and Scientific Linux (SL), Oracle Linux (OL)." />
 <meta property="og:type" content="article" />
 <meta property="og:url" content="https://ikingye.github.io/study-linux/docs/distro/CentOS/" />
 <meta property="article:modified_time" content="2020-06-02T11:36:50+08:00" />
@@ -20,7 +20,7 @@ yum install -y epel-release " />
 <link rel="stylesheet" href="/study-linux/book.min.2b565af4d61986071164f1ead48c719f32bb138a148802dc3943b967fc4f20c6.css" integrity="sha256-K1Za9NYZhgcRZPHq1IxxnzK7E4oUiALcOUO5Z/xPIMY=">
 
 
-<script defer src="/study-linux/en.search.min.8d85b2564df668cf9c8b3bd90b6320a6ac997c3cf9bb9fac3e9966ca8255a6a4.js" integrity="sha256-jYWyVk32aM&#43;cizvZC2MgpqyZfDz5u5&#43;sPplmyoJVpqQ="></script>
+<script defer src="/study-linux/en.search.min.5dd4f74802f29f9a724356d419799d1f635cbc47acb0c207ea517bd387b9d231.js" integrity="sha256-XdT3SALyn5pyQ1bUGXmdH2NcvEessMIH6lF704e50jE="></script>
 
 <!--
 Made with Book Theme
@@ -333,7 +333,7 @@ https://github.com/alex-shpak/hugo-book
   <ul>
     <li><a href="#centos">CentOS</a>
       <ul>
-        <li><a href="#yum">yum</a>
+        <li><a href="#yumhttpswwwwikiwandcomzh-cnyellowdog_updater_modified"><a href="https://www.wikiwand.com/zh-cn/Yellowdog_Updater,_Modified">yum</a></a>
           <ul>
             <li><a href="#安装本地-rpm-包">安装本地 rpm 包</a></li>
             <li><a href="#第三方源">第三方源</a>
@@ -357,7 +357,8 @@ https://github.com/alex-shpak/hugo-book
       
       
   <article class="markdown"><h1 id="centos">CentOS</h1>
-<h2 id="yum">yum</h2>
+<h2 id="yumhttpswwwwikiwandcomzh-cnyellowdog_updater_modified"><a href="https://www.wikiwand.com/zh-cn/Yellowdog_Updater,_Modified">yum</a></h2>
+<p>Yum（Yellow dog Updater, Modified）是由  <a href="https://www.wikiwand.com/zh-cn/Duke_University" title="Duke University">Duke University</a>  团队修改  <a href="https://www.wikiwand.com/zh-cn/Yellow_Dog_Linux">Yellow Dog Linux</a>  的 Yellow Dog Updater 开发而成，是一个基于  <a href="https://www.wikiwand.com/zh-cn/RPM" title="RPM">RPM</a>  包管理的字符前端软件包管理器。能够从指定的服务器自动下载 RPM 包并且安装，可以处理依赖性关系，并且一次安装所有依赖的软件包，无须繁琐地一次次下载、安装。被  <a href="https://www.wikiwand.com/zh-cn/Yellow_Dog_Linux">Yellow Dog Linux</a>  本身，以及  <a href="https://www.wikiwand.com/zh-cn/Fedora" title="Fedora">Fedora</a>、<a href="https://www.wikiwand.com/zh-cn/Red_Hat_Enterprise_Linux" title="Red Hat Enterprise Linux">Red Hat Enterprise Linux</a>  采用。</p>
 <h3 id="安装本地-rpm-包">安装本地 rpm 包</h3>
 <div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-shell" data-lang="shell">rpm -qs | grep jdk
 
@@ -427,7 +428,7 @@ Oracle Linux (OL).</p>
   <ul>
     <li><a href="#centos">CentOS</a>
       <ul>
-        <li><a href="#yum">yum</a>
+        <li><a href="#yumhttpswwwwikiwandcomzh-cnyellowdog_updater_modified"><a href="https://www.wikiwand.com/zh-cn/Yellowdog_Updater,_Modified">yum</a></a>
           <ul>
             <li><a href="#安装本地-rpm-包">安装本地 rpm 包</a></li>
             <li><a href="#第三方源">第三方源</a>
