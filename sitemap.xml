@@ -23,11 +23,6 @@
   </url>
   
   <url>
-    <loc>https://ikingye.github.io/study-linux/docs/appendix/tutorial/</loc>
-    <lastmod>2020-04-17T00:54:39+08:00</lastmod>
-  </url>
-  
-  <url>
     <loc>https://ikingye.github.io/study-linux/docs/shell/program/practice/spec/baidu/</loc>
     <lastmod>2020-04-16T23:25:25+08:00</lastmod>
   </url>
@@ -90,6 +85,11 @@
   <url>
     <loc>https://ikingye.github.io/study-linux/docs/shell/type/zsh/</loc>
     <lastmod>2020-03-16T14:03:57+08:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://ikingye.github.io/study-linux/docs/appendix/tutorial/</loc>
+    <lastmod>2020-04-17T00:54:39+08:00</lastmod>
   </url>
   
   <url>
