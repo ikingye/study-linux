@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>1.2 发行版 on Linux 学习笔记</title>
+    <link>https://ikingye.github.io/study-linux/docs/basic/distro/</link>
+    <description>Recent content in 1.2 发行版 on Linux 学习笔记</description>
+    <generator>Hugo -- gohugo.io</generator>
+    
+	<atom:link href="https://ikingye.github.io/study-linux/docs/basic/distro/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>1.2.1 CentOS</title>
+      <link>https://ikingye.github.io/study-linux/docs/basic/distro/CentOS/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://ikingye.github.io/study-linux/docs/basic/distro/CentOS/</guid>
+      <description>CentOS yum Yum（Yellow dog Updater, Modified）是由 Duke University 团队修改 Yellow Dog Linux 的 Yellow Dog Updater 开发而成，是一个基于 RPM 包管理的字符前端软件包管理器。能够从指定的服务器自动下载 RPM 包并且安装，可以处理依赖性关系，并且一次安装所有依赖的软件包，无须繁琐地一次次下载、安装。被 Yellow Dog Linux 本身，以及 Fedora、Red Hat Enterprise Linux 采用。
+安装本地 rpm 包 rpm -qs | grep jdk yum install -y /xxx/xxx.rpm # localinstall 已过时 # yum localinstall -y /xxx/xxx.rpm 第三方源 EPEL Extra Packages for Enterprise Linux
+EPEL is a Fedora Special Interest Group that creates, maintains, and manages a high quality set of additional packages for Enterprise Linux, including, but not limited to, Red Hat Enterprise Linux (RHEL), CentOS and Scientific Linux (SL), Oracle Linux (OL).</description>
+    </item>
+    
+    <item>
+      <title>1.2.2 Ubuntu</title>
+      <link>https://ikingye.github.io/study-linux/docs/basic/distro/Ubuntu/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://ikingye.github.io/study-linux/docs/basic/distro/Ubuntu/</guid>
+      <description>CentOS </description>
+    </item>
+    
+  </channel>
+</rss>

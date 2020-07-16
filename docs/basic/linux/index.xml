@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>1.1 Linux on Linux 学习笔记</title>
+    <link>https://ikingye.github.io/study-linux/docs/basic/linux/</link>
+    <description>Recent content in 1.1 Linux on Linux 学习笔记</description>
+    <generator>Hugo -- gohugo.io</generator>
+    
+	<atom:link href="https://ikingye.github.io/study-linux/docs/basic/linux/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>用户</title>
+      <link>https://ikingye.github.io/study-linux/docs/basic/linux/user/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://ikingye.github.io/study-linux/docs/basic/linux/user/</guid>
+      <description>Linux 用户 创建用户 useradd  useradd xxx  不会创建同名目录   useradd -m xxx  会在 /home 目录创建同名文件夹   passwd xxx  adduser  删除用户 userdel xxx  用户组 添加组 groupadd xxx
+删除组 groupdel xxx
+ 修改用户主目录 usermod -d /home/users/yewang -u uid yewang
+问题：usermod user is currently used by process
+uid 获取 id 用户名
+ 修改默认用户目录与默认 shell chmod +w /etc/passwd vi /etc/passwd # id username # yewang:x:311272:100000:yewang:/home/user/yewang:/bin/zsh chmod -w /etc/passwd sudo 免密码   切换到 root 用户</description>
+    </item>
+    
+    <item>
+      <title>时区</title>
+      <link>https://ikingye.github.io/study-linux/docs/basic/linux/timezone/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://ikingye.github.io/study-linux/docs/basic/linux/timezone/</guid>
+      <description>时区 设置时区 CentOS 和 Ubuntu 的时区文件是 /etc/localtime，
+但是在 CentOS7 以后 localtime 变成了一个链接文件
+[root@centos7 ~]# ll /etc/localtime lrwxrwxrwx 1 root root 33 Oct 12 11:01 /etc/localtime -&amp;gt; /usr/share/zoneinfo/Asia/Shanghai  CentOS6、Ubuntu16 $ cp /usr/share/zoneinfo/Asia/Shanghai /etc/localtime CentOS7、RHEL7、Scientific Linux 7、Oracle Linux 7 最好的方法是使用 timedatectl 命令
+$ timedatectl list-timezones |grep Shanghai #查找中国时区的完整名称 Asia/Shanghai $ timedatectl set-timezone Asia/Shanghai #其他时区以此类推 或者直接手动创建软链接
+$ ln -sf /usr/share/zoneinfo/Asia/Shanghai /etc/localtime  参考：
+ Linux 修改时区的正确方法  </description>
+    </item>
+    
+  </channel>
+</rss>

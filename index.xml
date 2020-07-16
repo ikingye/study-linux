@@ -10,63 +10,30 @@
     
     
     <item>
-      <title>CentOS</title>
-      <link>https://ikingye.github.io/study-linux/docs/distro/CentOS/</link>
-      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      
-      <guid>https://ikingye.github.io/study-linux/docs/distro/CentOS/</guid>
-      <description>CentOS yum Yum（Yellow dog Updater, Modified）是由 Duke University 团队修改 Yellow Dog Linux 的 Yellow Dog Updater 开发而成，是一个基于 RPM 包管理的字符前端软件包管理器。能够从指定的服务器自动下载 RPM 包并且安装，可以处理依赖性关系，并且一次安装所有依赖的软件包，无须繁琐地一次次下载、安装。被 Yellow Dog Linux 本身，以及 Fedora、Red Hat Enterprise Linux 采用。
-安装本地 rpm 包 rpm -qs | grep jdk yum install -y /xxx/xxx.rpm # localinstall 已过时 # yum localinstall -y /xxx/xxx.rpm 第三方源 EPEL Extra Packages for Enterprise Linux
-EPEL is a Fedora Special Interest Group that creates, maintains, and manages a high quality set of additional packages for Enterprise Linux, including, but not limited to, Red Hat Enterprise Linux (RHEL), CentOS and Scientific Linux (SL), Oracle Linux (OL).</description>
-    </item>
-    
-    <item>
       <title>ps</title>
-      <link>https://ikingye.github.io/study-linux/docs/shell/command/ps/</link>
+      <link>https://ikingye.github.io/study-linux/docs/basic/shell/command/ps/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>https://ikingye.github.io/study-linux/docs/shell/command/ps/</guid>
+      <guid>https://ikingye.github.io/study-linux/docs/basic/shell/command/ps/</guid>
       <description>ps </description>
     </item>
     
     <item>
       <title>sh</title>
-      <link>https://ikingye.github.io/study-linux/docs/shell/type/sh/</link>
+      <link>https://ikingye.github.io/study-linux/docs/basic/shell/type/sh/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>https://ikingye.github.io/study-linux/docs/shell/type/sh/</guid>
+      <guid>https://ikingye.github.io/study-linux/docs/basic/shell/type/sh/</guid>
       <description>sh 标记为 #!/bin/sh 的脚本不应使用任何 POSIX 没有规定的特性 (如 let 等命令，但 #!/bin/bash 可以)。</description>
     </item>
     
     <item>
-      <title>百度 Shell 编程规范</title>
-      <link>https://ikingye.github.io/study-linux/docs/shell/program/practice/spec/baidu/</link>
-      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      
-      <guid>https://ikingye.github.io/study-linux/docs/shell/program/practice/spec/baidu/</guid>
-      <description>  本文档适用于 Bash 3.0 及以上版本，不包括 4.0 新增特性
-  文档是 Bash 编程规范，不是 POSIX Shell 编程规范
-  章节分类和内容组织依据 Google Shell Style Guide
-  参考文档
- Google Shell Style Guide Chromium Project Shell Style Guidelines     </description>
-    </item>
-    
-    <item>
       <title>Bash</title>
-      <link>https://ikingye.github.io/study-linux/docs/shell/type/bash/</link>
+      <link>https://ikingye.github.io/study-linux/docs/basic/shell/type/bash/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>https://ikingye.github.io/study-linux/docs/shell/type/bash/</guid>
+      <guid>https://ikingye.github.io/study-linux/docs/basic/shell/type/bash/</guid>
       <description>Bash </description>
-    </item>
-    
-    <item>
-      <title>Ubuntu</title>
-      <link>https://ikingye.github.io/study-linux/docs/distro/Ubuntu/</link>
-      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      
-      <guid>https://ikingye.github.io/study-linux/docs/distro/Ubuntu/</guid>
-      <description>CentOS </description>
     </item>
     
     <item>
@@ -89,38 +56,38 @@ EPEL is a Fedora Special Interest Group that creates, maintains, and manages a h
     
     <item>
       <title>kill</title>
-      <link>https://ikingye.github.io/study-linux/docs/shell/command/kill/</link>
+      <link>https://ikingye.github.io/study-linux/docs/basic/shell/command/kill/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>https://ikingye.github.io/study-linux/docs/shell/command/kill/</guid>
+      <guid>https://ikingye.github.io/study-linux/docs/basic/shell/command/kill/</guid>
       <description>kill kill -9 与 kill 的区别  kill 等于 kill -15，是安全的  TERM   kill -9 是不安全的  SIGKILL    kill aka kill -TERM aka kill -15 is the safe and correct way of terminating a process. It&amp;rsquo;s equivalent to safely shutting down a computer.
 kill -9 is the unsafe way of brutally murdering a process. It&amp;rsquo;s equivalent to pulling the power cord, and may cause data corruption.</description>
     </item>
     
     <item>
       <title>netcat</title>
-      <link>https://ikingye.github.io/study-linux/docs/shell/command/netcat/</link>
+      <link>https://ikingye.github.io/study-linux/docs/basic/shell/command/netcat/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>https://ikingye.github.io/study-linux/docs/shell/command/netcat/</guid>
+      <guid>https://ikingye.github.io/study-linux/docs/basic/shell/command/netcat/</guid>
       <description>netcat netcat -u 127.0.0.1 9502 </description>
     </item>
     
     <item>
       <title>netstat</title>
-      <link>https://ikingye.github.io/study-linux/docs/shell/command/netstat/</link>
+      <link>https://ikingye.github.io/study-linux/docs/basic/shell/command/netstat/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>https://ikingye.github.io/study-linux/docs/shell/command/netstat/</guid>
+      <guid>https://ikingye.github.io/study-linux/docs/basic/shell/command/netstat/</guid>
       <description>netstat </description>
     </item>
     
     <item>
       <title>telnet</title>
-      <link>https://ikingye.github.io/study-linux/docs/shell/command/telnet/</link>
+      <link>https://ikingye.github.io/study-linux/docs/basic/shell/command/telnet/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>https://ikingye.github.io/study-linux/docs/shell/command/telnet/</guid>
+      <guid>https://ikingye.github.io/study-linux/docs/basic/shell/command/telnet/</guid>
       <description>telnet 只能测试 tcp 端口连接
 无法测试 udp 端口连接（可以用 netcat）
 telnet domain/ip [port] telnet 退出  按 CTRL+] 然后输入 quit  </description>
@@ -137,19 +104,39 @@ telnet domain/ip [port] telnet 退出  按 CTRL+] 然后输入 quit  </descripti
     
     <item>
       <title>Zsh</title>
-      <link>https://ikingye.github.io/study-linux/docs/shell/type/zsh/</link>
+      <link>https://ikingye.github.io/study-linux/docs/basic/shell/type/zsh/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>https://ikingye.github.io/study-linux/docs/shell/type/zsh/</guid>
+      <guid>https://ikingye.github.io/study-linux/docs/basic/shell/type/zsh/</guid>
       <description>Zsh </description>
     </item>
     
     <item>
-      <title>Dash</title>
-      <link>https://ikingye.github.io/study-linux/docs/shell/type/dash/</link>
+      <title>1.2.1 CentOS</title>
+      <link>https://ikingye.github.io/study-linux/docs/basic/distro/CentOS/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>https://ikingye.github.io/study-linux/docs/shell/type/dash/</guid>
+      <guid>https://ikingye.github.io/study-linux/docs/basic/distro/CentOS/</guid>
+      <description>CentOS yum Yum（Yellow dog Updater, Modified）是由 Duke University 团队修改 Yellow Dog Linux 的 Yellow Dog Updater 开发而成，是一个基于 RPM 包管理的字符前端软件包管理器。能够从指定的服务器自动下载 RPM 包并且安装，可以处理依赖性关系，并且一次安装所有依赖的软件包，无须繁琐地一次次下载、安装。被 Yellow Dog Linux 本身，以及 Fedora、Red Hat Enterprise Linux 采用。
+安装本地 rpm 包 rpm -qs | grep jdk yum install -y /xxx/xxx.rpm # localinstall 已过时 # yum localinstall -y /xxx/xxx.rpm 第三方源 EPEL Extra Packages for Enterprise Linux
+EPEL is a Fedora Special Interest Group that creates, maintains, and manages a high quality set of additional packages for Enterprise Linux, including, but not limited to, Red Hat Enterprise Linux (RHEL), CentOS and Scientific Linux (SL), Oracle Linux (OL).</description>
+    </item>
+    
+    <item>
+      <title>4.1 教程</title>
+      <link>https://ikingye.github.io/study-linux/docs/appendix/tutorial/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://ikingye.github.io/study-linux/docs/appendix/tutorial/</guid>
+      <description>教程 基础 进阶 高阶 </description>
+    </item>
+    
+    <item>
+      <title>Dash</title>
+      <link>https://ikingye.github.io/study-linux/docs/basic/shell/type/dash/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://ikingye.github.io/study-linux/docs/basic/shell/type/dash/</guid>
       <description>Dash Dash 与 Bash 的区别  定义函数  bash: function 在 bash 中为关键字
 dash: dash 中没有 function 这个关键字
 2.select var in list; do command; done
@@ -166,10 +153,10 @@ dash: &amp;gt;&amp;amp;word, word 不支持非数字，替代方法: &amp;gt;wor
     
     <item>
       <title>xargs</title>
-      <link>https://ikingye.github.io/study-linux/docs/shell/command/xargs/</link>
+      <link>https://ikingye.github.io/study-linux/docs/basic/shell/command/xargs/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>https://ikingye.github.io/study-linux/docs/shell/command/xargs/</guid>
+      <guid>https://ikingye.github.io/study-linux/docs/basic/shell/command/xargs/</guid>
       <description>xargs xargs 命令的作用，是将标准输入转为命令行参数
 -L xargs -L 1 xargs --max-lines=1 # synonym for the -L option -L 参数指定多少行作为一个命令行参数。
 执行子目录里所有的 deploy.sh find . -name deploy.sh | xargs -L 1 sh
@@ -179,10 +166,10 @@ dash: &amp;gt;&amp;amp;word, word 不支持非数字，替代方法: &amp;gt;wor
     
     <item>
       <title>用户</title>
-      <link>https://ikingye.github.io/study-linux/docs/basic/user/</link>
+      <link>https://ikingye.github.io/study-linux/docs/basic/linux/user/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>https://ikingye.github.io/study-linux/docs/basic/user/</guid>
+      <guid>https://ikingye.github.io/study-linux/docs/basic/linux/user/</guid>
       <description>Linux 用户 创建用户 useradd  useradd xxx  不会创建同名目录   useradd -m xxx  会在 /home 目录创建同名文件夹   passwd xxx  adduser  删除用户 userdel xxx  用户组 添加组 groupadd xxx
 删除组 groupdel xxx
  修改用户主目录 usermod -d /home/users/yewang -u uid yewang
@@ -192,11 +179,42 @@ uid 获取 id 用户名
     </item>
     
     <item>
-      <title>时区</title>
-      <link>https://ikingye.github.io/study-linux/docs/basic/timezone/</link>
+      <title>百度 Shell 编程规范</title>
+      <link>https://ikingye.github.io/study-linux/docs/basic/shell/spec/baidu/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>https://ikingye.github.io/study-linux/docs/basic/timezone/</guid>
+      <guid>https://ikingye.github.io/study-linux/docs/basic/shell/spec/baidu/</guid>
+      <description>百度 Shell 编程规范   本文档适用于 Bash 3.0 及以上版本，不包括 4.0 新增特性
+  文档是 Bash 编程规范，不是 POSIX Shell 编程规范
+  章节分类和内容组织依据 Google Shell Style Guide
+  参考文档
+ Google Shell Style Guide Chromium Project Shell Style Guidelines     </description>
+    </item>
+    
+    <item>
+      <title>1.2.2 Ubuntu</title>
+      <link>https://ikingye.github.io/study-linux/docs/basic/distro/Ubuntu/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://ikingye.github.io/study-linux/docs/basic/distro/Ubuntu/</guid>
+      <description>CentOS </description>
+    </item>
+    
+    <item>
+      <title>4.3 关注项目</title>
+      <link>https://ikingye.github.io/study-linux/docs/appendix/attention/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://ikingye.github.io/study-linux/docs/appendix/attention/</guid>
+      <description>关注项目 </description>
+    </item>
+    
+    <item>
+      <title>时区</title>
+      <link>https://ikingye.github.io/study-linux/docs/basic/linux/timezone/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://ikingye.github.io/study-linux/docs/basic/linux/timezone/</guid>
       <description>时区 设置时区 CentOS 和 Ubuntu 的时区文件是 /etc/localtime，
 但是在 CentOS7 以后 localtime 变成了一个链接文件
 [root@centos7 ~]# ll /etc/localtime lrwxrwxrwx 1 root root 33 Oct 12 11:01 /etc/localtime -&amp;gt; /usr/share/zoneinfo/Asia/Shanghai  CentOS6、Ubuntu16 $ cp /usr/share/zoneinfo/Asia/Shanghai /etc/localtime CentOS7、RHEL7、Scientific Linux 7、Oracle Linux 7 最好的方法是使用 timedatectl 命令
