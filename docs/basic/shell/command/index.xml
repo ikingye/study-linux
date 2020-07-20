@@ -54,7 +54,7 @@ kill -9 is the unsafe way of brutally murdering a process. It&amp;rsquo;s equiva
       <guid>https://ikingye.github.io/study-linux/docs/basic/shell/command/telnet/</guid>
       <description>telnet 只能测试 tcp 端口连接
 无法测试 udp 端口连接（可以用 netcat）
-telnet domain/ip [port] telnet 退出  按 CTRL+] 然后输入 quit  </description>
+telnet domain/ip [port] telnet 退出  按 CTRL + ] 然后输入 quit  </description>
     </item>
     
     <item>
