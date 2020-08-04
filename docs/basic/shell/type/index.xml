@@ -15,7 +15,7 @@
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
       <guid>https://ikingye.github.io/study-linux/docs/basic/shell/type/sh/</guid>
-      <description>sh 标记为 #!/bin/sh 的脚本不应使用任何 POSIX 没有规定的特性 (如 let 等命令，但 #!/bin/bash 可以)。</description>
+      <description>sh #  标记为 #!/bin/sh 的脚本不应使用任何 POSIX 没有规定的特性 (如 let 等命令，但 #!/bin/bash 可以)。</description>
     </item>
     
     <item>
@@ -24,7 +24,7 @@
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
       <guid>https://ikingye.github.io/study-linux/docs/basic/shell/type/bash/</guid>
-      <description>Bash </description>
+      <description>Bash #  </description>
     </item>
     
     <item>
@@ -33,7 +33,7 @@
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
       <guid>https://ikingye.github.io/study-linux/docs/basic/shell/type/zsh/</guid>
-      <description>Zsh </description>
+      <description>Zsh #  </description>
     </item>
     
     <item>
@@ -42,7 +42,7 @@
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
       <guid>https://ikingye.github.io/study-linux/docs/basic/shell/type/dash/</guid>
-      <description>Dash Dash 与 Bash 的区别  定义函数  bash: function 在 bash 中为关键字
+      <description>Dash #  Dash 与 Bash 的区别 #   定义函数  bash: function 在 bash 中为关键字
 dash: dash 中没有 function 这个关键字
 2.select var in list; do command; done
 bash: 支持
@@ -52,8 +52,7 @@ dash: 不支持，替代方法，采用 seq 外部命令
 here string  bash: 支持 here string
 dash: 不支持，替代方法：可采用 here documents
   &amp;amp;word 重定向标准输出和标准错误
-   bash: 当 word 为非数字时，&amp;gt;&amp;amp;word 变成重定向标准错误和标准输出到文件 word
-dash: &amp;gt;&amp;amp;word, word 不支持非数字，替代方法: &amp;gt;word 2&amp;gt;&amp;amp;1; 常见用法 &amp;gt;/dev/null 2&amp;gt;&amp;amp;1</description>
+   bash: 当 word 为非数字时，&amp;gt;&amp;amp;word 变成重定向标准错误和标准输出到文件 word</description>
     </item>
     
   </channel>
