@@ -3,23 +3,8 @@
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   
   <url>
-    <loc>https://ikingye.github.io/study-linux/docs/basic/shell/command/ps/</loc>
-    <lastmod>2020-07-16T17:53:43+08:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>https://ikingye.github.io/study-linux/docs/basic/shell/type/sh/</loc>
-    <lastmod>2020-07-16T17:53:43+08:00</lastmod>
-  </url>
-  
-  <url>
     <loc>https://ikingye.github.io/study-linux/docs/basic/</loc>
     <lastmod>2020-07-16T20:44:51+08:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>https://ikingye.github.io/study-linux/docs/basic/shell/type/bash/</loc>
-    <lastmod>2020-07-16T17:53:43+08:00</lastmod>
   </url>
   
   <url>
@@ -38,26 +23,6 @@
   </url>
   
   <url>
-    <loc>https://ikingye.github.io/study-linux/docs/basic/shell/command/kill/</loc>
-    <lastmod>2020-07-16T17:53:43+08:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>https://ikingye.github.io/study-linux/docs/basic/shell/command/netcat/</loc>
-    <lastmod>2020-07-16T17:53:43+08:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>https://ikingye.github.io/study-linux/docs/basic/shell/command/netstat/</loc>
-    <lastmod>2020-07-16T17:53:43+08:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>https://ikingye.github.io/study-linux/docs/basic/shell/command/telnet/</loc>
-    <lastmod>2020-07-20T19:58:08+08:00</lastmod>
-  </url>
-  
-  <url>
     <loc>https://ikingye.github.io/study-linux/docs/code/</loc>
     <lastmod>2020-07-16T17:53:43+08:00</lastmod>
   </url>
@@ -73,22 +38,12 @@
   </url>
   
   <url>
-    <loc>https://ikingye.github.io/study-linux/docs/basic/shell/type/zsh/</loc>
-    <lastmod>2020-07-16T17:53:43+08:00</lastmod>
-  </url>
-  
-  <url>
     <loc>https://ikingye.github.io/study-linux/docs/basic/linux/</loc>
     <lastmod>2020-07-16T17:53:43+08:00</lastmod>
   </url>
   
   <url>
     <loc>https://ikingye.github.io/study-linux/docs/basic/distro/CentOS/</loc>
-    <lastmod>2020-07-16T17:53:43+08:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>https://ikingye.github.io/study-linux/docs/basic/shell/command/</loc>
     <lastmod>2020-07-16T17:53:43+08:00</lastmod>
   </url>
   
@@ -103,22 +58,7 @@
   </url>
   
   <url>
-    <loc>https://ikingye.github.io/study-linux/docs/basic/shell/type/dash/</loc>
-    <lastmod>2020-07-16T17:53:43+08:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>https://ikingye.github.io/study-linux/docs/basic/shell/command/xargs/</loc>
-    <lastmod>2020-07-16T17:53:43+08:00</lastmod>
-  </url>
-  
-  <url>
     <loc>https://ikingye.github.io/study-linux/docs/basic/linux/user/</loc>
-    <lastmod>2020-07-16T17:53:43+08:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>https://ikingye.github.io/study-linux/docs/basic/shell/spec/baidu/</loc>
     <lastmod>2020-07-16T17:53:43+08:00</lastmod>
   </url>
   
@@ -133,32 +73,12 @@
   </url>
   
   <url>
-    <loc>https://ikingye.github.io/study-linux/docs/basic/shell/spec/</loc>
-    <lastmod>2020-07-16T17:53:43+08:00</lastmod>
-  </url>
-  
-  <url>
     <loc>https://ikingye.github.io/study-linux/docs/appendix/interview/</loc>
     <lastmod>2020-07-16T20:44:51+08:00</lastmod>
   </url>
   
   <url>
-    <loc>https://ikingye.github.io/study-linux/docs/basic/shell/</loc>
-    <lastmod>2020-07-16T17:53:43+08:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>https://ikingye.github.io/study-linux/docs/basic/shell/snippet/</loc>
-    <lastmod>2020-07-16T17:53:43+08:00</lastmod>
-  </url>
-  
-  <url>
     <loc>https://ikingye.github.io/study-linux/docs/appendix/attention/</loc>
-    <lastmod>2020-07-16T17:53:43+08:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>https://ikingye.github.io/study-linux/docs/basic/shell/type/</loc>
     <lastmod>2020-07-16T17:53:43+08:00</lastmod>
   </url>
   
@@ -188,7 +108,7 @@
   
   <url>
     <loc>https://ikingye.github.io/study-linux/docs/</loc>
-    <lastmod>2020-07-20T19:58:08+08:00</lastmod>
+    <lastmod>2020-07-16T20:44:51+08:00</lastmod>
   </url>
   
   <url>
