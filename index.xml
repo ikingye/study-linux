@@ -2,42 +2,42 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>首页 on Linux 学习笔记</title>
-    <link>https://ikingye.github.io/study-linux/</link>
+    <link>https://kingye.me/study-linux/</link>
     <description>Recent content in 首页 on Linux 学习笔记</description>
-    <generator>Hugo -- gohugo.io</generator><atom:link href="https://ikingye.github.io/study-linux/index.xml" rel="self" type="application/rss+xml" />
+    <generator>Hugo -- gohugo.io</generator><atom:link href="https://kingye.me/study-linux/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>基础</title>
-      <link>https://ikingye.github.io/study-linux/docs/appendix/interview/basic/</link>
+      <link>https://kingye.me/study-linux/docs/appendix/interview/basic/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>https://ikingye.github.io/study-linux/docs/appendix/interview/basic/</guid>
+      <guid>https://kingye.me/study-linux/docs/appendix/interview/basic/</guid>
       <description>基础面试题 #  </description>
     </item>
     
     <item>
       <title>进阶</title>
-      <link>https://ikingye.github.io/study-linux/docs/appendix/interview/advanced/</link>
+      <link>https://kingye.me/study-linux/docs/appendix/interview/advanced/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>https://ikingye.github.io/study-linux/docs/appendix/interview/advanced/</guid>
+      <guid>https://kingye.me/study-linux/docs/appendix/interview/advanced/</guid>
       <description>进阶面试题 #  </description>
     </item>
     
     <item>
       <title>高阶</title>
-      <link>https://ikingye.github.io/study-linux/docs/appendix/interview/expert/</link>
+      <link>https://kingye.me/study-linux/docs/appendix/interview/expert/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>https://ikingye.github.io/study-linux/docs/appendix/interview/expert/</guid>
+      <guid>https://kingye.me/study-linux/docs/appendix/interview/expert/</guid>
       <description>高阶面试题 #  </description>
     </item>
     
     <item>
       <title>1.2.1 CentOS</title>
-      <link>https://ikingye.github.io/study-linux/docs/basic/distro/CentOS/</link>
+      <link>https://kingye.me/study-linux/docs/basic/distro/CentOS/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>https://ikingye.github.io/study-linux/docs/basic/distro/CentOS/</guid>
+      <guid>https://kingye.me/study-linux/docs/basic/distro/CentOS/</guid>
       <description>CentOS #  yum #  Yum（Yellow dog Updater, Modified）是由 Duke University 团队修改 Yellow Dog Linux 的 Yellow Dog Updater 开发而成，是一个基于 RPM 包管理的字符前端软件包管理器。能够从指定的服务器自动下载 RPM 包并且安装，可以处理依赖性关系，并且一次安装所有依赖的软件包，无须繁琐地一次次下载、安装。被 Yellow Dog Linux 本身，以及 Fedora、Red Hat Enterprise Linux 采用。
 安装本地 rpm 包 #  rpm -qs | grep jdk yum install -y /xxx/xxx.rpm # localinstall 已过时 # yum localinstall -y /xxx/xxx.rpm 第三方源 #  EPEL #  Extra Packages for Enterprise Linux
 EPEL is a Fedora Special Interest Group that creates, maintains, and manages a high quality set of additional packages for Enterprise Linux, including, but not limited to, Red Hat Enterprise Linux (RHEL), CentOS and Scientific Linux (SL), Oracle Linux (OL).</description>
@@ -45,19 +45,19 @@ EPEL is a Fedora Special Interest Group that creates, maintains, and manages a h
     
     <item>
       <title>4.1 教程</title>
-      <link>https://ikingye.github.io/study-linux/docs/appendix/tutorial/</link>
+      <link>https://kingye.me/study-linux/docs/appendix/tutorial/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>https://ikingye.github.io/study-linux/docs/appendix/tutorial/</guid>
+      <guid>https://kingye.me/study-linux/docs/appendix/tutorial/</guid>
       <description>教程 #  基础 #  进阶 #  </description>
     </item>
     
     <item>
       <title>用户</title>
-      <link>https://ikingye.github.io/study-linux/docs/basic/linux/user/</link>
+      <link>https://kingye.me/study-linux/docs/basic/linux/user/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>https://ikingye.github.io/study-linux/docs/basic/linux/user/</guid>
+      <guid>https://kingye.me/study-linux/docs/basic/linux/user/</guid>
       <description>Linux 用户 #  创建用户 #  useradd #   useradd xxx  不会创建同名目录   useradd -m xxx  会在 /home 目录创建同名文件夹   passwd xxx  adduser #   删除用户 #  userdel xxx #   用户组 #  添加组 #  groupadd xxx
 删除组 #  groupdel xxx
  修改用户主目录 #  usermod -d /home/users/yewang -u uid yewang
@@ -66,28 +66,28 @@ EPEL is a Fedora Special Interest Group that creates, maintains, and manages a h
     
     <item>
       <title>1.2.2 Ubuntu</title>
-      <link>https://ikingye.github.io/study-linux/docs/basic/distro/Ubuntu/</link>
+      <link>https://kingye.me/study-linux/docs/basic/distro/Ubuntu/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>https://ikingye.github.io/study-linux/docs/basic/distro/Ubuntu/</guid>
+      <guid>https://kingye.me/study-linux/docs/basic/distro/Ubuntu/</guid>
       <description>Ubuntu #  </description>
     </item>
     
     <item>
       <title>4.3 关注项目</title>
-      <link>https://ikingye.github.io/study-linux/docs/appendix/attention/</link>
+      <link>https://kingye.me/study-linux/docs/appendix/attention/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>https://ikingye.github.io/study-linux/docs/appendix/attention/</guid>
+      <guid>https://kingye.me/study-linux/docs/appendix/attention/</guid>
       <description>关注项目 #  </description>
     </item>
     
     <item>
       <title>时区</title>
-      <link>https://ikingye.github.io/study-linux/docs/basic/linux/timezone/</link>
+      <link>https://kingye.me/study-linux/docs/basic/linux/timezone/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>https://ikingye.github.io/study-linux/docs/basic/linux/timezone/</guid>
+      <guid>https://kingye.me/study-linux/docs/basic/linux/timezone/</guid>
       <description>时区 #  设置时区 #  CentOS 和 Ubuntu 的时区文件是 /etc/localtime，
 但是在 CentOS7 以后 localtime 变成了一个链接文件
 [root@centos7 ~]# ll /etc/localtime lrwxrwxrwx 1 root root 33 Oct 12 11:01 /etc/localtime -&amp;gt; /usr/share/zoneinfo/Asia/Shanghai  CentOS6、Ubuntu16 $ cp /usr/share/zoneinfo/Asia/Shanghai /etc/localtime CentOS7、RHEL7、Scientific Linux 7、Oracle Linux 7 最好的方法是使用 timedatectl 命令
