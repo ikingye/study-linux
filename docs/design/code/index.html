@@ -5,18 +5,18 @@
   <meta name="generator" content="Hugo 0.87.0" />
   <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<meta name="description" content="内核 #  参考 #  现在的 Linux 内核和 Linux 2.6 的内核有多大区别？ #  ">
-<meta name="theme-color" content="#FFFFFF"><meta property="og:title" content="3.1 内核" />
+<meta name="description" content="源码分析 #   现在的 Linux 内核和 Linux 2.6 的内核有多大区别？  ">
+<meta name="theme-color" content="#FFFFFF"><meta property="og:title" content="3.7 源码分析" />
 <meta property="og:description" content="" />
 <meta property="og:type" content="website" />
-<meta property="og:url" content="https://kingye.me/study-linux/docs/code/kernel/" />
+<meta property="og:url" content="https://kingye.me/study-linux/docs/design/code/" />
 
-<title>3.1 内核 | Linux 学习笔记</title>
+<title>3.7 源码分析 | Linux 学习笔记</title>
 <link rel="manifest" href="/study-linux/manifest.json">
 <link rel="icon" href="/study-linux/favicon.png" type="image/x-icon">
 <link rel="stylesheet" href="/study-linux/book.min.e3d401e975fe9e04a41f82b0c90be4c8773f2541f197dba3ff2ae80293cb78c2.css" integrity="sha256-49QB6XX&#43;ngSkH4KwyQvkyHc/JUHxl9uj/yroApPLeMI=">
-<script defer src="/study-linux/en.search.min.7eb8a325e509adf82ddf9cea3d36d90185bfc4341cd6295c0e8258ed9bd84673.js" integrity="sha256-frijJeUJrfgt35zqPTbZAYW/xDQc1ilcDoJY7ZvYRnM="></script>
-<link rel="alternate" type="application/rss+xml" href="https://kingye.me/study-linux/docs/code/kernel/index.xml" title="Linux 学习笔记" />
+<script defer src="/study-linux/en.search.min.6d1c95ba33c507558c7d063f47fc656dbcac90a1c12772921b0103d7f88b58b9.js" integrity="sha256-bRyVujPFB1WMfQY/R/xlbbyskKHBJ3KSGwED1/iLWLk="></script>
+<link rel="alternate" type="application/rss+xml" href="https://kingye.me/study-linux/docs/design/code/index.xml" title="Linux 学习笔记" />
 <!--
 Made with Book Theme
 https://github.com/alex-shpak/hugo-book
@@ -279,7 +279,7 @@ https://github.com/alex-shpak/hugo-book
   
 
   
-    <a href="https://kingye.me/study-linux/docs/code/" class="">第三部分 设计与实现</a>
+    <span>第三部分 设计与实现</span>
   
 
           
@@ -292,14 +292,32 @@ https://github.com/alex-shpak/hugo-book
   
 
   
-    <input type="checkbox" id="section-fe234b529941a79ba1796d385a07577c" class="toggle" checked />
-    <label for="section-fe234b529941a79ba1796d385a07577c" class="flex justify-between">
-      <a href="https://kingye.me/study-linux/docs/code/kernel/" class="active">3.1 内核</a>
+    <a href="https://kingye.me/study-linux/docs/design/code/" class=" active">3.7 源码分析</a>
+  
+
+          
+  <ul>
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <input type="checkbox" id="section-f50f5ae2d73768110f63cc21e95799cc" class="toggle"  />
+    <label for="section-f50f5ae2d73768110f63cc21e95799cc" class="flex justify-between">
+      <a href="https://kingye.me/study-linux/docs/design/code/0.11/" class="">0.11</a>
     </label>
   
 
           
   <ul>
+    
+  </ul>
+
+        </li>
+      
     
   </ul>
 
@@ -460,7 +478,7 @@ https://github.com/alex-shpak/hugo-book
     <img src="/study-linux/svg/menu.svg" class="book-icon" alt="Menu" />
   </label>
 
-  <strong>3.1 内核</strong>
+  <strong>3.7 源码分析</strong>
 
   <label for="toc-control">
     
@@ -474,15 +492,7 @@ https://github.com/alex-shpak/hugo-book
   <aside class="hidden clearfix">
     
   
-<nav id="TableOfContents">
-  <ul>
-    <li><a href="#参考">参考</a>
-      <ul>
-        <li><a href="#现在的-linux-内核和-linux-26-的内核有多大区别httpswwwzhihucomquestion35484429"><a href="https://www.zhihu.com/question/35484429">现在的 Linux 内核和 Linux 2.6 的内核有多大区别？</a></a></li>
-      </ul>
-    </li>
-  </ul>
-</nav>
+<nav id="TableOfContents"></nav>
 
 
 
@@ -493,18 +503,13 @@ https://github.com/alex-shpak/hugo-book
 
       
       
-  <article id="article" class="markdown"><h1 id="内核">
-  内核
-  <a class="anchor" href="#%e5%86%85%e6%a0%b8">#</a>
+  <article id="article" class="markdown"><h1 id="源码分析">
+  源码分析
+  <a class="anchor" href="#%e6%ba%90%e7%a0%81%e5%88%86%e6%9e%90">#</a>
 </h1>
-<h2 id="参考">
-  参考
-  <a class="anchor" href="#%e5%8f%82%e8%80%83">#</a>
-</h2>
-<h3 id="现在的-linux-内核和-linux-26-的内核有多大区别httpswwwzhihucomquestion35484429">
-  <a href="https://www.zhihu.com/question/35484429">现在的 Linux 内核和 Linux 2.6 的内核有多大区别？</a>
-  <a class="anchor" href="#%e7%8e%b0%e5%9c%a8%e7%9a%84-linux-%e5%86%85%e6%a0%b8%e5%92%8c-linux-26-%e7%9a%84%e5%86%85%e6%a0%b8%e6%9c%89%e5%a4%9a%e5%a4%a7%e5%8c%ba%e5%88%abhttpswwwzhihucomquestion35484429">#</a>
-</h3>
+<ul>
+<li><a href="https://www.zhihu.com/question/35484429">现在的 Linux 内核和 Linux 2.6 的内核有多大区别？</a></li>
+</ul>
 </article>
  
       
@@ -514,12 +519,6 @@ https://github.com/alex-shpak/hugo-book
   <div class="flex flex-wrap justify-between">
 
 
-
-  <div><a class="flex align-center" href="https://github.com/ikingye/study-linux/commit/48c849b064f2924b49db4aa3673b9f59c5a63657" title='Last modified by yewang | 2020-07-16' target="_blank" rel="noopener">
-      <img src="/study-linux/svg/calendar.svg" class="book-icon" alt="Calendar" />
-      <span>2020-07-16</span>
-    </a>
-  </div>
 
 
 
@@ -576,15 +575,7 @@ https://github.com/alex-shpak/hugo-book
       <div class="book-toc-content">
         
   
-<nav id="TableOfContents">
-  <ul>
-    <li><a href="#参考">参考</a>
-      <ul>
-        <li><a href="#现在的-linux-内核和-linux-26-的内核有多大区别httpswwwzhihucomquestion35484429"><a href="https://www.zhihu.com/question/35484429">现在的 Linux 内核和 Linux 2.6 的内核有多大区别？</a></a></li>
-      </ul>
-    </li>
-  </ul>
-</nav>
+<nav id="TableOfContents"></nav>
 
 
  

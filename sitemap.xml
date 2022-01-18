@@ -14,8 +14,7 @@
     <loc>https://kingye.me/study-linux/docs/appendix/interview/advanced/</loc>
     <lastmod>2020-04-17T00:54:39+08:00</lastmod>
   </url><url>
-    <loc>https://kingye.me/study-linux/docs/code/</loc>
-    <lastmod>2020-07-16T17:53:43+08:00</lastmod>
+    <loc>https://kingye.me/study-linux/docs/design/</loc>
   </url><url>
     <loc>https://kingye.me/study-linux/docs/appendix/interview/expert/</loc>
     <lastmod>2020-04-17T00:54:39+08:00</lastmod>
@@ -23,13 +22,12 @@
     <loc>https://kingye.me/study-linux/docs/appendix/</loc>
     <lastmod>2020-07-16T17:53:43+08:00</lastmod>
   </url><url>
+    <loc>https://kingye.me/study-linux/docs/design/code/0.11/</loc>
+  </url><url>
     <loc>https://kingye.me/study-linux/docs/basic/linux/</loc>
     <lastmod>2020-07-16T17:53:43+08:00</lastmod>
   </url><url>
     <loc>https://kingye.me/study-linux/docs/basic/distro/CentOS/</loc>
-    <lastmod>2020-07-16T17:53:43+08:00</lastmod>
-  </url><url>
-    <loc>https://kingye.me/study-linux/docs/code/kernel/</loc>
     <lastmod>2020-07-16T17:53:43+08:00</lastmod>
   </url><url>
     <loc>https://kingye.me/study-linux/docs/appendix/tutorial/</loc>
@@ -58,6 +56,8 @@
   </url><url>
     <loc>https://kingye.me/study-linux/docs/advanced/prof/</loc>
     <lastmod>2020-07-16T17:53:43+08:00</lastmod>
+  </url><url>
+    <loc>https://kingye.me/study-linux/docs/design/code/</loc>
   </url><url>
     <loc>https://kingye.me/study-linux/docs/basic/linux/timezone/</loc>
     <lastmod>2020-07-16T17:53:43+08:00</lastmod>

@@ -5,18 +5,20 @@
   <meta name="generator" content="Hugo 0.87.0" />
   <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<meta name="description" content="代码片段 #  ">
-<meta name="theme-color" content="#FFFFFF"><meta property="og:title" content="2.4 代码片段" />
+<meta name="description" content="Linux 0.11 源码分析 #  https://github.com/ikingye/linux-history/tree/0.11-annotated
+参考：
+ sunym1993/flash-linux0.11-talk   ">
+<meta name="theme-color" content="#FFFFFF"><meta property="og:title" content="0.11" />
 <meta property="og:description" content="" />
 <meta property="og:type" content="website" />
-<meta property="og:url" content="https://kingye.me/study-linux/docs/advanced/snippet/" />
+<meta property="og:url" content="https://kingye.me/study-linux/docs/design/code/0.11/" />
 
-<title>2.4 代码片段 | Linux 学习笔记</title>
+<title>0.11 | Linux 学习笔记</title>
 <link rel="manifest" href="/study-linux/manifest.json">
 <link rel="icon" href="/study-linux/favicon.png" type="image/x-icon">
 <link rel="stylesheet" href="/study-linux/book.min.e3d401e975fe9e04a41f82b0c90be4c8773f2541f197dba3ff2ae80293cb78c2.css" integrity="sha256-49QB6XX&#43;ngSkH4KwyQvkyHc/JUHxl9uj/yroApPLeMI=">
 <script defer src="/study-linux/en.search.min.6d1c95ba33c507558c7d063f47fc656dbcac90a1c12772921b0103d7f88b58b9.js" integrity="sha256-bRyVujPFB1WMfQY/R/xlbbyskKHBJ3KSGwED1/iLWLk="></script>
-<link rel="alternate" type="application/rss+xml" href="https://kingye.me/study-linux/docs/advanced/snippet/index.xml" title="Linux 学习笔记" />
+<link rel="alternate" type="application/rss+xml" href="https://kingye.me/study-linux/docs/design/code/0.11/index.xml" title="Linux 学习笔记" />
 <!--
 Made with Book Theme
 https://github.com/alex-shpak/hugo-book
@@ -211,9 +213,9 @@ https://github.com/alex-shpak/hugo-book
   
 
   
-    <input type="checkbox" id="section-1a56e51bd16a3008ab3330849a82ab65" class="toggle" checked />
+    <input type="checkbox" id="section-1a56e51bd16a3008ab3330849a82ab65" class="toggle"  />
     <label for="section-1a56e51bd16a3008ab3330849a82ab65" class="flex justify-between">
-      <a href="https://kingye.me/study-linux/docs/advanced/snippet/" class="active">2.4 代码片段</a>
+      <a href="https://kingye.me/study-linux/docs/advanced/snippet/" class="">2.4 代码片段</a>
     </label>
   
 
@@ -305,9 +307,9 @@ https://github.com/alex-shpak/hugo-book
   
 
   
-    <input type="checkbox" id="section-f50f5ae2d73768110f63cc21e95799cc" class="toggle"  />
+    <input type="checkbox" id="section-f50f5ae2d73768110f63cc21e95799cc" class="toggle" checked />
     <label for="section-f50f5ae2d73768110f63cc21e95799cc" class="flex justify-between">
-      <a href="https://kingye.me/study-linux/docs/design/code/0.11/" class="">0.11</a>
+      <a href="https://kingye.me/study-linux/docs/design/code/0.11/" class="active">0.11</a>
     </label>
   
 
@@ -478,7 +480,7 @@ https://github.com/alex-shpak/hugo-book
     <img src="/study-linux/svg/menu.svg" class="book-icon" alt="Menu" />
   </label>
 
-  <strong>2.4 代码片段</strong>
+  <strong>0.11</strong>
 
   <label for="toc-control">
     
@@ -503,10 +505,15 @@ https://github.com/alex-shpak/hugo-book
 
       
       
-  <article id="article" class="markdown"><h1 id="代码片段">
-  代码片段
-  <a class="anchor" href="#%e4%bb%a3%e7%a0%81%e7%89%87%e6%ae%b5">#</a>
+  <article id="article" class="markdown"><h1 id="linux-011-源码分析">
+  Linux 0.11 源码分析
+  <a class="anchor" href="#linux-011-%e6%ba%90%e7%a0%81%e5%88%86%e6%9e%90">#</a>
 </h1>
+<p><a href="https://github.com/ikingye/linux-history/tree/0.11-annotated">https://github.com/ikingye/linux-history/tree/0.11-annotated</a></p>
+<p>参考：</p>
+<ul>
+<li><a href="https://github.com/sunym1993/flash-linux0.11-talk">sunym1993/flash-linux0.11-talk</a> <img src="https://img.shields.io/github/stars/sunym1993/flash-linux0.11-talk.svg" alt="Github stars" /> <img src="https://img.shields.io/github/forks/sunym1993/flash-linux0.11-talk.svg" alt="Github forks" /> <img src="https://img.shields.io/github/languages/top/sunym1993/flash-linux0.11-talk.svg" alt="Language" /> <img src="https://img.shields.io/github/v/tag/sunym1993/flash-linux0.11-talk.svg?sort=semver" alt="Last Tag" /> <img src="https://img.shields.io/github/last-commit/sunym1993/flash-linux0.11-talk.svg" alt="Last commit" /></li>
+</ul>
 </article>
  
       
@@ -516,12 +523,6 @@ https://github.com/alex-shpak/hugo-book
   <div class="flex flex-wrap justify-between">
 
 
-
-  <div><a class="flex align-center" href="https://github.com/ikingye/study-linux/commit/48c849b064f2924b49db4aa3673b9f59c5a63657" title='Last modified by yewang | 2020-07-16' target="_blank" rel="noopener">
-      <img src="/study-linux/svg/calendar.svg" class="book-icon" alt="Calendar" />
-      <span>2020-07-16</span>
-    </a>
-  </div>
 
 
 
