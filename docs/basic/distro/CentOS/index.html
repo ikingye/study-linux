@@ -2,15 +2,15 @@
 <html lang="en" dir="ltr">
 
 <head>
-  <meta name="generator" content="Hugo 0.87.0" />
+  <meta name="generator" content="Hugo 0.98.0" />
   <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <meta name="description" content="CentOS #  yum #  Yum（Yellow dog Updater, Modified）是由 Duke University 团队修改 Yellow Dog Linux 的 Yellow Dog Updater 开发而成，是一个基于 RPM 包管理的字符前端软件包管理器。能够从指定的服务器自动下载 RPM 包并且安装，可以处理依赖性关系，并且一次安装所有依赖的软件包，无须繁琐地一次次下载、安装。被 Yellow Dog Linux 本身，以及 Fedora、Red Hat Enterprise Linux 采用。
-安装本地 rpm 包 #  rpm -qs | grep jdk yum install -y /xxx/xxx.rpm # localinstall 已过时 # yum localinstall -y /xxx/xxx.rpm 第三方源 #  EPEL #  Extra Packages for Enterprise Linux
+安装本地 rpm 包 #  rpm -qs | grep jdk  yum install -y /xxx/xxx.rpm  # localinstall 已过时 # yum localinstall -y /xxx/xxx.rpm 第三方源 #  EPEL #  Extra Packages for Enterprise Linux
 EPEL is a Fedora Special Interest Group that creates, maintains, and manages a high quality set of additional packages for Enterprise Linux, including, but not limited to, Red Hat Enterprise Linux (RHEL), CentOS and Scientific Linux (SL), Oracle Linux (OL).">
 <meta name="theme-color" content="#FFFFFF"><meta property="og:title" content="1.2.1 CentOS" />
 <meta property="og:description" content="CentOS #  yum #  Yum（Yellow dog Updater, Modified）是由 Duke University 团队修改 Yellow Dog Linux 的 Yellow Dog Updater 开发而成，是一个基于 RPM 包管理的字符前端软件包管理器。能够从指定的服务器自动下载 RPM 包并且安装，可以处理依赖性关系，并且一次安装所有依赖的软件包，无须繁琐地一次次下载、安装。被 Yellow Dog Linux 本身，以及 Fedora、Red Hat Enterprise Linux 采用。
-安装本地 rpm 包 #  rpm -qs | grep jdk yum install -y /xxx/xxx.rpm # localinstall 已过时 # yum localinstall -y /xxx/xxx.rpm 第三方源 #  EPEL #  Extra Packages for Enterprise Linux
+安装本地 rpm 包 #  rpm -qs | grep jdk  yum install -y /xxx/xxx.rpm  # localinstall 已过时 # yum localinstall -y /xxx/xxx.rpm 第三方源 #  EPEL #  Extra Packages for Enterprise Linux
 EPEL is a Fedora Special Interest Group that creates, maintains, and manages a high quality set of additional packages for Enterprise Linux, including, but not limited to, Red Hat Enterprise Linux (RHEL), CentOS and Scientific Linux (SL), Oracle Linux (OL)." />
 <meta property="og:type" content="article" />
 <meta property="og:url" content="https://kingye.me/study-linux/docs/basic/distro/CentOS/" /><meta property="article:section" content="docs" />
@@ -21,7 +21,7 @@ EPEL is a Fedora Special Interest Group that creates, maintains, and manages a h
 <link rel="manifest" href="/study-linux/manifest.json">
 <link rel="icon" href="/study-linux/favicon.png" type="image/x-icon">
 <link rel="stylesheet" href="/study-linux/book.min.e3d401e975fe9e04a41f82b0c90be4c8773f2541f197dba3ff2ae80293cb78c2.css" integrity="sha256-49QB6XX&#43;ngSkH4KwyQvkyHc/JUHxl9uj/yroApPLeMI=">
-<script defer src="/study-linux/en.search.min.6d1c95ba33c507558c7d063f47fc656dbcac90a1c12772921b0103d7f88b58b9.js" integrity="sha256-bRyVujPFB1WMfQY/R/xlbbyskKHBJ3KSGwED1/iLWLk="></script>
+<script defer src="/study-linux/en.search.min.51e89a1fff4cfe28baf232bd2cfdd1e615c0a8f979a926ce052e013fe495df29.js" integrity="sha256-UeiaH/9M/ii68jK9LP3R5hXAqPl5qSbOBS4BP&#43;SV3yk="></script>
 <!--
 Made with Book Theme
 https://github.com/alex-shpak/hugo-book
@@ -468,7 +468,7 @@ https://github.com/alex-shpak/hugo-book
 
 
 
-  <script>(function(){var a=document.querySelector("aside.book-menu nav");addEventListener("beforeunload",function(b){localStorage.setItem("menu.scrollTop",a.scrollTop)}),a.scrollTop=localStorage.getItem("menu.scrollTop")})()</script>
+  <script>(function(){var e=document.querySelector("aside.book-menu nav");addEventListener("beforeunload",function(){localStorage.setItem("menu.scrollTop",e.scrollTop)}),e.scrollTop=localStorage.getItem("menu.scrollTop")})()</script>
 
 
  
@@ -534,13 +534,13 @@ https://github.com/alex-shpak/hugo-book
   安装本地 rpm 包
   <a class="anchor" href="#%e5%ae%89%e8%a3%85%e6%9c%ac%e5%9c%b0-rpm-%e5%8c%85">#</a>
 </h3>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-shell" data-lang="shell">rpm -qs | grep jdk
-
-yum install -y /xxx/xxx.rpm
-
-<span style="color:#75715e"># localinstall 已过时</span>
-<span style="color:#75715e"># yum localinstall -y /xxx/xxx.rpm</span>
-</code></pre></div><h3 id="第三方源">
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-shell" data-lang="shell"><span style="display:flex;"><span>rpm -qs | grep jdk
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>yum install -y /xxx/xxx.rpm
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e"># localinstall 已过时</span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e"># yum localinstall -y /xxx/xxx.rpm</span>
+</span></span></code></pre></div><h3 id="第三方源">
   第三方源
   <a class="anchor" href="#%e7%ac%ac%e4%b8%89%e6%96%b9%e6%ba%90">#</a>
 </h3>
@@ -556,8 +556,8 @@ including, but not limited to, 
 CentOS
 and Scientific Linux (SL),
 Oracle Linux (OL).</p>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-shell" data-lang="shell">yum install -y epel-release
-</code></pre></div></article>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-shell" data-lang="shell"><span style="display:flex;"><span>yum install -y epel-release
+</span></span></code></pre></div></article>
  
       
 

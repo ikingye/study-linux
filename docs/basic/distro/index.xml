@@ -12,7 +12,7 @@
       
       <guid>https://kingye.me/study-linux/docs/basic/distro/CentOS/</guid>
       <description>CentOS #  yum #  Yum（Yellow dog Updater, Modified）是由 Duke University 团队修改 Yellow Dog Linux 的 Yellow Dog Updater 开发而成，是一个基于 RPM 包管理的字符前端软件包管理器。能够从指定的服务器自动下载 RPM 包并且安装，可以处理依赖性关系，并且一次安装所有依赖的软件包，无须繁琐地一次次下载、安装。被 Yellow Dog Linux 本身，以及 Fedora、Red Hat Enterprise Linux 采用。
-安装本地 rpm 包 #  rpm -qs | grep jdk yum install -y /xxx/xxx.rpm # localinstall 已过时 # yum localinstall -y /xxx/xxx.rpm 第三方源 #  EPEL #  Extra Packages for Enterprise Linux
+安装本地 rpm 包 #  rpm -qs | grep jdk  yum install -y /xxx/xxx.rpm  # localinstall 已过时 # yum localinstall -y /xxx/xxx.rpm 第三方源 #  EPEL #  Extra Packages for Enterprise Linux
 EPEL is a Fedora Special Interest Group that creates, maintains, and manages a high quality set of additional packages for Enterprise Linux, including, but not limited to, Red Hat Enterprise Linux (RHEL), CentOS and Scientific Linux (SL), Oracle Linux (OL).</description>
     </item>
     
