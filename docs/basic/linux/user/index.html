@@ -5,9 +5,9 @@
   <meta name="generator" content="Hugo 0.99.1" />
   <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<meta name="description" content="Linux 用户 #  创建用户 #  useradd #   useradd xxx  不会创建同名目录   useradd -m xxx  会在 /home 目录创建同名文件夹   passwd xxx  adduser #   设置 sudo 免密 #  对于 RHEL/CentOS/SLES12/Debian/Ubuntu 系统 #  cat &lt;&lt; EOF &gt; /etc/sudoers.d/yewang yewang ALL=(ALL) NOPASSWD:ALL EOF 对于 SLES11 (SUSE Linux Enterprise Server) 系统 #  cat &lt;&lt; EOF &gt;&gt; /etc/sudoers yewang ALL=(ALL) NOPASSWD:ALL EOF  ---  ## 删除用户  ### userdel xxx  ---  ## 用户组  ### 添加组  groupadd xxx  ### 删除组  groupdel xxx  ---  ## 修改用户主目录  usermod -d /home/users/yewang -u uid yewang  问题：usermod user is currently used by process  ### uid 获取  id 用户名  ---  ## 修改默认用户目录与默认 shell  ```shell chmod &#43;w /etc/passwd vi /etc/passwd  # id username # yewang:x:311272:100000:yewang:/home/user/yewang:/bin/zsh  chmod -w /etc/passwd sudo 免密码 #    切换到 root 用户">
+<meta name="description" content="Linux 用户 #  创建用户 #  useradd #  # 不会创建同名目录 # useradd xxx  # 会在 /home 目录创建同名文件夹 useradd -m yewang  passwd yewang adduser #   设置 sudo 免密 #  对于 RHEL/CentOS/SLES12/Debian/Ubuntu 系统 #  cat &lt;&lt; EOF &gt; /etc/sudoers.d/yewang yewang ALL=(ALL) NOPASSWD:ALL EOF 对于 SLES11 (SUSE Linux Enterprise Server) 系统 #  cat &lt;&lt; EOF &gt;&gt; /etc/sudoers yewang ALL=(ALL) NOPASSWD:ALL EOF  ---  ## 删除用户  ### userdel xxx  ---  ## 用户组  ### 添加组  groupadd xxx  ### 删除组  groupdel xxx  ---  ## 修改用户主目录  usermod -d /home/users/yewang -u uid yewang  问题：usermod user is currently used by process  ### uid 获取  id 用户名  ---  ## 修改默认用户目录与默认 shell  ```shell chmod &#43;w /etc/passwd vi /etc/passwd  # id username # yewang:x:311272:100000:yewang:/home/user/yewang:/bin/zsh  chmod -w /etc/passwd sudo 免密码 #    切换到 root 用户">
 <meta name="theme-color" content="#FFFFFF"><meta property="og:title" content="用户" />
-<meta property="og:description" content="Linux 用户 #  创建用户 #  useradd #   useradd xxx  不会创建同名目录   useradd -m xxx  会在 /home 目录创建同名文件夹   passwd xxx  adduser #   设置 sudo 免密 #  对于 RHEL/CentOS/SLES12/Debian/Ubuntu 系统 #  cat &lt;&lt; EOF &gt; /etc/sudoers.d/yewang yewang ALL=(ALL) NOPASSWD:ALL EOF 对于 SLES11 (SUSE Linux Enterprise Server) 系统 #  cat &lt;&lt; EOF &gt;&gt; /etc/sudoers yewang ALL=(ALL) NOPASSWD:ALL EOF  ---  ## 删除用户  ### userdel xxx  ---  ## 用户组  ### 添加组  groupadd xxx  ### 删除组  groupdel xxx  ---  ## 修改用户主目录  usermod -d /home/users/yewang -u uid yewang  问题：usermod user is currently used by process  ### uid 获取  id 用户名  ---  ## 修改默认用户目录与默认 shell  ```shell chmod &#43;w /etc/passwd vi /etc/passwd  # id username # yewang:x:311272:100000:yewang:/home/user/yewang:/bin/zsh  chmod -w /etc/passwd sudo 免密码 #    切换到 root 用户" />
+<meta property="og:description" content="Linux 用户 #  创建用户 #  useradd #  # 不会创建同名目录 # useradd xxx  # 会在 /home 目录创建同名文件夹 useradd -m yewang  passwd yewang adduser #   设置 sudo 免密 #  对于 RHEL/CentOS/SLES12/Debian/Ubuntu 系统 #  cat &lt;&lt; EOF &gt; /etc/sudoers.d/yewang yewang ALL=(ALL) NOPASSWD:ALL EOF 对于 SLES11 (SUSE Linux Enterprise Server) 系统 #  cat &lt;&lt; EOF &gt;&gt; /etc/sudoers yewang ALL=(ALL) NOPASSWD:ALL EOF  ---  ## 删除用户  ### userdel xxx  ---  ## 用户组  ### 添加组  groupadd xxx  ### 删除组  groupdel xxx  ---  ## 修改用户主目录  usermod -d /home/users/yewang -u uid yewang  问题：usermod user is currently used by process  ### uid 获取  id 用户名  ---  ## 修改默认用户目录与默认 shell  ```shell chmod &#43;w /etc/passwd vi /etc/passwd  # id username # yewang:x:311272:100000:yewang:/home/user/yewang:/bin/zsh  chmod -w /etc/passwd sudo 免密码 #    切换到 root 用户" />
 <meta property="og:type" content="article" />
 <meta property="og:url" content="https://kingye.me/study-linux/docs/basic/linux/user/" /><meta property="article:section" content="docs" />
 
@@ -17,7 +17,7 @@
 <link rel="manifest" href="/study-linux/manifest.json">
 <link rel="icon" href="/study-linux/favicon.png" type="image/x-icon">
 <link rel="stylesheet" href="/study-linux/book.min.e3d401e975fe9e04a41f82b0c90be4c8773f2541f197dba3ff2ae80293cb78c2.css" integrity="sha256-49QB6XX&#43;ngSkH4KwyQvkyHc/JUHxl9uj/yroApPLeMI=">
-<script defer src="/study-linux/en.search.min.e157f5574f1f77bd5645431e9282eaec9d233473e77e8502a5ecf13a9e5ddfd0.js" integrity="sha256-4Vf1V08fd71WRUMekoLq7J0jNHPnfoUCpezxOp5d39A="></script>
+<script defer src="/study-linux/en.search.min.9678d5e55594b01d4f993b8504d8df52c900bc27be5a3ff65df52bd82b4d6e8b.js" integrity="sha256-lnjV5VWUsB1PmTuFBNjfUskAvCe&#43;Wj/2XfUr2CtNbos="></script>
 <!--
 Made with Book Theme
 https://github.com/alex-shpak/hugo-book
@@ -532,20 +532,14 @@ https://github.com/alex-shpak/hugo-book
   useradd
   <a class="anchor" href="#useradd">#</a>
 </h3>
-<ul>
-<li><code>useradd xxx</code>
-<ul>
-<li>不会创建同名目录</li>
-</ul>
-</li>
-<li><code>useradd -m xxx</code>
-<ul>
-<li>会在 /home 目录创建同名文件夹</li>
-</ul>
-</li>
-<li><code>passwd xxx</code></li>
-</ul>
-<h3 id="adduser">
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-shell" data-lang="shell"><span style="display:flex;"><span><span style="color:#75715e"># 不会创建同名目录</span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e"># useradd xxx</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e"># 会在 /home 目录创建同名文件夹</span>
+</span></span><span style="display:flex;"><span>useradd -m yewang
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>passwd yewang
+</span></span></code></pre></div><h3 id="adduser">
   adduser
   <a class="anchor" href="#adduser">#</a>
 </h3>
