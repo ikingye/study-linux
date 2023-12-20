@@ -2,12 +2,12 @@
 <html lang="en" dir="ltr">
 
 <head>
-  <meta name="generator" content="Hugo 0.99.1" />
+  <meta name="generator" content="Hugo 0.121.1">
   <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<meta name="description" content="Linux 用户 #  创建用户 #  useradd #  # 不会创建同名目录 # useradd xxx  # 会在 /home 目录创建同名文件夹 useradd -m yewang  passwd yewang adduser #   设置 sudo 免密 #  对于 RHEL/CentOS/SLES12/Debian/Ubuntu 系统 #  cat &lt;&lt; EOF &gt; /etc/sudoers.d/yewang yewang ALL=(ALL) NOPASSWD:ALL EOF 对于 SLES11 (SUSE Linux Enterprise Server) 系统 #  cat &lt;&lt; EOF &gt;&gt; /etc/sudoers yewang ALL=(ALL) NOPASSWD:ALL EOF  ---  ## 删除用户  ### userdel xxx  ---  ## 用户组  ### 添加组  groupadd xxx  ### 删除组  groupdel xxx  ---  ## 修改用户主目录  usermod -d /home/users/yewang -u uid yewang  问题：usermod user is currently used by process  ### uid 获取  id 用户名  ---  ## 修改默认用户目录与默认 shell  ```shell chmod &#43;w /etc/passwd vi /etc/passwd  # id username # yewang:x:311272:100000:yewang:/home/user/yewang:/bin/zsh  chmod -w /etc/passwd sudo 免密码 #    切换到 root 用户">
+<meta name="description" content="Linux 用户 # 创建用户 # useradd # # 不会创建同名目录 # useradd xxx # 会在 /home 目录创建同名文件夹 useradd -m yewang passwd yewang adduser # 设置 sudo 免密 # 对于 RHEL/CentOS/SLES12/Debian/Ubuntu 系统 # cat &lt;&lt; EOF &gt; /etc/sudoers.d/yewang yewang ALL=(ALL) NOPASSWD:ALL EOF 对于 SLES11 (SUSE Linux Enterprise Server) 系统 # cat &lt;&lt; EOF &gt;&gt; /etc/sudoers yewang ALL=(ALL) NOPASSWD:ALL EOF --- ## 删除用户 ### userdel xxx --- ## 用户组 ### 添加组 groupadd xxx ### 删除组 groupdel xxx --- ## 修改用户主目录 usermod -d /home/users/yewang -u uid yewang 问题：usermod user is currently used by process ### uid 获取 id 用户名 --- ## 修改默认用户目录与默认 shell ```shell chmod &#43;w /etc/passwd vi /etc/passwd # id username # yewang:x:311272:100000:yewang:/home/user/yewang:/bin/zsh chmod -w /etc/passwd sudo 免密码 # 切换到 root 用户">
 <meta name="theme-color" content="#FFFFFF"><meta property="og:title" content="用户" />
-<meta property="og:description" content="Linux 用户 #  创建用户 #  useradd #  # 不会创建同名目录 # useradd xxx  # 会在 /home 目录创建同名文件夹 useradd -m yewang  passwd yewang adduser #   设置 sudo 免密 #  对于 RHEL/CentOS/SLES12/Debian/Ubuntu 系统 #  cat &lt;&lt; EOF &gt; /etc/sudoers.d/yewang yewang ALL=(ALL) NOPASSWD:ALL EOF 对于 SLES11 (SUSE Linux Enterprise Server) 系统 #  cat &lt;&lt; EOF &gt;&gt; /etc/sudoers yewang ALL=(ALL) NOPASSWD:ALL EOF  ---  ## 删除用户  ### userdel xxx  ---  ## 用户组  ### 添加组  groupadd xxx  ### 删除组  groupdel xxx  ---  ## 修改用户主目录  usermod -d /home/users/yewang -u uid yewang  问题：usermod user is currently used by process  ### uid 获取  id 用户名  ---  ## 修改默认用户目录与默认 shell  ```shell chmod &#43;w /etc/passwd vi /etc/passwd  # id username # yewang:x:311272:100000:yewang:/home/user/yewang:/bin/zsh  chmod -w /etc/passwd sudo 免密码 #    切换到 root 用户" />
+<meta property="og:description" content="Linux 用户 # 创建用户 # useradd # # 不会创建同名目录 # useradd xxx # 会在 /home 目录创建同名文件夹 useradd -m yewang passwd yewang adduser # 设置 sudo 免密 # 对于 RHEL/CentOS/SLES12/Debian/Ubuntu 系统 # cat &lt;&lt; EOF &gt; /etc/sudoers.d/yewang yewang ALL=(ALL) NOPASSWD:ALL EOF 对于 SLES11 (SUSE Linux Enterprise Server) 系统 # cat &lt;&lt; EOF &gt;&gt; /etc/sudoers yewang ALL=(ALL) NOPASSWD:ALL EOF --- ## 删除用户 ### userdel xxx --- ## 用户组 ### 添加组 groupadd xxx ### 删除组 groupdel xxx --- ## 修改用户主目录 usermod -d /home/users/yewang -u uid yewang 问题：usermod user is currently used by process ### uid 获取 id 用户名 --- ## 修改默认用户目录与默认 shell ```shell chmod &#43;w /etc/passwd vi /etc/passwd # id username # yewang:x:311272:100000:yewang:/home/user/yewang:/bin/zsh chmod -w /etc/passwd sudo 免密码 # 切换到 root 用户" />
 <meta property="og:type" content="article" />
 <meta property="og:url" content="https://kingye.me/study-linux/docs/basic/linux/user/" /><meta property="article:section" content="docs" />
 
@@ -17,7 +17,7 @@
 <link rel="manifest" href="/study-linux/manifest.json">
 <link rel="icon" href="/study-linux/favicon.png" type="image/x-icon">
 <link rel="stylesheet" href="/study-linux/book.min.e3d401e975fe9e04a41f82b0c90be4c8773f2541f197dba3ff2ae80293cb78c2.css" integrity="sha256-49QB6XX&#43;ngSkH4KwyQvkyHc/JUHxl9uj/yroApPLeMI=">
-<script defer src="/study-linux/en.search.min.9678d5e55594b01d4f993b8504d8df52c900bc27be5a3ff65df52bd82b4d6e8b.js" integrity="sha256-lnjV5VWUsB1PmTuFBNjfUskAvCe&#43;Wj/2XfUr2CtNbos="></script>
+<script defer src="/study-linux/en.search.min.75173e61f6b3b655b27838055cf6ba0df94d4f1c5eebe728b1a573b3259c0b28.js" integrity="sha256-dRc&#43;YfaztlWyeDgFXPa6DflNTxxe6&#43;cosaVzsyWcCyg="></script>
 <!--
 Made with Book Theme
 https://github.com/alex-shpak/hugo-book
