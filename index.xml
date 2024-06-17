@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>首页 on Linux 学习笔记</title>
+    <link>https://kingye.me/study-linux/</link>
+    <description>Recent content in 首页 on Linux 学习笔记</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en</language>
+    <atom:link href="https://kingye.me/study-linux/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>基础</title>
+      <link>https://kingye.me/study-linux/docs/appendix/interview/basic/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <guid>https://kingye.me/study-linux/docs/appendix/interview/basic/</guid>
+      <description> 基础面试题 # </description>
+    </item>
+    <item>
+      <title>进阶</title>
+      <link>https://kingye.me/study-linux/docs/appendix/interview/advanced/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <guid>https://kingye.me/study-linux/docs/appendix/interview/advanced/</guid>
+      <description> 进阶面试题 # </description>
+    </item>
+    <item>
+      <title>高阶</title>
+      <link>https://kingye.me/study-linux/docs/appendix/interview/expert/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <guid>https://kingye.me/study-linux/docs/appendix/interview/expert/</guid>
+      <description> 高阶面试题 # </description>
+    </item>
+    <item>
+      <title>1.2.1 CentOS</title>
+      <link>https://kingye.me/study-linux/docs/basic/distro/CentOS/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <guid>https://kingye.me/study-linux/docs/basic/distro/CentOS/</guid>
+      <description>CentOS # yum # Yum（Yellow dog Updater, Modified）是由 Duke University 团队修改 Yellow Dog Linux 的 Yellow Dog Updater 开发而成，是一个基于 RPM 包管理的字符前端软件包管理器。能够从指定的服务器自动下载 RPM 包并且安装，可以处理依赖性关系，并且一次安装所有依赖的软件包，无须繁琐地一次次下载、安装。被 Yellow Dog Linux 本身，以及 Fedora、Red Hat Enterprise Linux 采用。&#xA;安装本地 rpm 包 # rpm -qs | grep jdk yum install -y /xxx/xxx.rpm # localinstall 已过时 # yum localinstall -y /xxx/xxx.rpm 第三方源 # EPEL # Extra Packages for Enterprise Linux&#xA;EPEL is a Fedora Special Interest Group that creates, maintains, and manages a high quality set of additional packages for Enterprise Linux, including, but not limited to, Red Hat Enterprise Linux (RHEL), CentOS and Scientific Linux (SL), Oracle Linux (OL).</description>
+    </item>
+    <item>
+      <title>4.1 教程</title>
+      <link>https://kingye.me/study-linux/docs/appendix/tutorial/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <guid>https://kingye.me/study-linux/docs/appendix/tutorial/</guid>
+      <description> 教程 # 基础 # 进阶 # Linux 操作系统实现原理 # [pdf] Linux 内核 0.12 完全注释（修正版 V5.0） - 赵炯 MaximeChretien/linux-history </description>
+    </item>
+    <item>
+      <title>用户</title>
+      <link>https://kingye.me/study-linux/docs/basic/linux/user/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <guid>https://kingye.me/study-linux/docs/basic/linux/user/</guid>
+      <description>Linux 用户 # 创建用户 # useradd # useradd 是一个低级的、更基础的命令，几乎在所有的 Linux 发行版中都可以找到。 它提供了较少的默认设置，这意味着在创建用户时，你可能需要手动设置更多的选项，如用户的家目录、登录 shell、用户组等。 使用 useradd 时，通常需要配合其他命令，如 passwd 来设置用户密码。&#xA;# 不会创建同名目录 # useradd xxx # 会在 /home 目录创建同名文件夹 useradd -m yewang passwd yewang adduser # 设置 sudo 免密 # 对于 RHEL/CentOS/SLES12/Debian/Ubuntu 系统 # cat &amp;lt;&amp;lt; EOF &amp;gt; /etc/sudoers.d/yewang yewang ALL=(ALL) NOPASSWD:ALL EOF 对于 SLES11 (SUSE Linux Enterprise Server) 系统 # cat &amp;lt;&amp;lt; EOF &amp;gt;&amp;gt; /etc/sudoers yewang ALL=(ALL) NOPASSWD:ALL EOF --- ## 删除用户 ### userdel xxx --- ## 用户组 ### 添加组 groupadd xxx ### 删除组 groupdel xxx --- ## 修改用户主目录 usermod -d /home/users/yewang -u uid yewang 问题：usermod user is currently used by process ### uid 获取 id 用户名 --- ## 修改默认用户目录与默认 shell ```shell chmod +w /etc/passwd vi /etc/passwd # id username # yewang:x:311272:100000:yewang:/home/user/yewang:/bin/zsh chmod -w /etc/passwd sudo 免密码 # 切换到 root 用户</description>
+    </item>
+    <item>
+      <title>1.2.2 Ubuntu</title>
+      <link>https://kingye.me/study-linux/docs/basic/distro/Ubuntu/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <guid>https://kingye.me/study-linux/docs/basic/distro/Ubuntu/</guid>
+      <description>Ubuntu # 版本存续期间并不锁定内核版本 真正在一个版本生命周期内几乎不会变的东西其实是 libc 20.04 vs 18.04 # Ubuntu 20.04 与 Ubuntu 18.04 的比较表&#xA;特征 Ubuntu 20.04（Ubuntu 20.04 发布下载，附新特性和增强新功能介绍） Ubuntu 18.04 发布日期 2020 年 4 月 23 日 2018 年 4 月 26 日 开发代号 Focal Fossa Bionic Beaver 默认显示服务器 Xorg 是 Ubuntu 20.04 中的默认显示服务器 Xorg 成为 Ubuntu 18.04 中的默认显示服务器 Linux 内核 Ubuntu 20.04 随附 5.4 内核，您可以获得本机 ExFAT 支持和其他性能改进 Ubuntu 18.04 随附 4.15 内核 32 位和 64 位 没有适用于 Ubuntu 20.</description>
+    </item>
+    <item>
+      <title>4.3 关注项目</title>
+      <link>https://kingye.me/study-linux/docs/appendix/attention/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <guid>https://kingye.me/study-linux/docs/appendix/attention/</guid>
+      <description> 关注项目 # </description>
+    </item>
+    <item>
+      <title>时区</title>
+      <link>https://kingye.me/study-linux/docs/basic/linux/timezone/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <guid>https://kingye.me/study-linux/docs/basic/linux/timezone/</guid>
+      <description> 时区 # 设置时区 # CentOS 和 Ubuntu 的时区文件是 /etc/localtime，&#xA;但是在 CentOS7 以后 localtime 变成了一个链接文件&#xA;[root@centos7 ~]# ll /etc/localtime lrwxrwxrwx 1 root root 33 Oct 12 11:01 /etc/localtime -&amp;gt; /usr/share/zoneinfo/Asia/Shanghai CentOS6、Ubuntu16 $ cp /usr/share/zoneinfo/Asia/Shanghai /etc/localtime CentOS7、RHEL7、Scientific Linux 7、Oracle Linux 7 最好的方法是使用 timedatectl 命令&#xA;$ timedatectl list-timezones |grep Shanghai #查找中国时区的完整名称 Asia/Shanghai $ timedatectl set-timezone Asia/Shanghai #其他时区以此类推 或者直接手动创建软链接&#xA;$ ln -sf /usr/share/zoneinfo/Asia/Shanghai /etc/localtime 参考：&#xA;Linux 修改时区的正确方法 </description>
+    </item>
+  </channel>
+</rss>
