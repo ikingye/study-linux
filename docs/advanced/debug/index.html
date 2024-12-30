@@ -1,0 +1,619 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+
+<head>
+  <meta name="generator" content="Hugo 0.140.1">
+  <meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="description" content="
+  故障排查
+  #
+">
+<meta name="theme-color" media="(prefers-color-scheme: light)" content="#ffffff">
+<meta name="theme-color" media="(prefers-color-scheme: dark)" content="#343a40">
+<meta name="color-scheme" content="light dark"><meta property="og:url" content="https://kingye.me/study-linux/docs/advanced/debug/">
+  <meta property="og:site_name" content="Linux 学习笔记">
+  <meta property="og:title" content="2.5 故障排查">
+  <meta property="og:description" content="故障排查 #">
+  <meta property="og:locale" content="en">
+  <meta property="og:type" content="website">
+<title>2.5 故障排查 | Linux 学习笔记</title>
+<link rel="manifest" href="/study-linux/manifest.json">
+<link rel="icon" href="/study-linux/favicon.png" >
+<link rel="canonical" href="https://kingye.me/study-linux/docs/advanced/debug/">
+<link rel="stylesheet" href="/study-linux/book.min.45ab58199f84c9a33853fdef2e41664c57a49ca55c9badf2dd2dd071f39975a3.css" integrity="sha256-RatYGZ&#43;EyaM4U/3vLkFmTFeknKVcm63y3S3QcfOZdaM=" crossorigin="anonymous">
+  <script defer src="/study-linux/fuse.min.js"></script>
+  <script defer src="/study-linux/en.search.min.58c6f4ff37ec7c9c661f028d2bbf373d096a33ca082e6375516aac7d73156e63.js" integrity="sha256-WMb0/zfsfJxmHwKNK783PQlqM8oILmN1UWqsfXMVbmM=" crossorigin="anonymous"></script>
+<link rel="alternate" type="application/rss+xml" href="https://kingye.me/study-linux/docs/advanced/debug/index.xml" title="Linux 学习笔记" />
+<!--
+Made with Book Theme
+https://github.com/alex-shpak/hugo-book
+-->
+  
+</head>
+
+<body dir="ltr">
+  <input type="checkbox" class="hidden toggle" id="menu-control" />
+  <input type="checkbox" class="hidden toggle" id="toc-control" />
+  <main class="container flex">
+    <aside class="book-menu">
+      <div class="book-menu-content">
+        
+  <nav>
+<h2 class="book-brand">
+  <a class="flex align-center" href="/study-linux/"><span>Linux 学习笔记</span>
+  </a>
+</h2>
+
+
+<div class="book-search hidden">
+  <input type="text" id="book-search-input" placeholder="Search" aria-label="Search" maxlength="64" data-hotkeys="s/" />
+  <div class="book-search-spinner hidden"></div>
+  <ul id="book-search-results"></ul>
+</div>
+<script>document.querySelector(".book-search").classList.remove("hidden")</script>
+
+
+
+
+<ul>
+  <li><a href="https://kingye.me" target="_blank" rel="noopener noreferrer">博客</a></li>
+  <li><a href="https://cdn.jsdelivr.net/gh/ikingye/imagehost/picgo/20200417021727.png" target="_blank" rel="noopener noreferrer">公众号</a></li>
+  <li><a href="https://github.com/ikingye" target="_blank" rel="noopener noreferrer">Github</a></li>
+  <li><a href="https://weibo.com/kingyip15215" target="_blank" rel="noopener noreferrer">微博</a></li>
+  <li><a href="https://www.zhihu.com/people/wutongyip" target="_blank" rel="noopener noreferrer">知乎</a></li>
+</ul>
+<hr />
+
+
+
+
+
+
+
+
+  
+
+
+
+  
+  <ul>
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <span>第一部分 基础入门</span>
+  
+
+          
+  <ul>
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <input type="checkbox" id="section-d08bc7e5a9f2ad02b4c8a75b23a29907" class="toggle"  />
+    <label for="section-d08bc7e5a9f2ad02b4c8a75b23a29907" class="flex justify-between">
+      <a href="/study-linux/docs/basic/linux/" class="">1.1 Linux</a>
+    </label>
+  
+
+          
+  <ul>
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <input type="checkbox" id="section-e370c663fe2193f6a75eff0439340e16" class="toggle"  />
+    <label for="section-e370c663fe2193f6a75eff0439340e16" class="flex justify-between">
+      <a href="/study-linux/docs/basic/linux/user/" class="">用户</a>
+    </label>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <input type="checkbox" id="section-b6e92952d5cd1d24a2abf64e19bec5c3" class="toggle"  />
+    <label for="section-b6e92952d5cd1d24a2abf64e19bec5c3" class="flex justify-between">
+      <a href="/study-linux/docs/basic/linux/timezone/" class="">时区</a>
+    </label>
+  
+
+        </li>
+      
+    
+  </ul>
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/study-linux/docs/basic/distro/" class="">1.2 发行版</a>
+  
+
+          
+  <ul>
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <input type="checkbox" id="section-df1332961170f6095a98833ef65ab9e3" class="toggle"  />
+    <label for="section-df1332961170f6095a98833ef65ab9e3" class="flex justify-between">
+      <a href="/study-linux/docs/basic/distro/CentOS/" class="">1.2.1 CentOS</a>
+    </label>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <input type="checkbox" id="section-255f679801bcd728764f83cff5e858b3" class="toggle"  />
+    <label for="section-255f679801bcd728764f83cff5e858b3" class="flex justify-between">
+      <a href="/study-linux/docs/basic/distro/Ubuntu/" class="">1.2.2 Ubuntu</a>
+    </label>
+  
+
+        </li>
+      
+    
+  </ul>
+
+        </li>
+      
+    
+  </ul>
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <span>第二部分 进阶实战</span>
+  
+
+          
+  <ul>
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <input type="checkbox" id="section-b2433a26fbe90fb26b2046cc6ac166b3" class="toggle"  />
+    <label for="section-b2433a26fbe90fb26b2046cc6ac166b3" class="flex justify-between">
+      <a href="/study-linux/docs/advanced/snippet/" class="">2.4 代码片段</a>
+    </label>
+  
+
+          
+  <ul>
+    
+  </ul>
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <input type="checkbox" id="section-3fc71ab5081efdedc7bb94090db04558" class="toggle" checked />
+    <label for="section-3fc71ab5081efdedc7bb94090db04558" class="flex justify-between">
+      <a href="/study-linux/docs/advanced/debug/" class="active">2.5 故障排查</a>
+    </label>
+  
+
+          
+  <ul>
+    
+  </ul>
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <input type="checkbox" id="section-46aa337575b217ac9e0ef9bc2da01e30" class="toggle"  />
+    <label for="section-46aa337575b217ac9e0ef9bc2da01e30" class="flex justify-between">
+      <a href="/study-linux/docs/advanced/prof/" class="">2.6 性能</a>
+    </label>
+  
+
+          
+  <ul>
+    
+  </ul>
+
+        </li>
+      
+    
+  </ul>
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <span>第三部分 设计与实现</span>
+  
+
+          
+  <ul>
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/study-linux/docs/design/code/" class="">3.7 源码分析</a>
+  
+
+          
+  <ul>
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <input type="checkbox" id="section-0a91df2cafc86dff907c650b8c4afb4b" class="toggle"  />
+    <label for="section-0a91df2cafc86dff907c650b8c4afb4b" class="flex justify-between">
+      <a href="/study-linux/docs/design/code/0.11/" class="">0.11</a>
+    </label>
+  
+
+          
+  <ul>
+    
+  </ul>
+
+        </li>
+      
+    
+  </ul>
+
+        </li>
+      
+    
+  </ul>
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <span>第四部分 附录</span>
+  
+
+          
+  <ul>
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <input type="checkbox" id="section-2b4e6334c173b16ca2f3ac22bbeffc6e" class="toggle"  />
+    <label for="section-2b4e6334c173b16ca2f3ac22bbeffc6e" class="flex justify-between">
+      <a href="/study-linux/docs/appendix/tutorial/" class="">4.1 教程</a>
+    </label>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <input type="checkbox" id="section-4b8d7d20cc701c1881db7cb9ce1f6c3e" class="toggle"  />
+    <label for="section-4b8d7d20cc701c1881db7cb9ce1f6c3e" class="flex justify-between">
+      <a href="/study-linux/docs/appendix/interview/" class="">4.2 面试题</a>
+    </label>
+  
+
+          
+  <ul>
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/study-linux/docs/appendix/interview/basic/" class="">基础</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/study-linux/docs/appendix/interview/advanced/" class="">进阶</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/study-linux/docs/appendix/interview/expert/" class="">高阶</a>
+  
+
+        </li>
+      
+    
+  </ul>
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/study-linux/docs/appendix/attention/" class="">4.3 关注项目</a>
+  
+
+        </li>
+      
+    
+  </ul>
+
+        </li>
+      
+    
+  </ul>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<hr />
+<ul>
+  <li><a href="https://cdn.jsdelivr.net/gh/ikingye/imagehost/picgo/20200417022040.png" target="_blank" rel="noopener noreferrer">微信</a></li>
+  <li><a href="https://qm.qq.com/cgi-bin/qm/qr?k=EUhzg0UwUksxpQnwEmPngRLezlC6qrnn&jump_from=webapi" target="_blank" rel="noopener noreferrer"><img src="//pub.idqqimg.com/wpa/images/group.png"></a></li>
+</ul>
+
+
+</nav>
+
+
+
+
+  <script>(function(){var e=document.querySelector("aside .book-menu-content");addEventListener("beforeunload",function(){localStorage.setItem("menu.scrollTop",e.scrollTop)}),e.scrollTop=localStorage.getItem("menu.scrollTop")})()</script>
+
+
+ 
+      </div>
+    </aside>
+
+    <div class="book-page">
+      <header class="book-header">
+        
+  <div class="flex align-center justify-between">
+  <label for="menu-control">
+    <img src="/study-linux/svg/menu.svg" class="book-icon" alt="Menu" />
+  </label>
+
+  <strong>2.5 故障排查</strong>
+
+  <label for="toc-control">
+    
+    <img src="/study-linux/svg/toc.svg" class="book-icon" alt="Table of Contents" />
+    
+  </label>
+</div>
+
+
+  
+  <aside class="hidden clearfix">
+    
+  
+<nav id="TableOfContents"></nav>
+
+
+
+  </aside>
+  
+ 
+      </header>
+
+      
+      
+  <article id="article" class="markdown"><h1 id="故障排查">
+  故障排查
+  <a class="anchor" href="#%e6%95%85%e9%9a%9c%e6%8e%92%e6%9f%a5">#</a>
+</h1>
+</article>
+ 
+      
+
+      <footer class="book-footer">
+        
+  <div class="flex flex-wrap justify-between">
+
+
+  <div><a class="flex align-center" href="https://github.com/ikingye/study-linux/commit/48c849b064f2924b49db4aa3673b9f59c5a63657" title='Last modified by yewang | 2020-07-16' target="_blank" rel="noopener">
+      <img src="/study-linux/svg/calendar.svg" class="book-icon" alt="" />
+      <span>2020-07-16</span>
+    </a>
+  </div>
+
+
+
+
+</div>
+
+
+
+  <script>(function(){function e(e){const t=window.getSelection(),n=document.createRange();n.selectNodeContents(e),t.removeAllRanges(),t.addRange(n)}document.querySelectorAll("pre code").forEach(t=>{t.addEventListener("click",function(){if(window.getSelection().toString())return;e(t.parentElement),navigator.clipboard&&navigator.clipboard.writeText(t.parentElement.textContent)})})})()</script>
+
+
+ 
+        <div>
+    <br>
+    <script async src="//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script>
+    <link rel="stylesheet" href="//cdn.bootcss.com/font-awesome/4.3.0/css/font-awesome.min.css">
+    <p><span id="busuanzi_container_page_pv">本文访问量 <span id="busuanzi_value_page_pv"><i class="fa fa-spinner fa-spin"></i></span> 次</span></p>
+    <p><span id="busuanzi_container_site_pv">本站总访问量 <span id="busuanzi_value_site_pv"><i class="fa fa-spinner fa-spin"></i></span> 次</span></p>
+    <p><span id="busuanzi_container_site_uv">本站总访客数 <span id="busuanzi_value_site_uv"><i class="fa fa-spinner fa-spin"></i></span> 人</span></p>
+</div>
+
+
+
+
+
+      </footer>
+
+      
+  
+  <div class="book-comments">
+<script src="https://utteranc.es/client.js"
+  repo="ikingye/study-linux"
+  issue-term="pathname"
+  theme="github-light"
+  crossorigin="anonymous"
+  async
+></script>
+
+<div id="footer">
+  <p>
+    <a href="https://kingye.me">叶王</a> &copy; 2013-2024
+    版权所有。如果本文档对你有所帮助，可以<a
+      href="https://cdn.jsdelivr.net/gh/ikingye/imagehost/picgo/20200428110046.png"
+      target="_blank"
+      rel="noopener noreferrer"
+      >请作者喝饮料</a
+    >。
+  </p>
+</div>
+
+</div>
+  
+ 
+
+      <label for="menu-control" class="hidden book-menu-overlay"></label>
+    </div>
+
+    
+    <aside class="book-toc">
+      <div class="book-toc-content">
+        
+  
+<nav id="TableOfContents"></nav>
+
+
+ 
+      </div>
+    </aside>
+    
+  </main>
+
+  
+</body>
+
+</html>
+
+
+
+
+
+
+
+
+
+
+
+
