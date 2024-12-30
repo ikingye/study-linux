@@ -1,25 +1,189 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes"?>
-<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
-  <channel>
-    <title>1.2 发行版 on Linux 学习笔记</title>
-    <link>https://kingye.me/study-linux/docs/basic/distro/</link>
-    <description>Recent content in 1.2 发行版 on Linux 学习笔记</description>
-    <generator>Hugo</generator>
-    <language>en</language>
-    <atom:link href="https://kingye.me/study-linux/docs/basic/distro/index.xml" rel="self" type="application/rss+xml" />
-    <item>
-      <title>1.2.1 CentOS</title>
-      <link>https://kingye.me/study-linux/docs/basic/distro/CentOS/</link>
-      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      <guid>https://kingye.me/study-linux/docs/basic/distro/CentOS/</guid>
-      <description>&lt;h1 id=&#34;centos&#34;&gt;&#xA;  CentOS&#xA;  &lt;a class=&#34;anchor&#34; href=&#34;#centos&#34;&gt;#&lt;/a&gt;&#xA;&lt;/h1&gt;&#xA;&lt;h2 id=&#34;yumhttpswwwwikiwandcomzh-cnyellowdog_updater_modified&#34;&gt;&#xA;  &lt;a href=&#34;https://www.wikiwand.com/zh-cn/Yellowdog_Updater,_Modified&#34;&gt;yum&lt;/a&gt;&#xA;  &lt;a class=&#34;anchor&#34; href=&#34;#yumhttpswwwwikiwandcomzh-cnyellowdog_updater_modified&#34;&gt;#&lt;/a&gt;&#xA;&lt;/h2&gt;&#xA;&lt;p&gt;Yum（Yellow dog Updater, Modified）是由  &lt;a href=&#34;https://www.wikiwand.com/zh-cn/Duke_University&#34; title=&#34;Duke University&#34;&gt;Duke University&lt;/a&gt;  团队修改  &lt;a href=&#34;https://www.wikiwand.com/zh-cn/Yellow_Dog_Linux&#34;&gt;Yellow Dog Linux&lt;/a&gt;  的 Yellow Dog Updater 开发而成，是一个基于  &lt;a href=&#34;https://www.wikiwand.com/zh-cn/RPM&#34; title=&#34;RPM&#34;&gt;RPM&lt;/a&gt;  包管理的字符前端软件包管理器。能够从指定的服务器自动下载 RPM 包并且安装，可以处理依赖性关系，并且一次安装所有依赖的软件包，无须繁琐地一次次下载、安装。被  &lt;a href=&#34;https://www.wikiwand.com/zh-cn/Yellow_Dog_Linux&#34;&gt;Yellow Dog Linux&lt;/a&gt;  本身，以及  &lt;a href=&#34;https://www.wikiwand.com/zh-cn/Fedora&#34; title=&#34;Fedora&#34;&gt;Fedora&lt;/a&gt;、&lt;a href=&#34;https://www.wikiwand.com/zh-cn/Red_Hat_Enterprise_Linux&#34; title=&#34;Red Hat Enterprise Linux&#34;&gt;Red Hat Enterprise Linux&lt;/a&gt;  采用。&lt;/p&gt;&#xA;&lt;h3 id=&#34;安装本地-rpm-包&#34;&gt;&#xA;  安装本地 rpm 包&#xA;  &lt;a class=&#34;anchor&#34; href=&#34;#%e5%ae%89%e8%a3%85%e6%9c%ac%e5%9c%b0-rpm-%e5%8c%85&#34;&gt;#&lt;/a&gt;&#xA;&lt;/h3&gt;&#xA;&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;&#34;&gt;&lt;code class=&#34;language-shell&#34; data-lang=&#34;shell&#34;&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;rpm -qs | grep jdk&#xA;&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&#xA;&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;yum install -y /xxx/xxx.rpm&#xA;&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&#xA;&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#75715e&#34;&gt;# localinstall 已过时&lt;/span&gt;&#xA;&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#75715e&#34;&gt;# yum localinstall -y /xxx/xxx.rpm&lt;/span&gt;&#xA;&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;h3 id=&#34;第三方源&#34;&gt;&#xA;  第三方源&#xA;  &lt;a class=&#34;anchor&#34; href=&#34;#%e7%ac%ac%e4%b8%89%e6%96%b9%e6%ba%90&#34;&gt;#&lt;/a&gt;&#xA;&lt;/h3&gt;&#xA;&lt;h4 id=&#34;epelhttpsfedoraprojectorgwikiepel&#34;&gt;&#xA;  &lt;a href=&#34;https://fedoraproject.org/wiki/EPEL&#34;&gt;EPEL&lt;/a&gt;&#xA;  &lt;a class=&#34;anchor&#34; href=&#34;#epelhttpsfedoraprojectorgwikiepel&#34;&gt;#&lt;/a&gt;&#xA;&lt;/h4&gt;&#xA;&lt;p&gt;&lt;code&gt;Extra Packages for Enterprise Linux&lt;/code&gt;&lt;/p&gt;&#xA;&lt;p&gt;&lt;code&gt;EPEL&lt;/code&gt; is a Fedora Special Interest Group&#xA;that creates, maintains, and manages a high quality set of additional packages for Enterprise Linux,&#xA;including, but not limited to, &#xA;&lt;a href=&#34;https://fedoraproject.org/wiki/Red_Hat_Enterprise_Linux&#34; title=&#34;Red Hat Enterprise Linux&#34;&gt;Red Hat Enterprise Linux&lt;/a&gt; (RHEL),&#xA;CentOS&#xA;and Scientific Linux (SL),&#xA;Oracle Linux (OL).&lt;/p&gt;</description>
-    </item>
-    <item>
-      <title>1.2.2 Ubuntu</title>
-      <link>https://kingye.me/study-linux/docs/basic/distro/Ubuntu/</link>
-      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      <guid>https://kingye.me/study-linux/docs/basic/distro/Ubuntu/</guid>
-      <description>&lt;h1 id=&#34;ubuntu&#34;&gt;&#xA;  Ubuntu&#xA;  &lt;a class=&#34;anchor&#34; href=&#34;#ubuntu&#34;&gt;#&lt;/a&gt;&#xA;&lt;/h1&gt;&#xA;&lt;ul&gt;&#xA;&lt;li&gt;版本存续期间并不锁定内核版本&lt;/li&gt;&#xA;&lt;li&gt;真正在一个版本生命周期内几乎不会变的东西其实是 &lt;code&gt;libc&lt;/code&gt;&lt;/li&gt;&#xA;&lt;/ul&gt;&#xA;&lt;h2 id=&#34;2004-vs-1804&#34;&gt;&#xA;  20.04 vs 18.04&#xA;  &lt;a class=&#34;anchor&#34; href=&#34;#2004-vs-1804&#34;&gt;#&lt;/a&gt;&#xA;&lt;/h2&gt;&#xA;&lt;p&gt;Ubuntu 20.04 与 Ubuntu 18.04 的比较表&lt;/p&gt;&#xA;&lt;table&gt;&#xA;  &lt;thead&gt;&#xA;      &lt;tr&gt;&#xA;          &lt;th&gt;特征&lt;/th&gt;&#xA;          &lt;th&gt;Ubuntu 20.04（Ubuntu 20.04 发布下载，附新特性和增强新功能介绍）&lt;/th&gt;&#xA;          &lt;th&gt;Ubuntu 18.04&lt;/th&gt;&#xA;      &lt;/tr&gt;&#xA;  &lt;/thead&gt;&#xA;  &lt;tbody&gt;&#xA;      &lt;tr&gt;&#xA;          &lt;td&gt;发布日期&lt;/td&gt;&#xA;          &lt;td&gt;2020 年 4 月 23 日&lt;/td&gt;&#xA;          &lt;td&gt;2018 年 4 月 26 日&lt;/td&gt;&#xA;      &lt;/tr&gt;&#xA;      &lt;tr&gt;&#xA;          &lt;td&gt;开发代号&lt;/td&gt;&#xA;          &lt;td&gt;Focal Fossa&lt;/td&gt;&#xA;          &lt;td&gt;Bionic Beaver&lt;/td&gt;&#xA;      &lt;/tr&gt;&#xA;      &lt;tr&gt;&#xA;          &lt;td&gt;默认显示服务器&lt;/td&gt;&#xA;          &lt;td&gt;Xorg 是 Ubuntu 20.04 中的默认显示服务器&lt;/td&gt;&#xA;          &lt;td&gt;Xorg 成为 Ubuntu 18.04 中的默认显示服务器&lt;/td&gt;&#xA;      &lt;/tr&gt;&#xA;      &lt;tr&gt;&#xA;          &lt;td&gt;Linux 内核&lt;/td&gt;&#xA;          &lt;td&gt;Ubuntu 20.04 随附 5.4 内核，您可以获得本机 ExFAT 支持和其他性能改进&lt;/td&gt;&#xA;          &lt;td&gt;Ubuntu 18.04 随附 4.15 内核&lt;/td&gt;&#xA;      &lt;/tr&gt;&#xA;      &lt;tr&gt;&#xA;          &lt;td&gt;32 位和 64 位&lt;/td&gt;&#xA;          &lt;td&gt;没有适用于 Ubuntu 20.04 的 32 位系统&lt;/td&gt;&#xA;          &lt;td&gt;Ubuntu 18.04 同时具有 32 位和 64 位&lt;/td&gt;&#xA;      &lt;/tr&gt;&#xA;      &lt;tr&gt;&#xA;          &lt;td&gt;Gnome 桌面&lt;/td&gt;&#xA;          &lt;td&gt;GNOME 3.36 以及该版本的视觉和性能改进&lt;/td&gt;&#xA;          &lt;td&gt;GNOME 3.28 以及该版本的视觉和性能改进&lt;/td&gt;&#xA;      &lt;/tr&gt;&#xA;      &lt;tr&gt;&#xA;          &lt;td&gt;视觉差异&lt;/td&gt;&#xA;          &lt;td&gt;Ubuntu 20.04 更漂亮，Ubuntu 20.04 通过三种样式增强了默认的 Yaru 主题：浅色、深色和标准&lt;/td&gt;&#xA;          &lt;td&gt;Ubuntu 18.04 LTS 用户注意到 Nautilus 上有一些暗淡的视觉变化&lt;/td&gt;&#xA;      &lt;/tr&gt;&#xA;      &lt;tr&gt;&#xA;          &lt;td&gt;静音/禁用通知&lt;/td&gt;&#xA;          &lt;td&gt;现在可以使设置中的通知静音&lt;/td&gt;&#xA;          &lt;td&gt;没有设置静音通知&lt;/td&gt;&#xA;      &lt;/tr&gt;&#xA;      &lt;tr&gt;&#xA;          &lt;td&gt;Dock&lt;/td&gt;&#xA;          &lt;td&gt;您现在可以使用扩展程序应用程序删除 Dock&lt;/td&gt;&#xA;          &lt;td&gt;用户无法自行决定删除 Dock&lt;/td&gt;&#xA;      &lt;/tr&gt;&#xA;      &lt;tr&gt;&#xA;          &lt;td&gt;安装时间&lt;/td&gt;&#xA;          &lt;td&gt;与 Ubuntu 18.04 相比，由于采用了新的压缩算法，因此安装 Ubuntu 20.04 所需的时间更少&lt;/td&gt;&#xA;          &lt;td&gt;与 Ubuntu 20.04 相比安装速度较慢&lt;/td&gt;&#xA;      &lt;/tr&gt;&#xA;      &lt;tr&gt;&#xA;          &lt;td&gt;开机时间&lt;/td&gt;&#xA;          &lt;td&gt;与 Ubuntu 18.04 相比，Ubuntu 20.04 的启动速度也更快&lt;/td&gt;&#xA;          &lt;td&gt;与 Ubuntu 20.04 相比，启动速度较慢&lt;/td&gt;&#xA;      &lt;/tr&gt;&#xA;      &lt;tr&gt;&#xA;          &lt;td&gt;WireGuard 支持&lt;/td&gt;&#xA;          &lt;td&gt;WireGuard 已被反向移植到 Ubuntu 20.04 中的 Kernel 5.4&lt;/td&gt;&#xA;          &lt;td&gt;不支持 WireGuard&lt;/td&gt;&#xA;      &lt;/tr&gt;&#xA;      &lt;tr&gt;&#xA;          &lt;td&gt;Snap 应用&lt;/td&gt;&#xA;          &lt;td&gt;更多活动供用户使用&lt;/td&gt;&#xA;          &lt;td&gt;支持快照应用&lt;/td&gt;&#xA;      &lt;/tr&gt;&#xA;      &lt;tr&gt;&#xA;          &lt;td&gt;Python&lt;/td&gt;&#xA;          &lt;td&gt;默认情况下为 Python3&lt;/td&gt;&#xA;          &lt;td&gt;仍然预装了 Python2&lt;/td&gt;&#xA;      &lt;/tr&gt;&#xA;      &lt;tr&gt;&#xA;          &lt;td&gt;X11 分数&lt;/td&gt;&#xA;          &lt;td&gt;X11 分数缩放&lt;/td&gt;&#xA;          &lt;td&gt;没有 X11 分数缩放&lt;/td&gt;&#xA;      &lt;/tr&gt;&#xA;      &lt;tr&gt;&#xA;          &lt;td&gt;PHP&lt;/td&gt;&#xA;          &lt;td&gt;php 7.4 是可安装的默认版本&lt;/td&gt;&#xA;          &lt;td&gt;php 7.3&lt;/td&gt;&#xA;      &lt;/tr&gt;&#xA;  &lt;/tbody&gt;&#xA;&lt;/table&gt;&#xA;&lt;hr&gt;&#xA;&lt;h2 id=&#34;2204-vs-2004&#34;&gt;&#xA;  22.04 vs 20.04&#xA;  &lt;a class=&#34;anchor&#34; href=&#34;#2204-vs-2004&#34;&gt;#&lt;/a&gt;&#xA;&lt;/h2&gt;&#xA;&lt;table&gt;&#xA;  &lt;thead&gt;&#xA;      &lt;tr&gt;&#xA;          &lt;th&gt;特征&lt;/th&gt;&#xA;          &lt;th&gt;Ubuntu 22.04&lt;/th&gt;&#xA;          &lt;th&gt;Ubuntu 20.04&lt;/th&gt;&#xA;      &lt;/tr&gt;&#xA;  &lt;/thead&gt;&#xA;  &lt;tbody&gt;&#xA;      &lt;tr&gt;&#xA;          &lt;td&gt;代号&lt;/td&gt;&#xA;          &lt;td&gt;&lt;code&gt;Jammy&lt;/code&gt; Jellyfish&lt;/td&gt;&#xA;          &lt;td&gt;&lt;code&gt;Focal&lt;/code&gt; Fossa&lt;/td&gt;&#xA;      &lt;/tr&gt;&#xA;      &lt;tr&gt;&#xA;          &lt;td&gt;Gnome 桌面&lt;/td&gt;&#xA;          &lt;td&gt;GNOME 42&lt;/td&gt;&#xA;          &lt;td&gt;GNOME 3.36&lt;/td&gt;&#xA;      &lt;/tr&gt;&#xA;      &lt;tr&gt;&#xA;          &lt;td&gt;GCC&lt;/td&gt;&#xA;          &lt;td&gt;GCC 11.2&lt;/td&gt;&#xA;          &lt;td&gt;GCC 10.3&lt;/td&gt;&#xA;      &lt;/tr&gt;&#xA;      &lt;tr&gt;&#xA;          &lt;td&gt;binutils&lt;/td&gt;&#xA;          &lt;td&gt;binutils 2.38&lt;/td&gt;&#xA;          &lt;td&gt;&lt;/td&gt;&#xA;      &lt;/tr&gt;&#xA;      &lt;tr&gt;&#xA;          &lt;td&gt;glibc&lt;/td&gt;&#xA;          &lt;td&gt;glibc 2.35&lt;/td&gt;&#xA;          &lt;td&gt;&lt;/td&gt;&#xA;      &lt;/tr&gt;&#xA;      &lt;tr&gt;&#xA;          &lt;td&gt;Python&lt;/td&gt;&#xA;          &lt;td&gt;Python3 3.10.1&lt;/td&gt;&#xA;          &lt;td&gt;Python3 3.8.2&lt;/td&gt;&#xA;      &lt;/tr&gt;&#xA;      &lt;tr&gt;&#xA;          &lt;td&gt;Linux Kernel&lt;/td&gt;&#xA;          &lt;td&gt;Linux Kernel 5.15 LTS&lt;/td&gt;&#xA;          &lt;td&gt;Linux Kernel 5.4&lt;/td&gt;&#xA;      &lt;/tr&gt;&#xA;  &lt;/tbody&gt;&#xA;&lt;/table&gt;</description>
-    </item>
-  </channel>
-</rss>
+<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>1.2 发行版 on Linux 学习笔记</title><link>https://kingye.me/study-linux/docs/basic/distro/</link><description>Recent content in 1.2 发行版 on Linux 学习笔记</description><generator>Hugo</generator><language>en</language><atom:link href="https://kingye.me/study-linux/docs/basic/distro/index.xml" rel="self" type="application/rss+xml"/><item><title>1.2.1 CentOS</title><link>https://kingye.me/study-linux/docs/basic/distro/CentOS/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://kingye.me/study-linux/docs/basic/distro/CentOS/</guid><description>&lt;h1 id="centos">
+ CentOS
+ &lt;a class="anchor" href="#centos">#&lt;/a>
+&lt;/h1>
+&lt;h2 id="yumhttpswwwwikiwandcomzh-cnyellowdog_updater_modified">
+ &lt;a href="https://www.wikiwand.com/zh-cn/Yellowdog_Updater,_Modified">yum&lt;/a>
+ &lt;a class="anchor" href="#yumhttpswwwwikiwandcomzh-cnyellowdog_updater_modified">#&lt;/a>
+&lt;/h2>
+&lt;p>Yum（Yellow dog Updater, Modified）是由  &lt;a href="https://www.wikiwand.com/zh-cn/Duke_University" title="Duke University">Duke University&lt;/a>  团队修改  &lt;a href="https://www.wikiwand.com/zh-cn/Yellow_Dog_Linux">Yellow Dog Linux&lt;/a>  的 Yellow Dog Updater 开发而成，是一个基于  &lt;a href="https://www.wikiwand.com/zh-cn/RPM" title="RPM">RPM&lt;/a>  包管理的字符前端软件包管理器。能够从指定的服务器自动下载 RPM 包并且安装，可以处理依赖性关系，并且一次安装所有依赖的软件包，无须繁琐地一次次下载、安装。被  &lt;a href="https://www.wikiwand.com/zh-cn/Yellow_Dog_Linux">Yellow Dog Linux&lt;/a>  本身，以及  &lt;a href="https://www.wikiwand.com/zh-cn/Fedora" title="Fedora">Fedora&lt;/a>、&lt;a href="https://www.wikiwand.com/zh-cn/Red_Hat_Enterprise_Linux" title="Red Hat Enterprise Linux">Red Hat Enterprise Linux&lt;/a>  采用。&lt;/p>
+&lt;h3 id="安装本地-rpm-包">
+ 安装本地 rpm 包
+ &lt;a class="anchor" href="#%e5%ae%89%e8%a3%85%e6%9c%ac%e5%9c%b0-rpm-%e5%8c%85">#&lt;/a>
+&lt;/h3>
+&lt;div class="highlight">&lt;pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">&lt;code class="language-shell" data-lang="shell">&lt;span style="display:flex;">&lt;span>rpm -qs | grep jdk
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>yum install -y /xxx/xxx.rpm
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>&lt;span style="color:#75715e"># localinstall 已过时&lt;/span>
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>&lt;span style="color:#75715e"># yum localinstall -y /xxx/xxx.rpm&lt;/span>
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div>&lt;h3 id="第三方源">
+ 第三方源
+ &lt;a class="anchor" href="#%e7%ac%ac%e4%b8%89%e6%96%b9%e6%ba%90">#&lt;/a>
+&lt;/h3>
+&lt;h4 id="epelhttpsfedoraprojectorgwikiepel">
+ &lt;a href="https://fedoraproject.org/wiki/EPEL">EPEL&lt;/a>
+ &lt;a class="anchor" href="#epelhttpsfedoraprojectorgwikiepel">#&lt;/a>
+&lt;/h4>
+&lt;p>&lt;code>Extra Packages for Enterprise Linux&lt;/code>&lt;/p>
+&lt;p>&lt;code>EPEL&lt;/code> is a Fedora Special Interest Group
+that creates, maintains, and manages a high quality set of additional packages for Enterprise Linux,
+including, but not limited to, 
+&lt;a href="https://fedoraproject.org/wiki/Red_Hat_Enterprise_Linux" title="Red Hat Enterprise Linux">Red Hat Enterprise Linux&lt;/a> (RHEL),
+CentOS
+and Scientific Linux (SL),
+Oracle Linux (OL).&lt;/p></description></item><item><title>1.2.2 Ubuntu</title><link>https://kingye.me/study-linux/docs/basic/distro/Ubuntu/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://kingye.me/study-linux/docs/basic/distro/Ubuntu/</guid><description>&lt;h1 id="ubuntu">
+ Ubuntu
+ &lt;a class="anchor" href="#ubuntu">#&lt;/a>
+&lt;/h1>
+&lt;ul>
+&lt;li>版本存续期间并不锁定内核版本&lt;/li>
+&lt;li>真正在一个版本生命周期内几乎不会变的东西其实是 &lt;code>libc&lt;/code>&lt;/li>
+&lt;/ul>
+&lt;h2 id="2004-vs-1804">
+ 20.04 vs 18.04
+ &lt;a class="anchor" href="#2004-vs-1804">#&lt;/a>
+&lt;/h2>
+&lt;p>Ubuntu 20.04 与 Ubuntu 18.04 的比较表&lt;/p>
+&lt;table>
+ &lt;thead>
+ &lt;tr>
+ &lt;th>特征&lt;/th>
+ &lt;th>Ubuntu 20.04（Ubuntu 20.04 发布下载，附新特性和增强新功能介绍）&lt;/th>
+ &lt;th>Ubuntu 18.04&lt;/th>
+ &lt;/tr>
+ &lt;/thead>
+ &lt;tbody>
+ &lt;tr>
+ &lt;td>发布日期&lt;/td>
+ &lt;td>2020 年 4 月 23 日&lt;/td>
+ &lt;td>2018 年 4 月 26 日&lt;/td>
+ &lt;/tr>
+ &lt;tr>
+ &lt;td>开发代号&lt;/td>
+ &lt;td>Focal Fossa&lt;/td>
+ &lt;td>Bionic Beaver&lt;/td>
+ &lt;/tr>
+ &lt;tr>
+ &lt;td>默认显示服务器&lt;/td>
+ &lt;td>Xorg 是 Ubuntu 20.04 中的默认显示服务器&lt;/td>
+ &lt;td>Xorg 成为 Ubuntu 18.04 中的默认显示服务器&lt;/td>
+ &lt;/tr>
+ &lt;tr>
+ &lt;td>Linux 内核&lt;/td>
+ &lt;td>Ubuntu 20.04 随附 5.4 内核，您可以获得本机 ExFAT 支持和其他性能改进&lt;/td>
+ &lt;td>Ubuntu 18.04 随附 4.15 内核&lt;/td>
+ &lt;/tr>
+ &lt;tr>
+ &lt;td>32 位和 64 位&lt;/td>
+ &lt;td>没有适用于 Ubuntu 20.04 的 32 位系统&lt;/td>
+ &lt;td>Ubuntu 18.04 同时具有 32 位和 64 位&lt;/td>
+ &lt;/tr>
+ &lt;tr>
+ &lt;td>Gnome 桌面&lt;/td>
+ &lt;td>GNOME 3.36 以及该版本的视觉和性能改进&lt;/td>
+ &lt;td>GNOME 3.28 以及该版本的视觉和性能改进&lt;/td>
+ &lt;/tr>
+ &lt;tr>
+ &lt;td>视觉差异&lt;/td>
+ &lt;td>Ubuntu 20.04 更漂亮，Ubuntu 20.04 通过三种样式增强了默认的 Yaru 主题：浅色、深色和标准&lt;/td>
+ &lt;td>Ubuntu 18.04 LTS 用户注意到 Nautilus 上有一些暗淡的视觉变化&lt;/td>
+ &lt;/tr>
+ &lt;tr>
+ &lt;td>静音/禁用通知&lt;/td>
+ &lt;td>现在可以使设置中的通知静音&lt;/td>
+ &lt;td>没有设置静音通知&lt;/td>
+ &lt;/tr>
+ &lt;tr>
+ &lt;td>Dock&lt;/td>
+ &lt;td>您现在可以使用扩展程序应用程序删除 Dock&lt;/td>
+ &lt;td>用户无法自行决定删除 Dock&lt;/td>
+ &lt;/tr>
+ &lt;tr>
+ &lt;td>安装时间&lt;/td>
+ &lt;td>与 Ubuntu 18.04 相比，由于采用了新的压缩算法，因此安装 Ubuntu 20.04 所需的时间更少&lt;/td>
+ &lt;td>与 Ubuntu 20.04 相比安装速度较慢&lt;/td>
+ &lt;/tr>
+ &lt;tr>
+ &lt;td>开机时间&lt;/td>
+ &lt;td>与 Ubuntu 18.04 相比，Ubuntu 20.04 的启动速度也更快&lt;/td>
+ &lt;td>与 Ubuntu 20.04 相比，启动速度较慢&lt;/td>
+ &lt;/tr>
+ &lt;tr>
+ &lt;td>WireGuard 支持&lt;/td>
+ &lt;td>WireGuard 已被反向移植到 Ubuntu 20.04 中的 Kernel 5.4&lt;/td>
+ &lt;td>不支持 WireGuard&lt;/td>
+ &lt;/tr>
+ &lt;tr>
+ &lt;td>Snap 应用&lt;/td>
+ &lt;td>更多活动供用户使用&lt;/td>
+ &lt;td>支持快照应用&lt;/td>
+ &lt;/tr>
+ &lt;tr>
+ &lt;td>Python&lt;/td>
+ &lt;td>默认情况下为 Python3&lt;/td>
+ &lt;td>仍然预装了 Python2&lt;/td>
+ &lt;/tr>
+ &lt;tr>
+ &lt;td>X11 分数&lt;/td>
+ &lt;td>X11 分数缩放&lt;/td>
+ &lt;td>没有 X11 分数缩放&lt;/td>
+ &lt;/tr>
+ &lt;tr>
+ &lt;td>PHP&lt;/td>
+ &lt;td>php 7.4 是可安装的默认版本&lt;/td>
+ &lt;td>php 7.3&lt;/td>
+ &lt;/tr>
+ &lt;/tbody>
+&lt;/table>
+&lt;hr>
+&lt;h2 id="2204-vs-2004">
+ 22.04 vs 20.04
+ &lt;a class="anchor" href="#2204-vs-2004">#&lt;/a>
+&lt;/h2>
+&lt;table>
+ &lt;thead>
+ &lt;tr>
+ &lt;th>特征&lt;/th>
+ &lt;th>Ubuntu 22.04&lt;/th>
+ &lt;th>Ubuntu 20.04&lt;/th>
+ &lt;/tr>
+ &lt;/thead>
+ &lt;tbody>
+ &lt;tr>
+ &lt;td>代号&lt;/td>
+ &lt;td>&lt;code>Jammy&lt;/code> Jellyfish&lt;/td>
+ &lt;td>&lt;code>Focal&lt;/code> Fossa&lt;/td>
+ &lt;/tr>
+ &lt;tr>
+ &lt;td>Gnome 桌面&lt;/td>
+ &lt;td>GNOME 42&lt;/td>
+ &lt;td>GNOME 3.36&lt;/td>
+ &lt;/tr>
+ &lt;tr>
+ &lt;td>GCC&lt;/td>
+ &lt;td>GCC 11.2&lt;/td>
+ &lt;td>GCC 10.3&lt;/td>
+ &lt;/tr>
+ &lt;tr>
+ &lt;td>binutils&lt;/td>
+ &lt;td>binutils 2.38&lt;/td>
+ &lt;td>&lt;/td>
+ &lt;/tr>
+ &lt;tr>
+ &lt;td>glibc&lt;/td>
+ &lt;td>glibc 2.35&lt;/td>
+ &lt;td>&lt;/td>
+ &lt;/tr>
+ &lt;tr>
+ &lt;td>Python&lt;/td>
+ &lt;td>Python3 3.10.1&lt;/td>
+ &lt;td>Python3 3.8.2&lt;/td>
+ &lt;/tr>
+ &lt;tr>
+ &lt;td>Linux Kernel&lt;/td>
+ &lt;td>Linux Kernel 5.15 LTS&lt;/td>
+ &lt;td>Linux Kernel 5.4&lt;/td>
+ &lt;/tr>
+ &lt;/tbody>
+&lt;/table></description></item></channel></rss>
