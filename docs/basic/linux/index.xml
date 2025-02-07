@@ -124,4 +124,34 @@
 &lt;p>参考：&lt;/p>
 &lt;ul>
 &lt;li>&lt;a href="https://www.cnblogs.com/st-jun/p/7737188.html">Linux 修改时区的正确方法&lt;/a>&lt;/li>
+&lt;/ul></description></item><item><title>磁盘</title><link>https://kingye.me/study-linux/docs/basic/linux/disk/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://kingye.me/study-linux/docs/basic/linux/disk/</guid><description>&lt;h1 id="磁盘">
+ 磁盘
+ &lt;a class="anchor" href="#%e7%a3%81%e7%9b%98">#&lt;/a>
+&lt;/h1>
+&lt;h2 id="挂载磁盘">
+ 挂载磁盘
+ &lt;a class="anchor" href="#%e6%8c%82%e8%bd%bd%e7%a3%81%e7%9b%98">#&lt;/a>
+&lt;/h2>
+&lt;p>开机自动挂载方法：&lt;/p>
+&lt;ol>
+&lt;li>&lt;code>lsblk&lt;/code> 查看磁盘情况&lt;/li>
+&lt;li>&lt;code>vi /etc/fstab&lt;/code> 填写挂载&lt;/li>
+&lt;li>&lt;code>mount -a&lt;/code> 生效&lt;/li>
+&lt;/ol>
+&lt;div class="highlight">&lt;pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">&lt;code class="language-shell" data-lang="shell">&lt;span style="display:flex;">&lt;span>&lt;span style="color:#75715e"># 显示机器当前磁盘&lt;/span>
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>fdisk -l
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>&lt;span style="color:#75715e"># 磁盘格式化为 ext4 的文件系统格式&lt;/span>
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>mkfs.ext4 /dev/vdb
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>&lt;span style="color:#75715e"># 手动挂载&lt;/span>
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>mount /dev/vdb /home
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>&lt;span style="color:#75715e"># 设置开机自动挂载&lt;/span>
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>cat &lt;span style="color:#e6db74">&amp;lt;&amp;lt; &amp;#39;EOF&amp;#39; &amp;gt; /etc/fstab
+&lt;/span>&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>&lt;span style="color:#e6db74">/dev/vdb /home ext4 defaults 0 2
+&lt;/span>&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>&lt;span style="color:#e6db74">EOF&lt;/span>
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div>&lt;p>参考：&lt;/p>
+&lt;ul>
+&lt;li>&lt;a href="https://www.cnblogs.com/jyzhao/p/4778657.html">Linux 磁盘分区、格式化、目录挂载&lt;/a>&lt;/li>
 &lt;/ul></description></item></channel></rss>
