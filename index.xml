@@ -324,22 +324,44 @@ Oracle Linux (OL).&lt;/p></description></item><item><title>4.1 教程</title><li
 &lt;p>但是在 CentOS7 以后 localtime 变成了一个链接文件&lt;/p>
 &lt;div class="highlight">&lt;pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">&lt;code class="language-shell" data-lang="shell">&lt;span style="display:flex;">&lt;span>&lt;span style="color:#f92672">[&lt;/span>root@centos7 ~&lt;span style="color:#f92672">]&lt;/span>&lt;span style="color:#75715e"># ll /etc/localtime&lt;/span>
 &lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>lrwxrwxrwx &lt;span style="color:#ae81ff">1&lt;/span> root root &lt;span style="color:#ae81ff">33&lt;/span> Oct &lt;span style="color:#ae81ff">12&lt;/span> 11:01 /etc/localtime -&amp;gt; /usr/share/zoneinfo/Asia/Shanghai
-&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div>
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div>&lt;div class="book-tabs">
+
+
+&lt;input type="radio" class="toggle" name="tabs-uniqueid" id="tabs-uniqueid-0" checked="checked" />
+&lt;label for="tabs-uniqueid-0">CentOS6、Ubuntu16&lt;/label>
+&lt;div class="book-tabs-content markdown-inner">
+
+```shell
+$ cp /usr/share/zoneinfo/Asia/Shanghai /etc/localtime
+```
+
+&lt;/div>
 
 
 
-&lt;div class="book-tabs">&lt;input type="radio" class="toggle" name="tabs-uniqueid" id="tabs-uniqueid-0" checked="checked" />
- &lt;label for="tabs-uniqueid-0">CentOS6、Ubuntu16&lt;/label>
- &lt;div class="book-tabs-content markdown-inner">&lt;div class="highlight">&lt;pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">&lt;code class="language-shell" data-lang="shell">&lt;span style="display:flex;">&lt;span>$ cp /usr/share/zoneinfo/Asia/Shanghai /etc/localtime
-&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div>&lt;/div>&lt;input type="radio" class="toggle" name="tabs-uniqueid" id="tabs-uniqueid-1" />
- &lt;label for="tabs-uniqueid-1">CentOS7、RHEL7、Scientific Linux 7、Oracle Linux 7&lt;/label>
- &lt;div class="book-tabs-content markdown-inner">&lt;p>最好的方法是使用 timedatectl 命令&lt;/p>
-&lt;div class="highlight">&lt;pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">&lt;code class="language-shell" data-lang="shell">&lt;span style="display:flex;">&lt;span>$ timedatectl list-timezones |grep Shanghai &lt;span style="color:#75715e">#查找中国时区的完整名称&lt;/span>
-&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>Asia/Shanghai
-&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>$ timedatectl set-timezone Asia/Shanghai &lt;span style="color:#75715e">#其他时区以此类推&lt;/span>
-&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div>&lt;p>或者直接手动创建软链接&lt;/p>
-&lt;div class="highlight">&lt;pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">&lt;code class="language-shell" data-lang="shell">&lt;span style="display:flex;">&lt;span>$ ln -sf /usr/share/zoneinfo/Asia/Shanghai /etc/localtime
-&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div>&lt;/div>&lt;/div>
+&lt;input type="radio" class="toggle" name="tabs-uniqueid" id="tabs-uniqueid-1" />
+&lt;label for="tabs-uniqueid-1">CentOS7、RHEL7、Scientific Linux 7、Oracle Linux 7&lt;/label>
+&lt;div class="book-tabs-content markdown-inner">
+
+最好的方法是使用 timedatectl 命令
+
+```shell
+$ timedatectl list-timezones |grep Shanghai #查找中国时区的完整名称
+Asia/Shanghai
+$ timedatectl set-timezone Asia/Shanghai #其他时区以此类推
+```
+
+或者直接手动创建软链接
+
+```shell
+$ ln -sf /usr/share/zoneinfo/Asia/Shanghai /etc/localtime
+```
+
+&lt;/div>
+
+
+
+&lt;/div>
 
 &lt;p>参考：&lt;/p>
 &lt;ul>
