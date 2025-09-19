@@ -289,7 +289,28 @@ Oracle Linux (OL).&lt;/p&gt;</description></item><item><title>4.1 教程</title>
  
  &lt;a class="anchor" href="#%e5%85%b3%e6%b3%a8%e9%a1%b9%e7%9b%ae"&gt;#&lt;/a&gt;
  
-&lt;/h1&gt;</description></item><item><title>时区</title><link>https://kingye.me/study-linux/docs/basic/linux/timezone/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://kingye.me/study-linux/docs/basic/linux/timezone/</guid><description>&lt;h1 id="时区"&gt;
+&lt;/h1&gt;</description></item><item><title>shell</title><link>https://kingye.me/study-linux/docs/basic/linux/shell/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://kingye.me/study-linux/docs/basic/linux/shell/</guid><description>&lt;h1 id="shell"&gt;
+ shell
+ 
+ &lt;a class="anchor" href="#shell"&gt;#&lt;/a&gt;
+ 
+&lt;/h1&gt;
+&lt;ul&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;code&gt;. ~/.bashrc&lt;/code&gt;（= &lt;code&gt;source ~/.bashrc&lt;/code&gt;）：在当前这个 shell 里执行 .bashrc 的内容，不新开进程，立刻生效；定义的函数/变量/alias 直接可用。&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;bash：新开一个 子 shell。子 shell 会读取 ~/.bashrc（交互式时），你在子 shell 里能用新设置，但退出子 shell 后，父 shell 还是老环境。&lt;/p&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;div class="highlight"&gt;&lt;pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"&gt;&lt;code class="language-shell" data-lang="shell"&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;echo $$ &lt;span style="color:#75715e"&gt;# 看当前 shell 的 PID&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;. ~/.bashrc &lt;span style="color:#75715e"&gt;# 或 source ~/.bashrc&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;echo $$ &lt;span style="color:#75715e"&gt;# PID 不变：同一个 shell&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;bash
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;echo $$ &lt;span style="color:#75715e"&gt;# PID 变了：进入子 shell&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;exit &lt;span style="color:#75715e"&gt;# 退回父 shell，环境恢复&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;</description></item><item><title>时区</title><link>https://kingye.me/study-linux/docs/basic/linux/timezone/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://kingye.me/study-linux/docs/basic/linux/timezone/</guid><description>&lt;h1 id="时区"&gt;
  时区
  
  &lt;a class="anchor" href="#%e6%97%b6%e5%8c%ba"&gt;#&lt;/a&gt;
