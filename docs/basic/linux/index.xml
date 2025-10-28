@@ -144,7 +144,7 @@ $ ln -sf /usr/share/zoneinfo/Asia/Shanghai /etc/localtime
 &lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;mount /dev/vdb /home
 &lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;
 &lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;&lt;span style="color:#75715e"&gt;# 设置开机自动挂载&lt;/span&gt;
-&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;cat &lt;span style="color:#e6db74"&gt;&amp;lt;&amp;lt; &amp;#39;EOF&amp;#39; &amp;gt; /etc/fstab
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;cat &lt;span style="color:#e6db74"&gt;&amp;lt;&amp;lt; &amp;#39;EOF&amp;#39; &amp;gt;&amp;gt; /etc/fstab
 &lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;&lt;span style="color:#e6db74"&gt;/dev/vdb /home ext4 defaults 0 2
 &lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;&lt;span style="color:#e6db74"&gt;EOF&lt;/span&gt;
 &lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;参考：&lt;/p&gt;
